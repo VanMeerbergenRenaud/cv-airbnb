@@ -1,0 +1,401 @@
+/* -------------------------------------------
+Nom Complet: 	Renaud Van Meerbergen
+------------------------------------------- */
+/*LET'S GO*/
+/*-------------------------------------------- */
+/* Define the "system" font family */
+/*@font-face {
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+!* Now, let's apply it on an element *!
+body {
+    font-family: "system-ui";
+}*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    /* System Fonts as used by GitHub */
+    font-family: "Circular Std", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #595959;
+    scroll-behavior: smooth;
+}
+main {
+    padding: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #222222;
+}
+h1 {
+    color: #484848;
+    font-size: 1.625em;
+    font-weight: 600;
+    line-height: 30px;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 28px;
+}
+h3 {
+    color: #484848;
+    font-size: 1.375em;
+    font-weight: 500;
+    line-height: 26px;
+}
+h4 {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 20px;
+}
+p, span {
+    color: #222222;
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul, ol {
+    padding: 0;
+    color: #484848;
+}
+li {
+    list-style-type: none;
+    font-size: 0.94em;
+}
+a, a:visited {
+    font-size: 0.875em;
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 0.01em solid #222222;
+    color: #222222;
+    outline: none;
+    cursor: pointer;
+}
+.hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.light {
+    font-size: 0.94em;
+    line-height: 20px;
+    font-weight: 300;
+}
+.regular-font {
+    color:  #222222;
+    font-size: 1em;
+    font-weight: 350;
+    line-height: 24px;
+}
+.semi-bold {
+    color: #717171;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 24px;
+}
+.fa, .fas, .fa-regular {
+    color: #222222;
+}
+/*---------------- PAGE D'ACCUEIL ---------------*/
+/*--------- HEADER --------*/
+header {
+
+}
+/*--------- SECTION INTRO --------*/
+.intro-resume {
+    margin-bottom: 1.5em;
+    margin-top: 8px;
+}
+.nice strong, p {
+    margin-right: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 450;
+}
+.nice {
+    border-top: 1px solid #bbb;
+    padding: 1.5em 0;
+    position: relative;
+}
+.nice p {
+    font-weight: 300;
+    max-width: 275px;
+}
+.fa-gem {
+    position: absolute;
+    top: 1em;
+    right: 0;
+}
+/*--------- ARTICLE 1 --------*/
+article section {
+    padding: 1.5em 0;
+    border-top: 1px solid #bbb;
+}
+/*--------- First Section --------*/
+.firstPresentation, .bonusSection {
+    position: relative;
+}
+.firstPresentation img.img-right, .bonusSection img.img-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+}
+.firstPresentation h3 span {
+    display: block;
+    margin-bottom: 8px;
+}
+article ol li {
+    display: inline-block;
+    font-weight: 300;
+}
+/*--------- Second Section --------*/
+.secondSection div:first-of-type {
+    padding-bottom: 1.5em;
+}
+.secondSection div:nth-of-type(2),
+.secondSection div:nth-of-type(3) {
+    padding: 0.75em 0;
+}
+.secondSection div i {
+    margin-right: 1em;
+}
+.secondSection p {
+    display: inline-block;
+    min-width: 250px;
+}
+.secondSection div p:first-of-type {
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+.secondSection div p:last-of-type {
+    color: #717171;
+    font-size: 0.875em;
+    font-weight: 400;
+    margin-left: 2.5em;
+}
+/*--------- Third Section --------*/
+.thirdSection img {
+    margin-bottom: 0.5em;
+}
+.thirdSection p {
+    color: #484848;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+/*--------- Fourth Section --------*/
+.fourthSection div i {
+    color: #484848;
+    margin-right: 8px;
+}
+.fourthSection div p {
+    padding-top: 1.5em;
+    color: #484848;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-left: 2.5em;
+    margin-top: -2.5em;
+}
+.fourthSection p.last {
+    padding: 1.5em 0;
+}
+.fourthSection a.last, .seventhSection a.last, .com-card a.last {
+    border-bottom: none;
+    font-size: 1em;
+    font-weight: 500;
+}
+/*--------- Fifth Section --------*/
+.fifthSection img {
+    border-radius: 0.5em;
+    margin: 1.5em 0 1em;
+}
+.fifthSection p:last-of-type {
+    margin-top: 0.2em;
+}
+/*--------- Sixth Section --------*/
+.list-item {
+    margin: 1.5em 0;
+}
+.list-item li {
+    margin-bottom: 0.5em;
+}
+.list-item li i {
+    margin-right: 1em;
+}
+.list-item li span {
+    vertical-align: top;
+}
+.big-btn {
+    display: block;
+    padding: 0.75em 1.5em;
+    text-align: center;
+    border-radius: 0.5em;
+    border: 1px solid #484848;
+    font-size: 1em;
+}
+/*--------- SeventhSection Section --------*/
+.seventhSection iframe {
+    width: 100%;
+    height: 100%;
+    margin: 1.5em 0;
+}
+.seventhSection p.last {
+    margin: 0.75em 0 1em;
+}
+/*--------- EighthSection Section --------*/
+.eighthSection time {
+    margin-top: 0.5em;
+    display: inline-block;
+}
+.eighthSection a.last {
+    margin-left: 1em;
+}
+/*--------- CommentaireSection Section --------*/
+.commentaireSection {
+    padding-top: 2em;
+}
+.commentaireSection i {
+    position: relative;
+    top: -3px;
+    color: #222222;
+}
+.commentaireSection span {
+    font-size: 1.35em;
+    line-height: 29px;
+    font-weight: 500;
+    margin-left: 4px;
+}
+.commentaireSection .slider {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.commentaireSection .slider > div {
+    flex-shrink: 0;
+    margin-right: 1em;
+    width: 250px;
+}
+.com-card {
+    margin-top: 2em;
+    border: 1px solid #DDD;
+    position: relative;
+    border-radius: 12px;
+    padding: 1em;
+}
+.com-card img {
+    border-radius: 50%;
+    float: left;
+    margin-right: 12px;
+}
+.com-card p:first-of-type {
+    margin-left: 52px;
+}
+.com-card p:last-of-type {
+    margin: 0.75em 0 0.5em;
+}
+.commentaireSection a.big-btn {
+    margin-top: 1.5em;
+}
+/*--------- BonusSection Section --------*/
+.bonusSection img.img-right {
+    top: 1.5em;
+}
+.bonusSection p.light {
+    margin-top: 0.5em;
+    margin-bottom: -5px;
+}
+.bonusSection p+ a {
+    padding-bottom: 0;
+    font-size: 0.75em;
+}
+.bonusSection h4 {
+    margin-top: 0.5em;
+}
+.bonusSection h4 + p {
+    margin: 0.475em 0 1.5em;
+}
+.bonusSection a.big-btn {
+    margin: 1.5em 0;
+}
+.bonusSection .advertising {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+small {
+    font-size: 0.75em;
+    line-height: 16px;
+    font-weight: 300;
+    margin-right: 1em;
+}
+/*--------- ARTICLE 1 FIN --------*/
+/*--------- ARTICLE 2 --------*/
+.aPropos section {
+    position: relative;
+}
+.aPropos h3 {
+    color: #222222;
+}
+.aPropos section p {
+    margin-top: 0.5em;
+}
+.aPropos section a {
+    position: absolute;
+    right: 0.25em;
+    top: 2.5em;
+    padding: 0.35em 0.85em;
+    border: 1px solid #222222;
+    border-radius: 50%;
+}
+.concurrents {
+
+}
+/*--------- ARTICLE 2 FIN --------*/
+/*--------- FOOTER --------*/
+.prendreReservation {
+    position: fixed;
+    bottom: 0;
+    padding: 1em 1.5em;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #bbbbbb;
+}
+.prendreReservation p {
+    font-size: 1.125em;
+    line-height: 24px;
+    font-weight: 300;
+    margin-right: 1em;
+}
+a.btnReservation {
+    border: none;
+    border-radius: 0.5em;
+    background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+    padding: 0.875em 1.5em;
+    font-size: 1em;
+    line-height: 20px;
+    color: #FFF;
+    text-align: center;
+}
+/*--------- FOOTER FIN --------*/
