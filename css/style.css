@@ -65,6 +65,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+.img-me {
+    width: 40px;
+    height: 40px;
+}
 ul, ol {
     padding: 0;
     color: #484848;
