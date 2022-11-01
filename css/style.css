@@ -96,6 +96,12 @@ a, a:visited {
     white-space: nowrap;
     width: 1px;
 }
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
 .light {
     font-size: 0.94em;
     line-height: 20px;
@@ -231,6 +237,9 @@ article ol li {
 .fifthSection img {
     border-radius: 0.5em;
     margin: 1.5em 0 1em;
+    object-fit: cover;
+    width: 156px;
+    height: 105px;
 }
 .fifthSection p:last-of-type {
     margin-top: 0.2em;
@@ -238,12 +247,14 @@ article ol li {
 /*--------- Sixth Section --------*/
 .list-item {
     margin: 1.5em 0;
+    display: flex;
+    flex-direction: column;
 }
 .list-item li {
     margin-bottom: 0.5em;
 }
-.list-item li i {
-    margin-right: 1em;
+.list-item li span {
+    margin-left: 2em;
 }
 .list-item li span {
     vertical-align: top;
@@ -330,6 +341,9 @@ article ol li {
 .bonusSection p+ a {
     padding-bottom: 0;
     font-size: 0.75em;
+}
+.bonusSection ul li i {
+    margin-right: 8px;
 }
 .bonusSection h4 {
     margin-top: 0.5em;
