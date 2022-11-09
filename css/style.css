@@ -19,10 +19,9 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    /* System Fonts as used by GitHub */
-    font-family: "Circular Std", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 24px;
     color: #595959;
     scroll-behavior: smooth;
@@ -132,25 +131,37 @@ header {
     margin-bottom: 1.5em;
     margin-top: 8px;
 }
-.nice strong, p {
-    margin-right: 4px;
+.nice {
+    color: rgb(34, 34, 34);
+    font-weight: 300;
     font-size: 16px;
     line-height: 20px;
-    font-weight: 450;
-}
-.nice {
-    border-top: 1px solid #bbb;
+    display: flex;
     padding: 1.5em 0;
-    position: relative;
+    border-top: 1px solid rgb(221, 221, 221);
 }
-.nice p {
+.nice div:first-of-type {
+    margin-right: 8px;
+}
+.nice div:first-of-type h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-right: 8px;
+    display: inline;
+}
+.nice div:last-of-type {
+    background-size: 32px;
+    background-color: rgb(255, 255, 255);
+    background-position: left top;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
     font-weight: 300;
-    max-width: 275px;
-}
-.fa-gem {
-    position: absolute;
-    top: 1em;
-    right: 0;
+    height: 32px;
+    width: 32px;
 }
 /*--------- ARTICLE 1 --------*/
 article section {
@@ -158,55 +169,62 @@ article section {
     border-top: 1px solid #bbb;
 }
 /*--------- First Section --------*/
-.firstPresentation, .bonusSection {
-    position: relative;
+.firstPresentation {
+    display: flex;
 }
-.firstPresentation img.img-right, .bonusSection img.img-right{
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
+.firstPresentation h3 {
+    flex: 0 1 100%;
 }
 .firstPresentation h3 span {
     display: block;
-    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 4px;
+}
+.firstPresentation img {
+    margin-left: 16px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
 }
 article ol li {
     display: inline-block;
     font-weight: 300;
 }
 /*--------- Second Section --------*/
-.secondSection div:first-of-type {
-    padding-bottom: 1.5em;
+.secondSection {
+    padding: 2em 0;
 }
-.secondSection div:nth-of-type(2),
-.secondSection div:nth-of-type(3) {
-    padding: 0.75em 0;
+.secondSection div.enfant {
+    display: flex;
+    margin-bottom: 1.5em;
 }
-.secondSection div i {
+.secondSection div div.icon {
+    display: block;
+    flex-shrink: 0;
+    min-width: 24px;
     margin-right: 1em;
 }
-.secondSection p {
-    display: inline-block;
-    min-width: 250px;
-}
-.secondSection div p:first-of-type {
+.secondSection div div p:first-of-type {
     margin-bottom: 4px;
     font-weight: 500;
+    font-size: 1em;
 }
-.secondSection div p:last-of-type {
-    color: #717171;
+.secondSection div div p:last-of-type {
+    font-weight: 300;
     font-size: 0.875em;
-    font-weight: 400;
-    margin-left: 2.5em;
 }
 /*--------- Third Section --------*/
 .thirdSection img {
+    /*height: 26px;
+    width: auto;*/
     margin-bottom: 0.5em;
 }
 .thirdSection p {
     color: #484848;
-    font-size: 14px;
+    font-size: 0.875em;
     line-height: 18px;
     font-weight: 400;
     margin-bottom: 1em;
@@ -331,6 +349,15 @@ article ol li {
     margin-top: 1.5em;
 }
 /*--------- BonusSection Section --------*/
+.bonusSection {
+    position: relative;
+}
+.bonusSection img.img-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+}
 .bonusSection img.img-right {
     top: 1.5em;
 }
