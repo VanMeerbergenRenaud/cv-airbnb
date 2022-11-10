@@ -3,18 +3,6 @@ Nom Complet: 	Renaud Van Meerbergen
 ------------------------------------------- */
 /*LET'S GO*/
 /*-------------------------------------------- */
-/* Define the "system" font family */
-/*@font-face {
-    font-family: system-ui;
-    font-style: normal;
-    font-weight: 300;
-    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-}
-
-!* Now, let's apply it on an element *!
-body {
-    font-family: "system-ui";
-}*/
 html {
     scroll-behavior: smooth;
 }
@@ -24,7 +12,6 @@ body {
     font-weight: 300;
     line-height: 24px;
     color: #595959;
-    scroll-behavior: smooth;
 }
 main {
     padding: 1.5em;
@@ -80,8 +67,7 @@ a, a:visited {
     font-size: 0.875em;
     font-weight: 500;
     text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 0.01em solid #222222;
+    border-bottom: 1px solid #222222;
     color: #222222;
     outline: none;
     cursor: pointer;
@@ -230,28 +216,38 @@ article ol li {
     margin-bottom: 1em;
 }
 /*--------- Fourth Section --------*/
-.fourthSection div i {
-    color: #484848;
-    margin-right: 8px;
+.fourthSection, .fifthSection, .sixthSection, .seventhSection, .bonusSection {
+    padding-top: 2em;
 }
-.fourthSection div p {
-    padding-top: 1.5em;
+.fourthSection div.enfant {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 2em;
+}
+.fourthSection div.enfant p {
     color: #484848;
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
-    margin-left: 2.5em;
-    margin-top: -2.5em;
 }
-.fourthSection p.last {
-    padding: 1.5em 0;
+.fourthSection div.enfant div {
+    flex: 0 0 auto;
+    margin-right: 12px;
 }
 .fourthSection a.last, .seventhSection a.last, .com-card a.last {
     border-bottom: none;
     font-size: 1em;
     font-weight: 500;
 }
+.fourthSection div:last-of-type a {
+    margin-top: 1em;
+    display: block;
+}
 /*--------- Fifth Section --------*/
+.fifthSection h3 {
+    color: #222222;
+}
 .fifthSection img {
     border-radius: 0.5em;
     margin: 1.5em 0 1em;
@@ -263,22 +259,20 @@ article ol li {
     margin-top: 0.2em;
 }
 /*--------- Sixth Section --------*/
-.list-item {
-    margin: 1.5em 0;
+.sixthSection h3 {
+    margin-bottom: 1.5em;
+}
+.sixthSection .list-item li {
+    padding-bottom: 1em;
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
-.list-item li {
-    margin-bottom: 0.5em;
-}
-.list-item li span {
-    margin-left: 2em;
-}
-.list-item li span {
-    vertical-align: top;
+.sixthSection .list-item li i {
+    margin-right: 0.5em;
 }
 .big-btn {
     display: block;
+    margin-top: 1em;
     padding: 0.75em 1.5em;
     text-align: center;
     border-radius: 0.5em;
@@ -302,6 +296,12 @@ article ol li {
 .eighthSection a.last {
     margin-left: 1em;
 }
+.calendrier {
+    display: flex;
+    overflow: hidden;
+    width: 395px;
+    height: 380px;
+}
 /*--------- CommentaireSection Section --------*/
 .commentaireSection {
     padding-top: 2em;
@@ -323,9 +323,12 @@ article ol li {
     -webkit-overflow-scrolling: touch;
 }
 .commentaireSection .slider > div {
-    flex-shrink: 0;
     margin-right: 1em;
-    width: 250px;
+    max-width: 80%;
+    flex: 0 0 80%;
+}
+.commentaireSection .slider > div:last-of-type {
+    margin-right: 0;
 }
 .com-card {
     margin-top: 2em;
@@ -337,7 +340,7 @@ article ol li {
 .com-card img {
     border-radius: 50%;
     float: left;
-    margin-right: 12px;
+    margin-right: 0.875em;
 }
 .com-card p:first-of-type {
     margin-left: 52px;
@@ -349,34 +352,43 @@ article ol li {
     margin-top: 1.5em;
 }
 /*--------- BonusSection Section --------*/
-.bonusSection {
-    position: relative;
-}
-.bonusSection img.img-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
-}
-.bonusSection img.img-right {
-    top: 1.5em;
+.bonusSection div.enfant {
+    margin-bottom: 1.5em;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .bonusSection p.light {
-    margin-top: 0.5em;
-    margin-bottom: -5px;
+    padding-top: 0.5em;
 }
-.bonusSection p+ a {
-    padding-bottom: 0;
-    font-size: 0.75em;
+.bonusSection img {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+.bonusSection ul {
+    margin-bottom: 0.5em;
+}
+.bonusSection ul li {
+    margin-bottom: 1em;
+}
+.bonusSection ul li div {
+    display: flex;
+    align-items: center;
 }
 .bonusSection ul li i {
-    margin-right: 8px;
+    margin-right: 0.5em;
 }
-.bonusSection h4 {
-    margin-top: 0.5em;
+.bonusSection h4:first-of-type {
+    padding-top: 1.5em;
 }
 .bonusSection h4 + p {
     margin: 0.475em 0 1.5em;
+    font-weight: 300;
+}
+.bonusSection ul.liste-talent li {
+    margin-bottom: 0.5em;
 }
 .bonusSection a.big-btn {
     margin: 1.5em 0;
@@ -395,7 +407,9 @@ small {
 /*--------- ARTICLE 1 FIN --------*/
 /*--------- ARTICLE 2 --------*/
 .aPropos section {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .aPropos h3 {
     color: #222222;
@@ -403,12 +417,7 @@ small {
 .aPropos section p {
     margin-top: 0.5em;
 }
-.aPropos section a {
-    position: absolute;
-    right: 0.25em;
-    top: 2.5em;
-    padding: 0.35em 0.85em;
-    border: 1px solid #222222;
+.aPropos section svg {
     border-radius: 50%;
 }
 .concurrents {
