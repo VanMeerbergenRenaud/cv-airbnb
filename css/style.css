@@ -1,7 +1,7 @@
 /* -------------------------------------------
 Nom Complet: 	Renaud Van Meerbergen
 ------------------------------------------- */
-/*LET'S GO*/
+                /*LET'S GO*/
 /*-------------------------------------------- */
 html {
     scroll-behavior: smooth;
@@ -452,10 +452,78 @@ small {
 .aPropos section svg {
     border-radius: 50%;
 }
-.concurrents {
-
-}
 /*--------- ARTICLE 2 FIN --------*/
+/*--------- SIGNALER L'ANNONCE --------*/
+.signalement {
+    display: flex;
+    align-items: center;
+    padding-top: 1.5em;
+    border-top: 1px solid #bbbbbb;
+}
+.signalement svg {
+    margin-right: 1em;
+}
+.signalement a {
+    font-size: 1em;
+    line-height: 20px;
+}
+/*--------- CONCURRENTS --------*/
+.concurrents {
+    padding: 2em 1.5em;
+    border-top: 8px solid whitesmoke;
+    border-bottom: 1px solid #bbbbbb;
+}
+.concurrents h3 {
+    padding-bottom: 1em;
+}
+.concurrents ul {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1em;
+}
+.concurrents ul li {
+    padding: 0.5em;
+    width: 45%;
+    color: #717171;
+    font-size: 1em;
+    line-height: 24px;
+}
+.concurrents p {
+    margin-top: 2em;
+    color: rgb(72, 72, 72);
+}
+.concurrents p span {
+    display: inline-block;
+    font-weight: 300;
+}
+.concurrents p span svg {
+    margin: 0 0.5em;
+}
+/*--------- ASSISTANCE --------*/
+section.assistance {
+    padding: 0.5em 1.5em 2em;
+    background-color: whitesmoke;
+}
+.assistance h4 {
+    margin-top: 1.5em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+.assistance div {
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid rgb(221, 221, 221)
+}
+.assistance ul li {
+    margin-top: 0.75em;
+}
+.assistance ul li a {
+    text-decoration: none;
+    border-bottom: none;
+    font-weight: 300;
+}
+.assistance ul li a:hover {
+    border-bottom: 1px solid #222222;
+}
 /*--------- FOOTER --------*/
 .prendreReservation {
     position: fixed;
