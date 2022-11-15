@@ -11,6 +11,7 @@
         <!-- Feuilles de styles  -->
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/mediaquery.css">
         <link rel="stylesheet" href="css/calendar.css">
         <!--Micro-data HTML-->
         <meta name="author" content="Renaud Van Meerbergen">
@@ -41,14 +42,13 @@
                 </div>
             </div>
             <section class="mes_photos">
-                <img src="img/moi/1Fichier%20.JPG" alt="">
-                <img src="img/moi/2Fichier%20.jpg" alt="">
-                <img src="img/moi/3Fichier%20.PNG" alt="">
-                <img src="img/moi/4Fichier%20.JPG" alt="">
-                <img src="img/moi/5Fichier%20.JPG" alt="">
-                <img src="img/moi/6Fichier%20.JPG" alt="">
-                <img src="img/moi/7Fichier%20.JPG" alt="">
-
+                <img src="img/moi/1Fichier%20.JPG" alt="" class="Photo_first">
+                <img src="img/moi/2Fichier%20.jpg" alt="" class="Photo2">
+                <img src="img/moi/3Fichier%20.PNG" alt="" class="Photo3">
+                <img src="img/moi/4Fichier%20.JPG" alt="" class="Photo4">
+                <img src="img/moi/5Fichier%20.JPG" alt="" class="Photo5">
+                <img src="img/moi/6Fichier%20.JPG" alt="" class="Photo-next">
+                <img src="img/moi/7Fichier%20.JPG" alt="" class="Photo-next">
             </section>
         </header>
         <main>
@@ -334,12 +334,81 @@
                     </div>
                 </section>
             </article>
-            <section class="concurrents">
-
-            </section>
+            <div class="signalement">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 16px; width: 16px; fill: currentcolor;" aria-hidden="true"><path d="M28 6H17V4a2 2 0 0 0-2-2H3v28h2V18h10v2a2 2 0 0 0 2 2h11l.115-.006a1 1 0 0 0 .847-1.269L27.039 14l1.923-6.724A1 1 0 0 0 28 6z"></path></svg>
+                <a href="">Signaler cette annonce</a>
+            </div>
         </main>
         <footer>
-            <section class="prendreReservation">
+            <section class="concurrents">
+                <h3>Découvrez d'autres personnes que je fréquente ⋅ Mes amis & mes collègues</h3>
+                <ul>
+                    <li>Adrien</li>
+                    <li>Thomas</li>
+                    <li>Louis</li>
+                    <li>Jean-Chris</li>
+                    <li>Eloise</li>
+                    <li>Safouane</li>
+                    <li>Martin</li>
+                    <li>Alexandre</li>
+                    <li>Baptiste</li>
+                    <li>Jacques</li>
+                    <li>Mireille</li>
+                    <li>Emilie</li>
+                </ul>
+                <p>
+                    <span>Belgique&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 7px; width: 7px; display: inline-block; fill: currentcolor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                    <span>Wallonie&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 7px; width: 7px; display: inline-block; fill: currentcolor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                    <span>Liège&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 7px; width: 7px; display: inline-block; fill: currentcolor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                    <span>Neupré&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 7px; width: 7px; display: inline-block; fill: currentcolor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                    <span>Plainevaux&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 7px; width: 7px; display: inline-block; fill: currentcolor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                    <span>Chez moi&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 7px; width: 7px; display: inline-block; fill: currentcolor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                </p>
+            </section>
+            <section class="assistance">
+                <h3 class="hidden">Titre footer</h3>
+                <div>
+                    <h4>Mes services</h4>
+                    <ul>
+                        <li><a href="">Design de logo</a></li>
+                        <li><a href="">Design d'application mobile</a></li>
+                        <li><a href="">Référencement SEO</a></li>
+                        <li><a href="">Copywriting</a></li>
+                        <li><a href="">Animation javascript</a></li>
+                        <li><a href="">Scène 3D en CSS</a></li>
+                        <li><a href="">Gestion de base de données</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Liens de contact</h4>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Twitter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="https://www.w3schools.com">W3C</a></li>
+                        <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                        <li><a href="https://codepen.io">CodePen</a></li>
+                        <li><a href="https://developer.mozilla.org">Developer mozilla</a></li>
+                        <li><a href="https://www.alsacreations.com/">Alsa Création</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Bonus</h4>
+                    <ul>
+                        <li><a href="https://www.triomarkets.com">Ma plateforme de trading</a></li>
+                        <li><a href="https://ripple.com">Mon investissement all-in</a></li>
+                        <li><a href="http://www.modelsgeneration.com">Agence de mannequinat</a></li>
+                        <li><a href="img/programme-musculation.pdf">Programme de musculation</a></li>
+                        <li><a href="https://cantata.be/fr/products/kopi-luwak-1">Ma marque de café</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!--<section class="prendreReservation">
                 <h3 class="hidden">Réservation</h3>
                 <div>
                     <p>Ajoutez des dates pour voir le prix</p>
@@ -349,7 +418,7 @@
                     </small>
                 </div>
                 <a href="" class="btnReservation">Vérifier la disponibilité</a>
-            </section>
+            </section>-->
         </footer>
         <script src="js/calendar.js"></script>
         <script src="js/main.js"></script>
