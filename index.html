@@ -30,7 +30,7 @@
     <body>
         <header>
             <div class="header-intro">
-                <a><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4px; overflow: visible; margin-right: 8px; " aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
+                <a><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; fill: none; height: 16px; width: 16px; stroke: currentcolor; margin-top: 4px; stroke-width: 4px; overflow: visible; margin-right: 8px; " aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
                     Mon portfolio</a>
                 <div class="share">
                     <a>
@@ -199,8 +199,28 @@
                 <section class="eighthSection">
                     <h3>Mes dispositions du mois</h3>
                     <time datetime="" class="light">Dec 11, 2022 - Dec 16, 2022</time>
-                    <div class="calendrier">
-
+                    <div class="all">
+                        <div class="wrapper">
+                            <div class="header">
+                                <div class="icons">
+                                    <span id="previous"><svg viewBox="0 0 18 18" aria-hidden="true" style="height: 12px; width: 12px; display: inline-block; transform: rotateY(180deg); fill: currentColor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                                    <p class="current-date"></p>
+                                    <span id="next"><svg viewBox="0 0 18 18" aria-hidden="true" style="height: 12px; width: 12px; display: inline-block; fill: currentColor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                                </div>
+                            </div>
+                            <div class="calendar">
+                                <ul class="weeks">
+                                    <li>Dim.</li>
+                                    <li>Lun.</li>
+                                    <li>Mar.</li>
+                                    <li>Mer.</li>
+                                    <li>Jeu.</li>
+                                    <li>Ven.</li>
+                                    <li>Sam.</li>
+                                </ul>
+                                <ul class="days"></ul>
+                            </div>
+                        </div>
                     </div>
                     <a href="" class="last">Effacer les dates</a>
                 </section>
@@ -211,35 +231,38 @@
                     <span>13 commentaires</span>
                     <div class="slider">
                         <div class="com-card">
-                            <img src="img/me.jpeg" alt="" class="img-me">
-                            <p><strong>Jack</strong></p>
+                            <img src="img/testimonials/face-1.jpg" alt="" class="img-me">
+                            <p><strong>Safouane</strong></p>
                             <time datetime="">septembre 2022</time>
                             <p class="regular-font">
-                                Fantastic "secret cabin" - close to Birmingham but so private and secluded.
-                                Super comfy and very cosy, with all your home comforts + additional benefits
-                                such as...
+                                Travailler avec Renaud a été un plaisir. Mieux encore, je l'ai alerté d'un problème
+                                mineur avant de m'endormir. Le problème a été résolu le lendemain matin. Je ne pouvais
+                                pas demander un meilleur support. C'est facilement un freelancer 5 étoiles. Merci Renaud,
+                                tu gères !
                             </p>
                             <a href="" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 12px; width: 12px; display: inline-block; fill: currentColor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
                         </div>
                         <div class="com-card">
-                            <img src="img/me.jpeg" alt="" class="img-me">
-                            <p><strong>Georges</strong></p>
-                            <time datetime="">septembre 2022</time>
+                            <img src="img/testimonials/face-2.jpg" alt="" class="img-me">
+                            <p><strong>Amélie</strong></p>
+                            <time datetime="">octobre 2022</time>
                             <p class="regular-font">
-                                Fantastic "secret cabin" - close to Birmingham but so private and secluded.
-                                Super comfy and very cosy, with all your home comforts + additional benefits
-                                such as...
+                                Il me fallait absolument une affiche dans l'urgence pour mon article de blog en
+                                tant que journaliste et Renaud a directement répondu à ma demande tout en me
+                                faisant un travail de qualité. Mon article à fait la une des pages de magazines
+                                grâces à ses techniques sur la publicité.
                             </p>
                             <a href="" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 12px; width: 12px; display: inline-block; fill: currentColor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
                         </div>
                         <div class="com-card">
-                            <img src="img/me.jpeg" alt="" class="img-me">
-                            <p><strong>Curtis</strong></p>
-                            <time datetime="">septembre 2022</time>
+                            <img src="img/testimonials/face-3.jpg" alt="" class="img-me">
+                            <p><strong>Hugues</strong></p>
+                            <time datetime="">novembre 2022</time>
                             <p class="regular-font">
-                                Fantastic "secret cabin" - close to Birmingham but so private and secluded.
-                                Super comfy and very cosy, with all your home comforts + additional benefits
-                                such as...
+                                Professionnel dans le domaine du développement Web, j'ai tout de même décidé de
+                                payer un coaching avec Renaud afin de me perfectionner et je peux dire que ces
+                                techniques de référencement sont exceptionnelles. J'ai enfin pu réaliser un site
+                                en première ligne sur Google.
                             </p>
                             <a href="" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" aria-hidden="true" style="height: 12px; width: 12px; display: inline-block; fill: currentColor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
                         </div>
@@ -308,8 +331,8 @@
             <article class="aPropos">
                 <section>
                     <div>
-                        <h3>Règlement intérieur</h3>
-                        <p class="semi-bold">Arrivée : Après 15:00</p>
+                        <h3>Avantages du HTML</h3>
+                        <p class="semi-bold">Le principal avantage du HTML5 est sa simplicité.</p>
                     </div>
                     <div>
                         <svg viewBox="0 0 18 18" aria-hidden="true" style="height: 12px; width: 12px; display: inline-block; fill: currentColor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
@@ -317,8 +340,8 @@
                 </section>
                 <section>
                     <div>
-                        <h3>Règlement intérieur</h3>
-                        <p class="semi-bold">Arrivée : Après 15:00</p>
+                        <h3>Avantages du CSS</h3>
+                        <p class="semi-bold">Le principal avantage du CSS est que le style est appliqué de manière cohérente sur une variété de sites.</p>
                     </div>
                     <div>
                         <svg viewBox="0 0 18 18" aria-hidden="true" style="height: 12px; width: 12px; display: inline-block; fill: currentColor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
@@ -326,8 +349,8 @@
                 </section>
                 <section>
                     <div>
-                        <h3>Règlement intérieur</h3>
-                        <p class="semi-bold">Arrivée : Après 15:00</p>
+                        <h3>Avantages du javascript</h3>
+                        <p class="semi-bold">Le principal avantage du javascript est la possibilité d'utiliser le même langage pour le côté front-end et back-end.</p>
                     </div>
                     <div>
                         <svg viewBox="0 0 18 18" aria-hidden="true" style="height: 12px; width: 12px; display: inline-block; fill: currentColor;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
@@ -420,7 +443,7 @@
                 <a href="" class="btnReservation">Vérifier la disponibilité</a>
             </section>-->
         </footer>
-        <script src="js/calendar.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/calendar.js"></script>
     </body>
 </html>
