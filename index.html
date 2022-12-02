@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mediaquery.css">
-        <link rel="stylesheet" href="css/calendar.css">
         <!--Micro-data HTML-->
         <meta name="author" content="Renaud Van Meerbergen">
         <meta name="title" content="Renaud Van Meerbergen - Mon premier CV">
@@ -28,6 +27,17 @@
         <meta property="og:description" content="">
     </head>
     <body>
+        <!--[if IE]>
+        <p class="browserupgrade">Vous utilisez un navigateur <strong> obsolète </strong>. Veuillez <a
+                href="https://browsehappy.com/"> mettre à niveau
+            votre navigateur </a> pour améliorer votre expérience et votre sécurité.
+        </p>
+        <![endif]-->
+        <p class="no-js__message">
+            Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.
+            Voici les <a href="https://www.enable-javascript.com/fr/">
+            instructions pour activer JavaScript dans votre navigateur Web</a>.
+        </p>
         <header>
             <div class="header-intro">
                 <a><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; fill: none; height: 16px; width: 16px; stroke: currentcolor; margin-top: 4px; stroke-width: 4px; overflow: visible; margin-right: 8px; " aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
@@ -42,13 +52,13 @@
                 </div>
             </div>
             <section class="mes_photos">
-                <img src="img/moi/1Fichier%20.JPG" alt="" class="Photo_first">
-                <img src="img/moi/2Fichier%20.jpg" alt="" class="Photo2">
-                <img src="img/moi/3Fichier%20.PNG" alt="" class="Photo3">
-                <img src="img/moi/4Fichier%20.JPG" alt="" class="Photo4">
-                <img src="img/moi/5Fichier%20.JPG" alt="" class="Photo5">
-                <img src="img/moi/6Fichier%20.JPG" alt="" class="Photo-next">
-                <img src="img/moi/7Fichier%20.JPG" alt="" class="Photo-next">
+                <img src="img/moi/7Fichier%20.JPG" alt="" class="photo_first">
+                <img src="img/moi/2Fichier%20.jpg" alt="" class="photo2">
+                <img src="img/moi/3Fichier%20.PNG" alt="" class="photo3">
+                <img src="img/moi/4Fichier%20.JPG" alt="" class="photo4">
+                <img src="img/moi/5Fichier%20.JPG" alt="" class="photo5">
+                <img src="img/moi/6Fichier%20.JPG" alt="" class="photo-next">
+                <img src="img/moi/7Fichier%20.JPG" alt="" class="photo-next">
             </section>
         </header>
         <main>
@@ -186,8 +196,7 @@
                 </section>
                 <section class="seventhSection">
                     <h3>Où est ce que j'habite</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2535.629287583582!2d5.502713715641957!3d50.54106638871243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0562e662bdd51%3A0xe4e8f32f48092024!2sRue%20du%20Petit%20Bioleux%2018%2C%204122%20Neupr%C3%A9!5e0!3m2!1sfr!2sbe!4v1664377458233!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <img src="img/logement.png" alt="" height="218" loading="lazy">
                     <p>
                         <strong>Rue Petit Bioleux,Neupré,Liège,Belgique</strong>
                     </p>
@@ -198,7 +207,7 @@
                 </section>
                 <section class="eighthSection">
                     <h3>Mes dispositions du mois</h3>
-                    <time datetime="" class="light">Dec 11, 2022 - Dec 16, 2022</time>
+                    <time datetime="" class="light">18 juin, 2023 - 24 août, 2023</time>
                     <div class="all">
                         <div class="wrapper">
                             <div class="header">
@@ -270,65 +279,70 @@
                     <a href="" class="big-btn">Afficher les 24 compétences</a>
                 </section>
                 <section class="bonusSection">
-                    <div class="enfant">
-                        <div>
-                            <h3>Bonus à mon propos</h3>
-                            <p class="light">Mes divers passions</p>
-                            <a href="">Preuves à l'appui</a>
+                    <div class="respons">
+                        <div class="enfant">
+                            <div>
+                                <h3>Bonus à mon propos</h3>
+                                <p class="light">Mes divers passions</p>
+                                <a href="">Preuves à l'appui</a>
+                            </div>
+                            <img src="img/me.jpeg" alt="" class="img-right img-me">
                         </div>
-                        <img src="img/me.jpeg" alt="" class="img-right img-me">
+                        <ul class="list-item">
+                            <li class="regular-font">
+                                <div>
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    Musculation (4 fois semaine)
+                                </div>
+                            </li>
+                            <li class="regular-font">
+                                <div>
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    Trading (forex & cryptomonnaie)
+                                </div>
+                            </li>
+                            <li class="regular-font">
+                                <div>
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    Mannequinat (défilés)
+                                </div>
+                            </li>
+                            <li class="regular-font">
+                                <div>
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    J'aime le café
+                                </div>
+                            </li>
+                        </ul>
+                        <h4>Pendant ma journée</h4>
+                        <p class="regular-font">
+                            Rien de bien fatiguant, j'écris du <code>code</code>, j'apprends de nouvelles techniques à propos de
+                            divers languages et je fais du sport.
+                        </p>
+                        <h4>Pendant les cours</h4>
+                        <p class="regular-font">
+                            Je suis quelqu'un de plutôt concentrer en cours, mais j'aime aussi parler avec mes camarades.
+                            Je pose toujours des questions (les plus pertinentes possibles) et je respecte mon professeur.
+                        </p>
                     </div>
-                    <ul class="list-item">
-                        <li class="regular-font">
-                            <div>
-                                <i class="fa-regular fa-thumbs-up"></i>
-                                Musculation (4 fois semaine)
-                            </div>
-                        </li>
-                        <li class="regular-font">
-                            <div>
-                                <i class="fa-regular fa-thumbs-up"></i>
-                                Trading (forex & cryptomonnaie)
-                            </div>
-                        </li>
-                        <li class="regular-font">
-                            <div>
-                                <i class="fa-regular fa-thumbs-up"></i>
-                                Mannequinat (défilés)
-                            </div>
-                        </li>
-                        <li class="regular-font">
-                            <div>
-                                <i class="fa-regular fa-thumbs-up"></i>
-                                J'aime le café
-                            </div>
-                        </li>
-                    </ul>
-                    <h4>Pendant ma journée</h4>
-                    <p class="regular-font">
-                        Rien de bien fatiguant, j'écris du <code>code</code>, j'apprends de nouvelles techniques à propos de
-                        divers languages et je fais du sport.
-                    </p>
-                    <h4>Pendant les cours</h4>
-                    <p class="regular-font">
-                        Je suis quelqu'un de plutôt concentrer en cours, mais j'aime aussi parler avec mes camarades.
-                        Je pose toujours des questions (les plus pertinentes possibles) et je respecte mon professeur.
-                    </p>
-                    <ul class="liste-talent">
-                        <li class="regular-font">Langues: Français, Anglais</li>
-                        <li class="regular-font">Taux de réponse : 100%</li>
-                        <li class="regular-font">Délai de réponse : Moins d'une heure</li>
-                    </ul>
-                    <a href="" class="big-btn">Me contacter</a>
-                    <div class="advertising">
-                        <small>
-                            Si vous voulez m'envoyer un autocollant, un tshirt (personnalisé ou volé), une sauce piquante ou une honda civic, contactez-moi.
-                        </small>
-                        <i class="fa fa-shield-halved"></i>
+                    <div class="respons">
+                        <ul class="liste-talent">
+                            <li class="regular-font">Langues: Français, Anglais</li>
+                            <li class="regular-font">Taux de réponse : 100%</li>
+                            <li class="regular-font">Délai de réponse : Moins d'une heure</li>
+                        </ul>
+                        <a href="" class="big-btn">Me contacter</a>
+                        <div class="advertising">
+                            <small>
+                                Si vous voulez m'envoyer un autocollant, un tshirt (personnalisé ou volé), une sauce piquante ou une honda civic, contactez-moi.
+                            </small>
+                            <i class="fa fa-shield-halved"></i>
+                        </div>
                     </div>
                 </section>
             </article>
             <article class="aPropos">
+                <h3 class="hidden">A propos</h3>
                 <section>
                     <div>
                         <h3>Avantages du HTML</h3>
