@@ -3,30 +3,75 @@ Nom Complet: 	Renaud Van Meerbergen
 ------------------------------------------- */
             /*MEDIA-QUERIES*/
 /*-------------------------------------------- */
-
+@media screen and (min-width: 375px) {
+    section.mes_photos {
+        max-height: 55vh;
+    }
+}
+@media screen and (min-width: 425px) {
+    section.mes_photos {
+        max-height: 75vh;
+    }
+}
 @media screen and (min-width: 750px) {
     section.mes_photos {
         overflow: auto;
-        max-height: calc(-64px + 60vh);
         padding: 1.5em 2.2em;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         gap: 8px 8px;
-        grid-auto-flow: column;
-        grid-template-areas:
-    "Photo1 Photo1 Photo2 Photo3"
-    "Photo1 Photo1 Photo4 Photo5";
+        grid-auto-flow: column dense;
+        /*grid-template-areas: "Photo1 Photo1 Photo2 Photo3"
+                             "Photo1 Photo1 Photo4 Photo5";*/
+        grid-template-areas: ". .";
     }
-    .Photo_first {grid-area: Photo1; border-radius: 12px 0 0 12px;}
+    .photo_first {
+        grid-row: span 2;
+        grid-column: span 2;
+        border-radius: 12px 0 0 12px;
+    }
+    .photo4 {border-radius: 0 12px 0 0;}
+    .photo5 {border-radius: 0 0 12px 0;}
+    /*.Photo_first {grid-area: Photo1; border-radius: 12px 0 0 12px;}
     .Photo2 { grid-area: Photo2;}
     .Photo3 {grid-area: Photo3;border-radius: 0 12px 0 0;}
     .Photo4 { grid-area: Photo4;}
-    .Photo5 {grid-area: Photo5;border-radius: 0 0 12px 0;}
+    .Photo5 {grid-area: Photo5;border-radius: 0 0 12px 0;}*/
     section.mes_photos img {
         height: 100%;
     }
-    section.mes_photos img.Photo-next {
+    section.mes_photos img.photo-next {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1125px) {
+    main {
+        padding: 1.5em 5em;
+    }
+    .fourthSection, .fifthSection, .sixthSection, .seventhSection, .bonusSection {
+        padding-top: 3em;
+    }
+    .bonusSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bonusSection div.repons {
+        align-items: center;
+    }
+    section.concurrents, section.assistance {
+        padding: 3em 5em;
+    }
+    .aPropos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .assistance, .concurrents ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .concurrents ul li {
+        padding-left: 0;
     }
 }
