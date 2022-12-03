@@ -660,21 +660,24 @@ a.btnReservation {
     position: fixed;
     inset: 0;
     margin-top: 1em;
-    padding: 0 1.5em 2em;
+    padding: 1em 1.5em 2em;
     z-index: 100;
-    background-color: #fafafa;
-    border-radius: 12px 12px 0 0;
+    background-color: #fcfcfc;
+    border-radius: 1em 1em 0 0;
     max-height: 100%;
     overflow: auto;
 }
 .is-opened svg {
     position: relative;
-    left: -1.2em;
-    padding: 1.5em 1.2em;
+    left: -0.5em;
+    padding: 0.5em;
     border-radius: 50%;
 }
+.is-opened svg:hover {
+    background-color: whitesmoke;
+}
 .is-opened img.airCover {
-    margin-bottom: 1em;
+    margin: 1em 0 0.5em;
     width: 35%;
 }
 .is-opened h3:first-of-type {
