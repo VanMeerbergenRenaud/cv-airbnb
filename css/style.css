@@ -8,6 +8,7 @@ html {
 }
 body {
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+    background-color: white;
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
@@ -137,6 +138,7 @@ section.mes_photos {
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    /*scroll-snap-type: x mandatory;*/
     max-height: 37.5vh;
 }
 .mes_photos img {
@@ -650,3 +652,48 @@ a.btnReservation {
     text-align: center;
 }
 /*--------- FOOTER FIN --------*/
+/*--------- Effet Au clic --------*/
+#answer {
+    display: none;
+}
+.is-opened {
+    position: fixed;
+    inset: 0;
+    margin-top: 1em;
+    padding: 0 1.5em 2em;
+    z-index: 100;
+    background-color: #fafafa;
+    border-radius: 12px 12px 0 0;
+    max-height: 100%;
+    overflow: auto;
+}
+.is-opened svg {
+    position: relative;
+    left: -1.2em;
+    padding: 1.5em 1.2em;
+    border-radius: 50%;
+}
+.is-opened img.airCover {
+    margin-bottom: 1em;
+    width: 35%;
+}
+.is-opened h3:first-of-type {
+    padding-top: 1.5em;
+    border-top: 1px solid #bbbbbb;
+}
+.is-opened p:first-of-type, .is-opened h3, .is-opened p:last-of-type {
+    color: #222222;
+    font-size: 1em;
+    line-height: 20px;
+    margin: 0 0 0.5em;
+}
+.is-opened p {
+    color: #717171;
+    font-size: 1em;
+    line-height: 24px;
+    margin-bottom: 1.5em;
+    padding: 0;
+}
+.is-opened p:first-of-type {
+    margin-bottom: 1.5em;
+}
