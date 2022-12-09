@@ -8,43 +8,39 @@ html {
 }
 body {
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+    -moz-osx-font-smoothing: grayscale;
     background-color: white;
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
-    color: #595959;
+    color: #222222;
 }
 main {
     padding: 1.5em;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: #222222;
+    font-weight: 600;
 }
 h1 {
     font-size: 1.625em;
-    font-weight: 600;
     line-height: 30px;
 }
 h2 {
     font-size: 1.5em;
-    font-weight: 600;
     line-height: 28px;
 }
 h3 {
     color: #484848;
     font-size: 1.375em;
-    font-weight: 500;
     line-height: 26px;
 }
 h4 {
     font-size: 1em;
-    font-weight: 500;
     line-height: 20px;
 }
 p, span {
-    color: #222222;
     font-size: 0.875em;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 20px;
 }
 img {
@@ -57,20 +53,20 @@ img {
 }
 ul, ol {
     padding: 0;
-    color: #484848;
 }
 li {
     list-style-type: none;
     font-size: 0.94em;
 }
 a, a:visited {
+    color: #000;
     font-size: 0.875em;
-    font-weight: 500;
-    text-decoration: none;
-    border-bottom: 1px solid #222222;
-    color: #222222;
+    font-weight: 600;
     outline: none;
     cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid #222222;
+    transition: 0.3s ease-in-out;
 }
 .hidden:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
@@ -87,23 +83,6 @@ code {
     font-family: courier, monospace;
     padding: 0 3px;
 }
-.light {
-    font-size: 0.94em;
-    line-height: 20px;
-    font-weight: 300;
-}
-.regular-font {
-    color:  #222222;
-    font-size: 1em;
-    font-weight: 350;
-    line-height: 24px;
-}
-.semi-bold {
-    color: #717171;
-    font-size: 0.875em;
-    font-weight: 400;
-    line-height: 24px;
-}
 .fa, .fas, .fa-regular {
     color: #222222;
 }
@@ -113,7 +92,7 @@ header {
 
 }
 header div.header-intro {
-    border-bottom: 1px solid rgb(235, 235, 235);
+    border-bottom: 1px solid rgb(221, 221, 221);
 }
 header div:first-of-type {
     background: white;
@@ -136,15 +115,18 @@ header div.share a {
 /*--------- SECTION MES PHOTOS --------*/
 section.mes_photos {
     display: flex;
-    overflow-x: auto;
+    height: calc(100vw * 8 / 12);
+    /*Solution du height adaptée (au format) depuis la source: https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css*/
+    overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
-    /*scroll-snap-type: x mandatory;*/
-    max-height: 37.5vh;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
 }
 .mes_photos img {
     flex: 0 0 100%;
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
+    scroll-snap-align: start;
 }
 /*--------- SECTION INTRO --------*/
 .intro-resume {
@@ -152,10 +134,6 @@ section.mes_photos {
     margin-top: 8px;
 }
 .nice {
-    color: rgb(34, 34, 34);
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 20px;
     display: flex;
     padding: 1.5em 0;
     border-top: 1px solid rgb(221, 221, 221);
@@ -164,29 +142,17 @@ section.mes_photos {
     margin-right: 8px;
 }
 .nice div:first-of-type h2 {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
     line-height: 20px;
     margin-bottom: 0;
     margin-right: 8px;
     display: inline;
 }
-.nice div:last-of-type {
-    background-size: 32px;
-    background-color: rgb(255, 255, 255);
-    background-position: left top;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    display: inline-block;
-    flex-shrink: 0;
-    font-weight: 300;
-    height: 32px;
-    width: 32px;
-}
 /*--------- ARTICLE 1 --------*/
 article section {
     padding: 1.5em 0;
-    border-top: 1px solid #bbb;
+    border-top: 1px solid rgb(221, 221, 221);
 }
 /*--------- First Section --------*/
 .firstPresentation {
@@ -197,54 +163,46 @@ article section {
 }
 .firstPresentation h3 span {
     display: block;
-    font-weight: 500;
     font-size: 22px;
     line-height: 26px;
     margin-bottom: 4px;
 }
 .firstPresentation img {
-    margin-left: 16px;
-    margin-bottom: 16px;
+    margin-left: 1em;
+    margin-bottom: 1em;
     border-radius: 50%;
     height: 48px;
     width: 48px;
 }
 article ol li {
     display: inline-block;
-    font-weight: 300;
+    font-weight: 400;
 }
 /*--------- Second Section --------*/
 .secondSection {
-    padding: 2em 0;
+    padding: 2em 0 0;
 }
 .secondSection div.enfant {
     display: flex;
     margin-bottom: 1.5em;
 }
 .secondSection div div.icon {
-    display: block;
-    flex-shrink: 0;
-    min-width: 24px;
     margin-right: 1em;
 }
 .secondSection div div p:first-of-type {
     margin-bottom: 4px;
-    font-weight: 500;
     font-size: 1em;
 }
 .secondSection div div p:last-of-type {
-    font-weight: 300;
-    font-size: 0.875em;
+    font-weight: 400;
+    color: #717171;
 }
 /*--------- Third Section --------*/
 .thirdSection img {
-    /*height: 26px;
-    width: auto;*/
+    width: 125px;
     margin-bottom: 0.5em;
 }
 .thirdSection p {
-    color: #484848;
-    font-size: 0.875em;
     line-height: 18px;
     font-weight: 400;
     margin-bottom: 1em;
@@ -255,8 +213,6 @@ article ol li {
 }
 .fourthSection div.enfant {
     display: flex;
-    overflow: hidden;
-    position: relative;
     padding-bottom: 2em;
 }
 .fourthSection div.enfant p {
@@ -265,8 +221,12 @@ article ol li {
     line-height: 18px;
     font-weight: 400;
 }
+.fourthSection p.last {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+}
 .fourthSection div.enfant div {
-    flex: 0 0 auto;
     margin-right: 12px;
 }
 .fourthSection a.last, .seventhSection a.last, .com-card a.last {
@@ -279,9 +239,6 @@ article ol li {
     display: block;
 }
 /*--------- Fifth Section --------*/
-.fifthSection h3 {
-    color: #222222;
-}
 .fifthSection img {
     border-radius: 0.5em;
     margin: 1.5em 0 1em;
@@ -291,10 +248,11 @@ article ol li {
 }
 .fifthSection p:last-of-type {
     margin-top: 0.2em;
+    font-weight: 300;
 }
 /*--------- Sixth Section --------*/
 .sixthSection h3 {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.1em;
 }
 .sixthSection .list-item li {
     padding-bottom: 1em;
@@ -303,6 +261,10 @@ article ol li {
 }
 .sixthSection .list-item li i {
     margin-right: 0.5em;
+}
+.sixthSection .list-item li span {
+    font-size: 1em;
+    font-weight: 400;
 }
 .big-btn {
     display: block;
@@ -439,8 +401,7 @@ article ol li {
 }
 .commentaireSection span {
     font-size: 1.35em;
-    line-height: 29px;
-    font-weight: 500;
+    line-height: 26px;
     margin-left: 4px;
 }
 .commentaireSection .slider {
@@ -458,7 +419,7 @@ article ol li {
 }
 .com-card {
     margin-top: 2em;
-    border: 1px solid #DDD;
+    border: 1px solid rgb(221, 221, 221);
     position: relative;
     border-radius: 12px;
     padding: 1em;
@@ -472,6 +433,9 @@ article ol li {
     margin-left: 52px;
 }
 .com-card p:last-of-type {
+    font-size: 16px;
+    font-weight: 350;
+    line-height: 24px;
     margin: 0.75em 0 0.5em;
     max-height: 100px;
     text-overflow: Ellipsis; /* will make [...] at the end */
@@ -486,7 +450,6 @@ article ol li {
     margin-bottom: 1.5em;
     align-items: center;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 .bonusSection p.light {
@@ -556,7 +519,7 @@ small {
     display: flex;
     align-items: center;
     padding-top: 1.5em;
-    border-top: 1px solid #bbbbbb;
+    border-top: 1px solid rgb(221, 221, 221);
 }
 .signalement svg {
     margin-right: 1em;
@@ -569,7 +532,7 @@ small {
 .concurrents {
     padding: 2em 1.5em;
     border-top: 8px solid whitesmoke;
-    border-bottom: 1px solid #bbbbbb;
+    border-bottom: 1px solid rgb(221, 221, 221);
     background-color: whitesmoke;
 }
 .concurrents h3 {
@@ -633,7 +596,7 @@ section.assistance {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid #bbbbbb;
+    border-top: 1px solid rgb(221, 221, 221);
 }
 .prendreReservation p {
     font-size: 1.125em;
@@ -653,7 +616,7 @@ a.btnReservation {
 }
 /*--------- FOOTER FIN --------*/
 /*--------- Effet Au clic --------*/
-#answer {
+.action {
     display: none;
 }
 .is-opened {
@@ -678,11 +641,11 @@ a.btnReservation {
 }
 .is-opened img.airCover {
     margin: 1em 0 0.5em;
-    width: 35%;
+    width: 120px;
 }
 .is-opened h3:first-of-type {
     padding-top: 1.5em;
-    border-top: 1px solid #bbbbbb;
+    border-top: 1px solid rgb(221, 221, 221);
 }
 .is-opened p:first-of-type, .is-opened h3, .is-opened p:last-of-type {
     color: #222222;
@@ -699,4 +662,24 @@ a.btnReservation {
 }
 .is-opened p:first-of-type {
     margin-bottom: 1.5em;
+}
+
+.full {
+    margin-top: 0;
+    border-radius: 0;
+}
+.full h2:first-of-type {
+    margin: 0.9em 0 1.35em;
+}
+.full h3:first-of-type, .full h3:last-of-type  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: 600;
+}
+.full p:first-of-type, .full p, .full p:last-of-type {
+    color: #222;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 24px;
 }

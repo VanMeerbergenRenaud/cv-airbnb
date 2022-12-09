@@ -3,46 +3,35 @@ Nom Complet: 	Renaud Van Meerbergen
 ------------------------------------------- */
             /*MEDIA-QUERIES*/
 /*-------------------------------------------- */
-@media screen and (min-width: 375px) {
-    section.mes_photos {
-        max-height: 55vh;
-    }
-}
-@media screen and (min-width: 425px) {
-    section.mes_photos {
-        max-height: 75vh;
-    }
-}
 @media screen and (min-width: 750px) {
     section.mes_photos {
+        height: calc(50vw * 8 / 12);
         overflow: auto;
-        padding: 1.5em 2.2em;
+        margin: 1.5em 2.2em;
+        border-radius: 12px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr); /*ou alors 2fr and repeat (2, 1fr)*/
         grid-template-rows: repeat(2, 1fr);
         gap: 8px 8px;
         grid-auto-flow: column dense;
-        /*grid-template-areas: "Photo1 Photo1 Photo2 Photo3"
-                             "Photo1 Photo1 Photo4 Photo5";*/
         grid-template-areas: ". .";
+        /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) à tester au clic*/
     }
     .photo_first {
         grid-row: span 2;
         grid-column: span 2;
-        border-radius: 12px 0 0 12px;
     }
-    .photo4 {border-radius: 0 12px 0 0;}
-    .photo5 {border-radius: 0 0 12px 0;}
-    /*.Photo_first {grid-area: Photo1; border-radius: 12px 0 0 12px;}
-    .Photo2 { grid-area: Photo2;}
-    .Photo3 {grid-area: Photo3;border-radius: 0 12px 0 0;}
-    .Photo4 { grid-area: Photo4;}
-    .Photo5 {grid-area: Photo5;border-radius: 0 0 12px 0;}*/
     section.mes_photos img {
         height: 100%;
     }
     section.mes_photos img.photo-next {
         display: none;
+    }
+    /*En savoir plus 1.*/
+    .is-opened {
+        margin: 2.5em;
+        padding: 2.5em;
+        border-radius: 1em;
     }
 }
 
@@ -56,9 +45,10 @@ Nom Complet: 	Renaud Van Meerbergen
     .bonusSection {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5em;
     }
-    .bonusSection div.repons {
-        align-items: center;
+    .bonusSection .respons {
+        place-self: center;
     }
     section.concurrents, section.assistance {
         padding: 3em 5em;
