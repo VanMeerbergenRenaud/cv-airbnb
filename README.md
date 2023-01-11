@@ -6,9 +6,11 @@ Ce projet a pour but de créer une copie du site Internet d'Airbnb en utilisant 
 Le site répliqué inclura les 15 sections suivantes :
 
 **HEADER**
+
 1. Section de photos et d'un en-tête
 
 **MAIN**
+
 2. Section sur la perle rare que je suis
 3. Section de qualités et défauts
 4. Section de certaines caractéristiques
@@ -23,6 +25,7 @@ Le site répliqué inclura les 15 sections suivantes :
 13. Section d'apprentissage des languages HTML, CSS, Javascript`
 
 **FOOTER**
+
 13. Section sur mes amis et collègues
 14. Section de divers liens
 
