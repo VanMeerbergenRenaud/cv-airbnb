@@ -41,7 +41,7 @@
         </p>
         <header itemscope itemtype="http://schema.org/CV">
             <h1 class="hidden">CV de Renaud Van Meerbergen</h1>
-            <div class="header-intro" itemprop="personalInformation" itemscope itemtype="http://schema.org/Person">
+            <div class="header-intro" itemprop="personalInformation">
                 <a href="#" itemprop="name">
                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; margin-top: 3px; stroke-width: 4px; overflow: visible; margin-right: 8px;" aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
                     CV de  Renaud Van Meerbergen</a>
@@ -65,9 +65,9 @@
                 <img src="img/moi/7Fichier%20.JPG" alt="portrait de moi au cours de mannequinat" class="photo-next" itemprop="photo">
             </section>
         </header>
-        <main>
+        <main itemscope itemtype="http://schema.org/Person">
             <h1 itemprop="name">Je m’appelle Renaud Van Meerbergen</h1>
-            <section itemscope itemtype="http://schema.org/Person">
+            <section>
                 <h2 class="hidden">Présentation de ma personne</h2>
                 <div class="intro-resume">
                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="width: 12px; height: 12px"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>
@@ -90,7 +90,7 @@
                     <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="height: 32px; width: 32px; fill: rgb(227, 28, 95); stroke: currentcolor;"><g stroke="none"><path d="m32.62 6 9.526 11.114-18.146 23.921-18.147-23.921 9.526-11.114z" fill-opacity=".2"></path><path d="m34.4599349 2 12.8243129 14.9616983-23.2842478 30.6928721-23.28424779-30.6928721 12.82431289-14.9616983zm-17.9171827 16h-12.52799999l18.25899999 24.069zm27.441 0h-12.528l-5.73 24.069zm-14.583 0h-10.802l5.4012478 22.684zm-15.92-12.86-9.30799999 10.86h11.89399999zm19.253-1.141h-17.468l2.857 12.001h11.754zm1.784 1.141-2.586 10.86h11.894z"></path></g></svg>
                 </div>
             </div>
-            <article itemscope itemtype="http://schema.org/Person">
+            <article>
                 <h2 class="hidden">Résumé professionnel</h2>
                 <section>
                     <h2 class="hidden">Présentation générale</h2>
@@ -188,9 +188,8 @@
                         </div>
                     </div>
                 </section>
-                <section class="fourthSection" itemscope itemtype="http://schema.org/Person">
+                <section class="fourthSection">
                     <h3 class="hidden">À propos de moi</h3>
-                    <meta itemprop="name" content="Renaud Van Meerbergen">
                     <div class="enfant">
                         <div>
                             <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M9 0a1 1 0 0 1 .993.883L10 1v5h5a1 1 0 0 1 .993.883L16 7v8a1 1 0 0 1-.883.993L15 16H7a1 1 0 0 1-.993-.883L6 15v-5H1a1 1 0 0 1-.993-.883L0 9V1A1 1 0 0 1 .883.007L1 0h8zm1.729 7l-1.393.495.233.217.13.132c.125.127.227.245.308.352l.073.103.048.073.045.077H7.308v1.309h1.207l.166.52.09.266.112.29a6.294 6.294 0 0 0 1.109 1.789c-.495.315-1.119.607-1.87.87l-.331.112-.346.108-.445.134L7.72 15l.407-.125.386-.128c1.007-.349 1.836-.752 2.486-1.214.57.405 1.277.764 2.12 1.08l.369.134.386.128.406.125.72-1.153-.445-.134-.26-.08-.345-.115c-.783-.27-1.43-.57-1.94-.895a6.3 6.3 0 0 0 1.068-1.694l.128-.32.114-.33.165-.521h1.208V8.449H11.64l-.093-.231a3.696 3.696 0 0 0-.554-.917l-.126-.149-.14-.152zm1.35 2.758l-.042.133-.076.224-.103.264A4.985 4.985 0 0 1 11 11.76a4.952 4.952 0 0 1-.743-1.127l-.115-.254-.103-.264-.076-.224-.042-.133h2.158zM9 1H1v8h5V7c0-.057.005-.113.014-.167H3.827L3.425 8H2l2.257-6h1.486l1.504 4H9V1zM5 3.411L4.253 5.6h1.502L5 3.411z"></path></svg>
@@ -212,7 +211,6 @@
                                 <div>
                                     <svg id="retour2" viewBox="0 0 18 18" style="rotate: 180deg"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
                                 </div>
-                                <span itemprop="name" style="display:none">Renaud Van Meerbergen</span>
                                 <h2>À propos de moi</h2>
                                 <p>
                                     Je suis un développeur web en apprentissage, spécialisé dans le développement front-end.
@@ -235,16 +233,16 @@
                         </div>
                     </div>
                 </section>
-                <section class="fifthSection" itemscope itemtype="http://schema.org/Place">
-                    <h3 itemprop="name">Où je dors actuellement</h3>
-                    <img src="img/chambre.jpeg" alt="photo de ma chambre et de mon lit" width="721" height="480" itemprop="photo">
-                    <p itemprop="description">Espace de vie</p>
+                <section class="fifthSection">
+                    <h3>Où je dors actuellement</h3>
+                    <img src="img/chambre.jpeg" alt="photo de ma chambre et de mon lit" width="721" height="480">
+                    <p>Espace de vie</p>
                     <p>
                         1 lit de type<span itemprop="bed" itemscope itemtype="http://schema.org/BedDetails">&nbsp;:&nbsp;<span itemprop="bedType">King Size</span></span>
                     </p>
                 </section>
-                <section class="sixthSection" itemscope itemtype="http://schema.org/Person">
-                    <h3 itemprop="name">Les languages que j’utilise</h3>
+                <section class="sixthSection">
+                    <h3>Les languages que j’utilise</h3>
                     <ul class="list-item">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 24px; width: 24px;"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg><span itemprop="skills">HTML 5</span>
@@ -360,7 +358,7 @@
                     <a href="#" class="big-btn">Afficher les 24 compétences</a>
                 </section>
                 <section class="bonusSection">
-                    <div class="respons" itemscope itemtype="http://schema.org/Person">
+                    <div class="respons">
                         <div class="enfant">
                             <div>
                                 <h3>Bonus à mon propos</h3>
@@ -406,11 +404,10 @@
                             Je pose le plus souvent possibles des questions pertinentes et j’accorde une grande importance au respect envers mes enseignants.
                         </p>
                     </div>
-                    <div class="respons" itemscope itemtype="http://schema.org/Person">
+                    <div class="respons">
                         <ul class="liste-talent">
-                            <li itemprop="jobTitle" style="display: none">Développeur web</li>
                             <li><span itemprop="language">Langues</span>: <span itemprop="spokenLanguage">Français</span>, <span itemprop="spokenLanguage">Anglais</span></li>
-                            <li><span itemprop="responseRate">Taux de réponse</span> : <span itemprop="responseTime">100%</span></li>
+                            <li><span itemprop="responseRate">Taux de réponse</span> : <span>100%</span></li>
                             <li><span itemprop="responseTime">Délai de réponse</span> : <span itemprop="responseTime">Moins d’une heure</span></li>
                         </ul>
                         <a href="#" class="big-btn" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
@@ -524,7 +521,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 itemprop="name">Ressources</h4>
+                    <h4>Ressources</h4>
                     <ul>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a itemprop="item" href="https://www.w3schools.com">
@@ -553,8 +550,8 @@
                         </li>
                     </ul>
                 </div>
-                <div itemscope itemtype="http://schema.org/WebPageElement">
-                    <h4 itemprop="name">Bonus</h4>
+                <div>
+                    <h4>Bonus</h4>
                     <ul>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a itemprop="item" href="https://www.triomarkets.com">
