@@ -43,7 +43,7 @@
             <h1 class="hidden">CV de Renaud Van Meerbergen</h1>
             <div class="header-intro" itemprop="personalInformation" itemscope itemtype="http://schema.org/Person">
                 <a href="#" itemprop="name">
-                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; margin-top: 4px; stroke-width: 4px; overflow: visible; margin-right: 8px;" aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; margin-top: 3px; stroke-width: 4px; overflow: visible; margin-right: 8px;" aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
                     CV de  Renaud Van Meerbergen</a>
                 <div class="share">
                     <a href="#">
@@ -90,58 +90,56 @@
                     <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="height: 32px; width: 32px; fill: rgb(227, 28, 95); stroke: currentcolor;"><g stroke="none"><path d="m32.62 6 9.526 11.114-18.146 23.921-18.147-23.921 9.526-11.114z" fill-opacity=".2"></path><path d="m34.4599349 2 12.8243129 14.9616983-23.2842478 30.6928721-23.28424779-30.6928721 12.82431289-14.9616983zm-17.9171827 16h-12.52799999l18.25899999 24.069zm27.441 0h-12.528l-5.73 24.069zm-14.583 0h-10.802l5.4012478 22.684zm-15.92-12.86-9.30799999 10.86h11.89399999zm19.253-1.141h-17.468l2.857 12.001h11.754zm1.784 1.141-2.586 10.86h11.894z"></path></g></svg>
                 </div>
             </div>
-            <article>
+            <article itemscope itemtype="http://schema.org/Person">
                 <h2 class="hidden">Résumé professionnel</h2>
                 <section>
                     <h2 class="hidden">Présentation générale</h2>
                     <div class="firstPresentation">
                         <h3><span>2 Qualités</span><span>·&nbsp;2 Défauts</span></h3>
-                        <img src="img/me.jpeg" alt="selfie de moi avec un filtre noir et blanc" class="img-right img-me">
+                        <img itemprop="image" src="img/me.jpeg" alt="selfie de moi avec un filtre noir et blanc" class="img-right img-me">
                     </div>
                     <ol>
-                        <li>Courageux&nbsp;·</li>
-                        <li>Curieux&nbsp;·</li>
-                        <li>Maniaque&nbsp;·</li>
-                        <li>Impatient</li>
+                        <li itemprop="qualities">Courageux&nbsp;·</li>
+                        <li itemprop="qualities">Curieux&nbsp;·</li>
+                        <li itemprop="flaws">Maniaque&nbsp;·</li>
+                        <li itemprop="flaws">Impatient</li>
                     </ol>
                 </section>
-                <section class="secondSection">
+                <section class="secondSection" itemscope itemtype="http://schema.org/Service">
                     <h2 class="hidden">Caractéristiques</h2>
-                    <div class="enfant">
+                    <div class="enfant" itemprop="serviceType">
                         <div class="icon">
-                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height: 24px; width: 24px;"><path d="m24.3334 1.66675c1.0543745 0 1.9181663.81587127 1.9945143 1.85073677l.0054857.14926323-.00065 24.666 3.00065.00075v2h-26.66665v-2l3-.00075v-24.666c0-1.05436681.81587301-1.91816558 1.850737-1.99451429l.149263-.00548571zm-4.00065 2h-12.666l-.00075 24.66625 12.66675-.00025zm4.00065 0h-2.00065v24.666l2.00025.00025zm-7.0001 11.00002c.7363778 0 1.33333.5969522 1.33333 1.33333s-.5969522 1.33333-1.33333 1.33333-1.33333-.5969522-1.33333-1.33333.5969522-1.33333 1.33333-1.33333z"></path></svg>
-                        </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="height: 22px; width: 22px;"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>                        </div>
                         <div>
-                            <p lang="en">
+                            <p>
                                 Challenge de code
                             </p>
-                            <p>
+                            <p itemprop="description">
                                 Je suis passionné par la réalisation de projets qui me permettent de mettre à l’épreuve mes compétences en matière de codage et de réflexion.
                             </p>
                         </div>
                     </div>
-                    <div class="enfant">
+                    <div class="enfant" itemprop="serviceType">
                         <div class="icon">
-                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height: 24px; width: 24px;"><path d="m24.3334 1.66675c1.0543745 0 1.9181663.81587127 1.9945143 1.85073677l.0054857.14926323-.00065 24.666 3.00065.00075v2h-26.66665v-2l3-.00075v-24.666c0-1.05436681.81587301-1.91816558 1.850737-1.99451429l.149263-.00548571zm-4.00065 2h-12.666l-.00075 24.66625 12.66675-.00025zm4.00065 0h-2.00065v24.666l2.00025.00025zm-7.0001 11.00002c.7363778 0 1.33333.5969522 1.33333 1.33333s-.5969522 1.33333-1.33333 1.33333-1.33333-.5969522-1.33333-1.33333.5969522-1.33333 1.33333-1.33333z"></path></svg>
-                        </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="height: 22px; width: 22px;"><path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/></svg></div>
                         <div>
                             <p>
                                 Voyage d’affaire
                             </p>
-                            <p>
+                            <p itemprop="description">
                                 Je suis disposé à me déplacer à l’étranger pour rencontrer mes clients lorsque leurs projets présentent un fort potentiel et un grand défi pour moi.
                             </p>
                         </div>
                     </div>
-                    <div class="enfant">
+                    <div class="enfant" itemprop="serviceType">
                         <div class="icon">
-                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height: 24px; width: 24px;"><path d="m11.6667 0-.00095 1.666h8.667l.00055-1.666h2l-.00055 1.666 6.00065.00063c1.0543745 0 1.9181663.81587127 1.9945143 1.85073677l.0054857.14926323v15.91907c0 .4715696-.1664445.9258658-.4669028 1.2844692l-.1188904.1298308-8.7476886 8.7476953c-.3334303.3332526-.7723097.5367561-1.2381975.5778649l-.1758207.0077398h-12.91915c-2.68874373 0-4.88181754-2.1223321-4.99538046-4.7831124l-.00461954-.2168876v-21.66668c0-1.05436021.81587582-1.91815587 1.85073739-1.99450431l.14926261-.00548569 5.999-.00063.00095-1.666zm16.66605 11.666h-24.666v13.6673c0 1.5976581 1.24893332 2.9036593 2.82372864 2.9949072l.17627136.0050928 10.999-.0003.00095-5.6664c0-2.6887355 2.122362-4.8818171 4.7832071-4.9953804l.2168929-.0046196 5.66595-.0006zm-.081 8-5.58495.0006c-1.5977285 0-2.9037573 1.2489454-2.9950071 2.8237299l-.0050929.1762701-.00095 5.5864zm-18.586-16-5.999.00062v5.99938h24.666l.00065-5.99938-6.00065-.00062.00055 1.66733h-2l-.00055-1.66733h-8.667l.00095 1.66733h-2z"></path></svg>                        </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 22px; width: 22px;"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"/></svg>                        </div>
                         <div>
                             <p>
                                 Rendez-vous gratuit
                             </p>
-                            <p>
-                                Chaque réservation inclut un déjeuner ou un verre offert par mes soins, en guise de reconnaissance pour votre confiance en mes services.
+                            <p itemprop="description">
+                                Chaque réservation inclut un déjeuner ou un verre offert par mes soins, en signe de reconnaissance pour votre confiance en mes services.
                             </p>
                         </div>
                     </div>
@@ -190,8 +188,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="fourthSection">
+                <section class="fourthSection" itemscope itemtype="http://schema.org/Person">
                     <h3 class="hidden">À propos de moi</h3>
+                    <meta itemprop="name" content="Renaud Van Meerbergen">
                     <div class="enfant">
                         <div>
                             <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M9 0a1 1 0 0 1 .993.883L10 1v5h5a1 1 0 0 1 .993.883L16 7v8a1 1 0 0 1-.883.993L15 16H7a1 1 0 0 1-.993-.883L6 15v-5H1a1 1 0 0 1-.993-.883L0 9V1A1 1 0 0 1 .883.007L1 0h8zm1.729 7l-1.393.495.233.217.13.132c.125.127.227.245.308.352l.073.103.048.073.045.077H7.308v1.309h1.207l.166.52.09.266.112.29a6.294 6.294 0 0 0 1.109 1.789c-.495.315-1.119.607-1.87.87l-.331.112-.346.108-.445.134L7.72 15l.407-.125.386-.128c1.007-.349 1.836-.752 2.486-1.214.57.405 1.277.764 2.12 1.08l.369.134.386.128.406.125.72-1.153-.445-.134-.26-.08-.345-.115c-.783-.27-1.43-.57-1.94-.895a6.3 6.3 0 0 0 1.068-1.694l.128-.32.114-.33.165-.521h1.208V8.449H11.64l-.093-.231a3.696 3.696 0 0 0-.554-.917l-.126-.149-.14-.152zm1.35 2.758l-.042.133-.076.224-.103.264A4.985 4.985 0 0 1 11 11.76a4.952 4.952 0 0 1-.743-1.127l-.115-.254-.103-.264-.076-.224-.042-.133h2.158zM9 1H1v8h5V7c0-.057.005-.113.014-.167H3.827L3.425 8H2l2.257-6h1.486l1.504 4H9V1zM5 3.411L4.253 5.6h1.502L5 3.411z"></path></svg>
@@ -201,7 +200,7 @@
                             <a href="#">Afficher la version originale</a>
                         </p>
                     </div>
-                    <div>
+                    <div itemprop="description">
                         <p class="last ">
                             Je suis un développeur web en apprentissage, spécialisé dans le développement front-end.
                             Expérimenté dans toutes les étapes du cycle de développement de projets Web dynamiques.
@@ -213,6 +212,7 @@
                                 <div>
                                     <svg id="retour2" viewBox="0 0 18 18" style="rotate: 180deg"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
                                 </div>
+                                <span itemprop="name" style="display:none">Renaud Van Meerbergen</span>
                                 <h2>À propos de moi</h2>
                                 <p>
                                     Je suis un développeur web en apprentissage, spécialisé dans le développement front-end.
@@ -229,51 +229,62 @@
                                     back-end et les designers. Je suis capable de travailler efficacement en équipe et de communiquer avec des non-techniciens,
                                     comme les clients et les chefs de projet.
                                 </p>
+                                <span itemprop="jobTitle" style="display:none">Développeur web</span>
+                                <span itemprop="skills" style="display:none">HTML5, CSS, JavaScript, développement front-end</span>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="fifthSection">
-                    <h3>Où je dors actuellement</h3>
-                    <img src="img/chambre.jpeg" alt="photo de ma chambre et de mon lit" width="721" height="480">
-                    <p>Espace de vie</p>
-                    <p>1 lit king size</p>
+                <section class="fifthSection" itemscope itemtype="http://schema.org/Place">
+                    <h3 itemprop="name">Où je dors actuellement</h3>
+                    <img src="img/chambre.jpeg" alt="photo de ma chambre et de mon lit" width="721" height="480" itemprop="photo">
+                    <p itemprop="description">Espace de vie</p>
+                    <p>
+                        1 lit de type<span itemprop="bed" itemscope itemtype="http://schema.org/BedDetails">&nbsp;:&nbsp;<span itemprop="bedType">King Size</span></span>
+                    </p>
                 </section>
-                <section class="sixthSection">
-                    <h3>Les languages que j’utilise</h3>
+                <section class="sixthSection" itemscope itemtype="http://schema.org/Person">
+                    <h3 itemprop="name">Les languages que j’utilise</h3>
                     <ul class="list-item">
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 24px; width: 24px;"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg><span>HTML 5</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 24px; width: 24px;"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg><span itemprop="skills">HTML 5</span>
                         </li>
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 24px; width: 24px;"><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg><span>CSS 3</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 24px; width: 24px;"><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg><span itemprop="skills">CSS 3</span>
                         </li>
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 24px; width: 24px;"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg><span>JS (ES6)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 24px; width: 24px;"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg><span itemprop="skills">JS (ES6)</span>
                         </li>
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 24px; width: 24px;"><path d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6.4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.3c-1.8 1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V167.5c0-3 2.4-5.3 5.4-5.3h23.4c2.9 0 5.4 2.3 5.4 5.3V378c0 36.6-20 57.6-54.7 57.6-10.7 0-19.1 0-42.5-11.6l-48.4-27.9C8.1 389.2.7 376.3.7 362.4V149.3c0-13.8 7.4-26.8 19.4-33.7L204.6 9c11.7-6.6 27.2-6.6 38.8 0l184.7 106.7c12 6.9 19.4 19.8 19.4 33.7v213.1c0 13.8-7.4 26.7-19.4 33.7L243.4 502.8c-5.9 3.4-12.6 5.2-19.4 5.2zm149.1-210.1c0-39.9-27-50.5-83.7-58-57.4-7.6-63.2-11.5-63.2-24.9 0-11.1 4.9-25.9 47.4-25.9 37.9 0 51.9 8.2 57.7 33.8.5 2.4 2.7 4.2 5.2 4.2h24c1.5 0 2.9-.6 3.9-1.7s1.5-2.6 1.4-4.1c-3.7-44.1-33-64.6-92.2-64.6-52.7 0-84.1 22.2-84.1 59.5 0 40.4 31.3 51.6 81.8 56.6 60.5 5.9 65.2 14.8 65.2 26.7 0 20.6-16.6 29.4-55.5 29.4-48.9 0-59.6-12.3-63.2-36.6-.4-2.6-2.6-4.5-5.3-4.5h-23.9c-3 0-5.3 2.4-5.3 5.3 0 31.1 16.9 68.2 97.8 68.2 58.4-.1 92-23.2 92-63.4z"/></svg><span>Node JS</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 24px; width: 24px;"><path d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6.4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.3c-1.8 1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V167.5c0-3 2.4-5.3 5.4-5.3h23.4c2.9 0 5.4 2.3 5.4 5.3V378c0 36.6-20 57.6-54.7 57.6-10.7 0-19.1 0-42.5-11.6l-48.4-27.9C8.1 389.2.7 376.3.7 362.4V149.3c0-13.8 7.4-26.8 19.4-33.7L204.6 9c11.7-6.6 27.2-6.6 38.8 0l184.7 106.7c12 6.9 19.4 19.8 19.4 33.7v213.1c0 13.8-7.4 26.7-19.4 33.7L243.4 502.8c-5.9 3.4-12.6 5.2-19.4 5.2zm149.1-210.1c0-39.9-27-50.5-83.7-58-57.4-7.6-63.2-11.5-63.2-24.9 0-11.1 4.9-25.9 47.4-25.9 37.9 0 51.9 8.2 57.7 33.8.5 2.4 2.7 4.2 5.2 4.2h24c1.5 0 2.9-.6 3.9-1.7s1.5-2.6 1.4-4.1c-3.7-44.1-33-64.6-92.2-64.6-52.7 0-84.1 22.2-84.1 59.5 0 40.4 31.3 51.6 81.8 56.6 60.5 5.9 65.2 14.8 65.2 26.7 0 20.6-16.6 29.4-55.5 29.4-48.9 0-59.6-12.3-63.2-36.6-.4-2.6-2.6-4.5-5.3-4.5h-23.9c-3 0-5.3 2.4-5.3 5.3 0 31.1 16.9 68.2 97.8 68.2 58.4-.1 92-23.2 92-63.4z"/></svg><span itemprop="skills">Node JS</span>
                         </li>
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="height: 24px; width: 24px;"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z"/></svg><span>NPM</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="height: 24px; width: 24px;"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z"/></svg><span itemprop="skills">NPM</span>
                         </li>
                     </ul>
                     <a href="#" class="big-btn">Afficher les 24 compétences</a>
                 </section>
-                <section class="seventhSection">
-                    <h3>Où est ce que j’habite</h3>
-                    <img src="img/logement.png" alt="localisation de mon adresse personnelle sur la carte Google Maps" loading="lazy">
-                    <p>
-                        <strong>Rue Petit Bioleux,Neupré,Liège,Belgique</strong>
+                <section class="seventhSection" itemscope itemtype="http://schema.org/Place">
+                    <h3 itemprop="name">Où est ce que j’habite</h3>
+                    <img src="img/logement.png" alt="localisation de mon adresse personnelle sur la carte Google Maps" loading="lazy" itemprop="photo">
+                    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <strong>
+                            <span itemprop="streetAddress">Rue Petit Bioleux</span>,
+                            <span itemprop="addressLocality">Neupré</span>,
+                            <span itemprop="addressRegion">Liège</span>,
+                            <span itemprop="addressCountry">Belgique</span>
+                        </strong>
                     </p>
-                    <p class="last ">
+                    <p class="last " itemprop="description">
                         En pleine campagne et forêt
                     </p>
                     <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
                 </section>
                 <section class="eighthSection">
                     <h3>Mes dispositions du mois</h3>
-                    <time datetime="">18 juin, 2023 - 24 août, 2023</time>
+                    <time datetime="2023-06-01T00:00:00" itemprop="startDate">1 juin, 2023</time>
+                    <span style="font-weight: 300">&nbsp;-&nbsp;</span>
+                    <time datetime="2023-06-30T23:59:59" itemprop="endDate">30 juin, 2023</time>
                     <div class="all">
                         <div class="wrapper">
                             <div class="header">
@@ -302,14 +313,18 @@
                 <section class="commentaireSection">
                     <h3 class="hidden">Commentaires Clients</h3>
                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height: 14px; width: 14px;"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>
-                    <span>4,95&nbsp;·</span>
-                    <span>13 commentaires</span>
+                    <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                        <meta itemprop="ratingValue" content="4.95">
+                        <meta itemprop="reviewCount" content="13">
+                        <span>4,95&nbsp;·</span>
+                        <span>13 commentaires</span>
+                    </span>
                     <div class="slider">
-                        <div class="com-card">
-                            <img src="img/testimonials/face-1.jpg" alt="image d’un client nommé Safouane" class="img-me">
-                            <p><strong>Safouane</strong></p>
-                            <time datetime="">septembre 2022</time>
-                            <p>
+                        <div class="com-card" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                            <img src="img/testimonials/face-1.jpg" alt="image d’un client nommé Safouane" class="img-me" itemprop="author">
+                            <p><strong itemprop="name">Safouane</strong></p>
+                            <time datetime="2022-09-01T00:00:00" itemprop="datePublished">septembre 2022</time>
+                            <p itemprop="reviewBody">
                                 Travailler avec Renaud a été un plaisir. Mieux encore, je l’ai alerté d’un problème
                                 mineur avant de m’endormir. Le problème a été résolu le lendemain matin. Je ne pouvais
                                 pas demander un meilleur support. C’est facilement un freelancer 5 étoiles. Merci Renaud,
@@ -317,11 +332,11 @@
                             </p>
                             <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
                         </div>
-                        <div class="com-card">
-                            <img src="img/testimonials/face-2.jpg" alt="image d’une cliente nommé Amélie" class="img-me">
-                            <p><strong>Amélie</strong></p>
-                            <time datetime="">octobre 2022</time>
-                            <p>
+                        <div class="com-card" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                            <img src="img/testimonials/face-2.jpg" alt="image d’une cliente nommé Amélie" class="img-me" itemprop="author">
+                            <p><strong itemprop="name">Amélie</strong></p>
+                            <time datetime="2022-10-01T00:00:00" itemprop="datePublished">octobre 2022</time>
+                            <p itemprop="reviewBody">
                                 Il me fallait absolument une affiche dans l’urgence pour mon article de blog en
                                 tant que journaliste et Renaud a directement répondu à ma demande tout en me
                                 faisant un travail de qualité. Mon article à fait la une des pages de magazines
@@ -329,11 +344,11 @@
                             </p>
                             <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
                         </div>
-                        <div class="com-card">
-                            <img src="img/testimonials/face-3.jpg" alt="image d’un client nommé Hugues" class="img-me">
-                            <p><strong>Hugues</strong></p>
-                            <time datetime="">novembre 2022</time>
-                            <p>
+                        <div class="com-card" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                            <img src="img/testimonials/face-3.jpg" alt="image d’un client nommé Hugues" class="img-me" itemprop="author">
+                            <p><strong itemprop="name">Hugues</strong></p>
+                            <time datetime="2022-11-01T00:00:00" itemprop="datePublished">novembre 2022</time>
+                            <p itemprop="reviewBody">
                                 Professionnel dans le domaine du développement Web, j’ai tout de même décidé de
                                 payer un coaching avec Renaud afin de me perfectionner et je peux dire que ces
                                 techniques de référencement sont exceptionnelles. J’ai enfin pu réaliser un site
@@ -345,16 +360,16 @@
                     <a href="#" class="big-btn">Afficher les 24 compétences</a>
                 </section>
                 <section class="bonusSection">
-                    <div class="respons">
+                    <div class="respons" itemscope itemtype="http://schema.org/Person">
                         <div class="enfant">
                             <div>
                                 <h3>Bonus à mon propos</h3>
                                 <p>Mes divers passions</p>
                                 <a href="#">Preuves à l’appui</a>
                             </div>
-                            <img src="img/me.jpeg" alt="selfie de moi avec un filtre noir et blanc" class="img-right img-me">
+                            <img src="img/me.jpeg" alt="selfie de moi avec un filtre noir et blanc" class="img-right img-me" itemprop="image">
                         </div>
-                        <ul class="list-item">
+                        <ul class="list-item" itemprop="hobbies">
                             <li>
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M112 96c0-17.7 14.3-32 32-32h16c17.7 0 32 14.3 32 32V224v64V416c0 17.7-14.3 32-32 32H144c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32h48V96zm416 0v32h48c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H528v32c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 96c0-17.7 14.3-32 32-32h16c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"/></svg>
@@ -391,13 +406,19 @@
                             Je pose le plus souvent possibles des questions pertinentes et j’accorde une grande importance au respect envers mes enseignants.
                         </p>
                     </div>
-                    <div class="respons">
+                    <div class="respons" itemscope itemtype="http://schema.org/Person">
                         <ul class="liste-talent">
-                            <li>Langues: Français, Anglais</li>
-                            <li>Taux de réponse : 100%</li>
-                            <li>Délai de réponse : Moins d’une heure</li>
+                            <li itemprop="jobTitle" style="display: none">Développeur web</li>
+                            <li><span itemprop="language">Langues</span>: <span itemprop="spokenLanguage">Français</span>, <span itemprop="spokenLanguage">Anglais</span></li>
+                            <li><span itemprop="responseRate">Taux de réponse</span> : <span itemprop="responseTime">100%</span></li>
+                            <li><span itemprop="responseTime">Délai de réponse</span> : <span itemprop="responseTime">Moins d’une heure</span></li>
                         </ul>
-                        <a href="#" class="big-btn">Me contacter</a>
+                        <a href="#" class="big-btn" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
+                            <meta itemprop="telephone" content="+32 470 59 60 65">
+                            <meta itemprop="email" content="renaud.vanmeerbergen@gmail.com">
+                            <meta itemprop="url" content="renaud-vmb.com">
+                            <span itemprop="contactType">Me contacter</span>
+                        </a>
                         <div class="advertising">
                             <small>
                                 Si vous voulez m’envoyer un autocollant, un tshirt (personnalisé ou volé), une sauce piquante ou une honda civic, contactez-moi.
@@ -468,54 +489,105 @@
                     <span>Chez moi&nbsp;<svg viewBox="0 0 18 18" style="height: 7px; width: 7px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
                 </p>
             </section>
-            <section class="assistance">
+            <section class="assistance" itemscope itemtype="http://schema.org/WebPageElement">
                 <h3 class="hidden">Titre footer</h3>
-                <div>
+                <div itemscope itemtype="http://schema.org/Service">
                     <h4>Mes services</h4>
                     <ul>
-                        <li><a href="#">Design de logo</a></li>
-                        <li><a href="#">Design d’application mobile</a></li>
-                        <li><a href="#">Référencement SEO</a></li>
-                        <li><a href="#">Copywriting</a></li>
-                        <li><a href="#">Animation javascript</a></li>
-                        <li><a href="#">Scène 3D en CSS</a></li>
-                        <li><a href="#">Gestion de base de données</a></li>
+                        <li><a href="#" itemprop="serviceType">Design de logo</a></li>
+                        <li><a href="#" itemprop="serviceType">Design d’application mobile</a></li>
+                        <li><a href="#" itemprop="serviceType">Référencement SEO</a></li>
+                        <li><a href="#" itemprop="serviceType">Copywriting</a></li>
+                        <li><a href="#" itemprop="serviceType">Animation javascript</a></li>
+                        <li><a href="#" itemprop="serviceType">Scène 3D en CSS</a></li>
+                        <li><a href="#" itemprop="serviceType">Gestion de base de données</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Liens de contact</h4>
                     <ul>
-                        <!--<li><a href="tel:+32470596065">+32 (0)470 59 60 65</a></li>-->
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li itemscope itemtype="http://schema.org/ContactPoint">
+                            <a href="https://www.facebook.com" itemprop="url">Facebook</a>
+                            <meta itemprop="contactType" content="customer service"/>
+                            <meta itemprop="areaServed" content="Worldwide"/>
+                        </li>
+                        <li itemscope itemtype="http://schema.org/ContactPoint">
+                            <a href="https://www.instagram.com" itemprop="url">Instagram</a>
+                            <meta itemprop="contactType" content="customer service"/>
+                            <meta itemprop="areaServed" content="Worldwide"/>
+                        </li>
+                        <li itemscope itemtype="http://schema.org/ContactPoint">
+                            <a href="https://twitter.com" itemprop="url">Twitter</a>
+                            <meta itemprop="contactType" content="customer service"/>
+                            <meta itemprop="areaServed" content="Worldwide"/>
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Ressources</h4>
+                    <h4 itemprop="name">Ressources</h4>
                     <ul>
-                        <li><a href="https://www.w3schools.com">W3C</a></li>
-                        <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
-                        <li><a href="https://codepen.io">CodePen</a></li>
-                        <li><a href="https://developer.mozilla.org">Developer mozilla</a></li>
-                        <li><a href="https://www.alsacreations.com/">Alsa Création</a></li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://www.w3schools.com">
+                                <span itemprop="name">W3C</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://css-tricks.com/">
+                                <span itemprop="name">CSS Tricks</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://codepen.io">
+                                <span itemprop="name">CodePen</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://developer.mozilla.org">
+                                <span itemprop="name">Developer mozilla</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://www.alsacreations.com/">
+                                <span itemprop="name">Alsa Création</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <div>
-                    <h4>Bonus</h4>
+                <div itemscope itemtype="http://schema.org/WebPageElement">
+                    <h4 itemprop="name">Bonus</h4>
                     <ul>
-                        <li><a href="https://www.triomarkets.com">Ma plateforme de trading</a></li>
-                        <li><a href="https://ripple.com">Mon investissement all-in</a></li>
-                        <li><a href="http://www.modelsgeneration.com">Agence de mannequinat</a></li>
-                        <li><a href="img/programme-musculation.pdf">Programme de musculation</a></li>
-                        <li><a href="https://cantata.be/fr/products/kopi-luwak-1">Ma marque de café</a></li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://www.triomarkets.com">
+                                <span itemprop="name">Ma plateforme de trading</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://ripple.com">
+                                <span itemprop="name">Mon investissement all-in</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="http://www.modelsgeneration.com">
+                                <span itemprop="name">Agence de mannequinat</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="img/programme-musculation.pdf">
+                                <span itemprop="name">Programme de musculation</span>
+                            </a>
+                        </li>
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="https://cantata.be/fr/products/kopi-luwak-1">
+                                <span itemprop="name">Ma marque de café</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </section>
             <section class="prendreReservation">
                 <h3 class="hidden">Réservation</h3>
                 <p>
-                    113 € <span>par nuit</span><br><span>11–16 déc</span>.
+                    2 <span>projets en cours</span><br><span>11–26 juin</span>.
                 </p>
                 <a href="#" class="btnReservation">Modifier les dates</a>
             </section>
