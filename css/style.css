@@ -32,7 +32,6 @@ h2 {
     line-height: 1.666;
 }
 h3 {
-    color: #484848;
     font-size: 1.375em;
     line-height: 1.182;
 }
@@ -43,11 +42,14 @@ h4 {
 p {
     word-wrap: break-word;
     hyphens: auto;
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: 400;
 }
-p, span {
-    font-size: 0.875em;
-    font-weight: 600;
-    line-height: 1.4285;
+span {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25;
 }
 img {
     max-width: 100%;
@@ -66,8 +68,9 @@ li {
 }
 a, a:visited {
     color: #000;
-    font-size: 0.875em;
+    font-size: 0.875rem;
     font-weight: 600;
+    line-height: 1.125;
     outline: none;
     cursor: pointer;
     text-decoration: none;
@@ -93,6 +96,19 @@ code {
     border-radius: 3px;
     font-family: courier, monospace;
     padding: 0 3px;
+}
+abbr {
+    text-decoration: none;
+}
+
+.light {
+    font-weight: 400;
+}
+.regular {
+    font-weight: 500;
+}
+.bold {
+    font-weight: 600;
 }
 
 /*---------------- PAGE D'ACCUEIL ---------------*/
@@ -149,15 +165,19 @@ section.mes_photos {
 }
 .nice div:first-of-type {
     margin-right: 8px;
+    line-height: 1.25;
 }
 .nice div:first-of-type h2 {
     font-size: 1em;
-    font-weight: 500;
     line-height: 1.25;
     margin-bottom: 0;
     margin-right: 8px;
     display: inline;
 }
+.nice div:first-of-type span {
+    font-size: 1rem;
+}
+
 /*--------- ARTICLE 1 --------*/
 article section {
     padding: 1.5em 0;
@@ -172,7 +192,7 @@ article section {
 }
 .firstPresentation h3 span {
     display: block;
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.182;
     margin-bottom: 4px;
 }
@@ -186,6 +206,8 @@ article section {
 article ol li {
     display: inline-block;
     font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25;
 }
 /*--------- Second Section --------*/
 .secondSection {
@@ -200,21 +222,23 @@ article ol li {
 }
 .secondSection div div p:first-of-type {
     margin-bottom: 4px;
-    font-size: 1em;
 }
 .secondSection div div p:last-of-type {
-    font-weight: 400;
     color: #717171;
+    font-size: 0.875rem;
+    line-height: 1.45;
 }
 /*--------- Third Section --------*/
 .thirdSection img {
-    width: 125px;
+    width: 100px;
     margin-bottom: 0.5em;
 }
 .thirdSection p {
-    line-height: 1.25;
-    font-weight: 400;
     margin-bottom: 1em;
+    font-size: 0.875rem;
+}
+.thirdSection a {
+    line-height: 1.25;
 }
 /*--------- Fourth Section --------*/
 .fourthSection, .fifthSection, .sixthSection, .seventhSection, .bonusSection {
@@ -224,15 +248,15 @@ article ol li {
     display: flex;
     padding-bottom: 2em;
 }
-.fourthSection div.enfant p {
+.fourthSection p.traduction {
     color: #484848;
-    font-size: 14px;
-    line-height: 1.15;
-    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25;
+}
+.fourthSection p.traduction a {
+    font-size: 0.875rem;
 }
 .fourthSection p.last {
-    font-size: 1em;
-    font-weight: 400;
     line-height: 1.5;
 }
 .fourthSection div.enfant div {
@@ -240,8 +264,7 @@ article ol li {
 }
 .fourthSection a.last, .seventhSection a.last, .com-card a.last {
     border-bottom: none;
-    font-size: 1em;
-    font-weight: 500;
+    font-size: 1rem;
 }
 .fourthSection div:last-of-type a {
     margin-top: 1em;
@@ -257,7 +280,7 @@ article ol li {
 }
 .fifthSection p:last-of-type {
     margin-top: 0.2em;
-    font-weight: 300;
+    font-size: 0.875rem;
 }
 /*--------- Sixth Section --------*/
 .sixthSection h3 {
@@ -270,10 +293,6 @@ article ol li {
 }
 .sixthSection .list-item li svg {
     margin-right: 0.75em;
-}
-.sixthSection .list-item li span {
-    font-size: 1em;
-    font-weight: 400;
 }
 .big-btn {
     display: block;
@@ -296,6 +315,10 @@ article ol li {
     border:0;
     border-radius: 12px 12px 0 0;
 }
+.seventhSection strong span {
+    font-size: 1rem;
+    line-height: 1.25;
+}
 .seventhSection p.last {
     margin: 0.75em 0 1em;
 }
@@ -303,6 +326,9 @@ article ol li {
 .eighthSection time {
     margin-top: 0.5em;
     display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.25;
 }
 .eighthSection a.last {
     margin-left: 0.5em;
@@ -407,7 +433,7 @@ article ol li {
     color: #222222;
 }
 .commentaireSection span {
-    font-size: 1.35em;
+    font-size: 1.35rem;
     line-height: 1.2265;
     margin-left: 4px;
 }
@@ -440,8 +466,6 @@ article ol li {
     margin-left: 52px;
 }
 .com-card p:last-of-type {
-    font-size: 16px;
-    font-weight: 350;
     line-height: 1.5;
     margin: 0.75em 0 0.5em;
     max-height: 100px;
@@ -458,6 +482,11 @@ article ol li {
     display: flex;
     justify-content: space-between;
 }
+.bonusSection div.enfant div p {
+    margin-top: 0.5em;
+    font-size: 0.875rem;
+    color: #717171;
+}
 .bonusSection p.light {
     padding-top: 0.5em;
 }
@@ -473,6 +502,8 @@ article ol li {
     margin-bottom: 1em;
 }
 .bonusSection ul li div {
+    font-size: 1rem;
+    line-height: 1.25;
     display: flex;
     align-items: center;
 }
@@ -484,7 +515,7 @@ article ol li {
 }
 .bonusSection h4 + p {
     margin: 0.475em 0 1.5em;
-    font-weight: 300;
+    line-height: 1.5;
 }
 .bonusSection ul.liste-talent li {
     margin-bottom: 0.5em;
@@ -492,16 +523,28 @@ article ol li {
 .bonusSection a.big-btn {
     margin: 1.5em 0;
 }
+.bonusSection a.big-btn span {
+    font-size: 1rem;
+    line-height: 1.5;
+}
 .bonusSection .advertising {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 small {
-    font-size: 0.75em;
+    font-size: 0.75rem;
     line-height: 1.333;
-    font-weight: 300;
     margin-right: 1em;
+    font-weight: 400;
+}
+.liste-talent li {
+    font-size: 1rem;
+    line-height: 1.25;
+}
+.liste-talent span {
+    font-size: inherit;
+    font-weight: inherit;
 }
 /*--------- ARTICLE 1 FIN --------*/
 /*--------- ARTICLE 2 --------*/
@@ -513,11 +556,11 @@ small {
 .aPropos section div:first-of-type {
     padding-right: 2em;
 }
-.aPropos h3 {
-    color: #222222;
-}
 .aPropos section p {
     margin-top: 0.5em;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: #717171;
 }
 .aPropos section svg {
     border-radius: 50%;
@@ -534,7 +577,7 @@ small {
     margin-right: 1em;
 }
 .signalement a {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.25;
 }
 /*--------- CONCURRENTS --------*/
@@ -542,7 +585,6 @@ small {
     padding: 2em 1.5em;
     border-top: 8px solid whitesmoke;
     border-bottom: 1px solid rgb(221, 221, 221);
-    background-color: whitesmoke;
 }
 .concurrents h3 {
     padding-bottom: 1em;
@@ -556,7 +598,7 @@ small {
     padding: 0.5em;
     width: 45%;
     color: #717171;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.5;
 }
 .concurrents p {
@@ -565,7 +607,6 @@ small {
 }
 .concurrents p span {
     display: inline-block;
-    font-weight: 300;
 }
 .concurrents p span svg {
     margin: 0 0.5em;
@@ -592,6 +633,10 @@ section.assistance {
     border-bottom: none;
     font-weight: 300;
 }
+.assistance span {
+    font-weight: inherit;
+    font-size: inherit;
+}
 .assistance ul li a:hover {
     border-bottom: 1px solid #222222;
 }
@@ -603,22 +648,19 @@ section.assistance {
     background-color: #FFF;
     display: flex;
     align-items: center;
-    flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid rgb(221, 221, 221);
 }
 .prendreReservation p {
-    font-size: 1.125em;
-    line-height: 1.333;
-    font-weight: 300;
     margin-right: 1em;
+    line-height: 1.125;
 }
 a.btnReservation {
     border: none;
     border-radius: 0.5em;
     background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
     padding: 0.875em 1.5em;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.25;
     color: #FFF;
     text-align: center;

@@ -3,6 +3,16 @@ Nom Complet: 	Renaud Van Meerbergen
 ------------------------------------------- */
             /*MEDIA-QUERIES*/
 /*-------------------------------------------- */
+@media screen and (min-width: 350px) {
+    .prendreReservation {
+        min-width: 90vw;
+    }
+}
+@media screen and (min-width: 500px) {
+    .prendreReservation {
+        min-width: 93.5vw;
+    }
+}
 @media screen and (min-width: 750px) {
     section.mes_photos {
         height: calc(50vw * 8 / 12);
@@ -32,6 +42,9 @@ Nom Complet: 	Renaud Van Meerbergen
         margin: 2.5em;
         padding: 2.5em;
         border-radius: 1em;
+    }
+    .prendreReservation {
+        display: none;
     }
 }
 
