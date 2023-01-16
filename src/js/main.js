@@ -25,3 +25,14 @@ function toggleAnswer(answerId, openLinkId, retourId) {
 toggleAnswer('answer', 'openLink', 'retour');
 toggleAnswer('answer2', 'openLink2', 'retour2');
 
+
+/*
+// Avoir une autre page en fonction de la taille de notre écran en utilisant javascript
+let screenWidth = window.innerWidth;
+if (screenWidth < 1000) {
+    window.location.href = "https://renaud-vmb/index.html";
+} else {
+    window.location.href = "https://renaud-vmb/index-desktop.html";
+}
+*/
+

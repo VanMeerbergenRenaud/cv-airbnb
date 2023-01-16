@@ -49,9 +49,18 @@ Nom Complet: 	Renaud Van Meerbergen
 }
 
 @media screen and (min-width: 1125px) {
+    section.mes_photos {
+        margin: 1.5em 5em;
+    }
     main {
         padding: 1.5em 5em;
     }
+    /*.nice {
+        background-color: #fff;
+        position: fixed;
+        width: 33.3333%;
+        margin-left: 8.33333%;
+    }*/
     .fourthSection, .fifthSection, .sixthSection, .seventhSection, .bonusSection {
         padding-top: 3em;
     }
