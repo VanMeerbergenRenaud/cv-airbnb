@@ -14,9 +14,6 @@
 # Icon must end with two \r
 Icon
 
-# Extern Files
-.fichiers_externes/
-
 # Thumbnails
 ._*
 
@@ -163,3 +160,4 @@ $RECYCLE.BIN/
 /hot
 /mix-manifest.json
 /dist/js/script.min.js
+/fichiers_externes/
