@@ -10,6 +10,9 @@
         <link rel="canonical" href="https://renaud-vmb.com">
         <!-- Feuilles de styles  -->
         <link rel="stylesheet" href="dist/css/style.min.css">
+        <!--<link rel="stylesheet" href="src/sass/reset.css">
+        <link rel="stylesheet" href="src/sass/style.css">
+        <link rel="stylesheet" href="src/sass/mediaquery.css">-->
 
         <!--Micro-data HTML-->
         <meta name="author" content="Renaud Van Meerbergen">
@@ -42,11 +45,11 @@
             <h1 class="hidden">CV de Renaud Van Meerbergen</h1>
             <div class="header-intro">
                 <a href="#">
-                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; margin-top: 3px; stroke-width: 4px; overflow: visible; margin-right: 8px;" aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; stroke-width: 4px; overflow: visible; margin-right: 8px;" aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
                     CV de  Renaud Van Meerbergen</a>
                 <div class="share">
                     <a href="#">
-                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; stroke-width: 2px; overflow: visible;"><g fill="none"><path d="M27 18v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9"></path><path d="M16 3v23V3z"></path><path d="M6 13l9.293-9.293a1 1 0 0 1 1.414 0L26 13"></path></g></svg>
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; margin-right: 1.25em; stroke-width: 2px; overflow: visible;"><g fill="none"><path d="M27 18v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9"></path><path d="M16 3v23V3z"></path><path d="M6 13l9.293-9.293a1 1 0 0 1 1.414 0L26 13"></path></g></svg>
                     </a>
                     <a href="#">
                         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; stroke-width: 2px; overflow: visible;"><path d="m16 28c7-4.733 14-10 14-17 0-1.792-.683-3.583-2.05-4.95-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05l-2.051 2.051-2.05-2.051c-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05-1.367 1.367-2.051 3.158-2.051 4.95 0 7 7 12.267 14 17z"></path></svg>
@@ -55,13 +58,13 @@
             </div>
             <section class="mes_photos">
                 <h2 class="hidden">Mon book photos</h2>
-                <img src="img/moi/1Fichier%20.JPG" alt="portrait de moi" class="photo_first">
-                <img src="img/moi/2Fichier%20.jpg" alt="portrait de moi en souriant" class="photo2">
-                <img src="img/moi/3Fichier%20.PNG" alt="portrait de moi en train de défilé" class="photo3">
-                <img src="img/moi/4Fichier%20.JPG" alt="portrait de moi depuis un miroir" class="photo4">
-                <img src="img/moi/5Fichier%20.JPG" alt="portrait de moi encore depuis une miroir" class="photo5">
-                <img src="img/moi/6Fichier%20.JPG" alt="portrait de moi en contre plongé et faisant une grimace" class="photo-next">
-                <img src="img/moi/7Fichier%20.JPG" alt="portrait de moi au cours de mannequinat" class="photo-next">
+                <img src="img/moi/fichier_1.png" alt="portrait de moi" class="photo_first">
+                <img src="img/moi/fichier_2.png" alt="portrait de moi en souriant" class="photo2">
+                <img src="img/moi/fichier_3.png" alt="portrait de moi en train de défilé" class="photo3">
+                <img src="img/moi/fichier_4.png" alt="portrait de moi depuis un miroir" class="photo4">
+                <img src="img/moi/fichier_5.png" alt="portrait de moi encore depuis une miroir" class="photo5">
+                <img src="img/moi/fichier_6.png" alt="portrait de moi en contre plongé et faisant une grimace" class="photo-next">
+                <img src="img/moi/fichier_7.png" alt="portrait de moi au cours de mannequinat" class="photo-next">
             </section>
         </header>
         <main itemscope itemtype="http://schema.org/Person">
@@ -91,7 +94,41 @@
             </div>
             <article>
                 <h2 class="hidden">Résumé professionnel de <span itemprop="additionalName">Renaud Vmb</span></h2>
-                <section>
+                <section class="nice-desktop none"><!--Pour ordinateur-->
+                    <h3 class="hidden">Partie réservation</h3>
+                    <div class="reservation-desktop">
+                        <p class="bold">
+                            2 <span class="light">projets en cours</span>
+                        </p>
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="width: 12px; height: 12px"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>
+                        <span class="bold">4,95</span> ·
+                        <a href="#">13 commentaires</a>
+                        <div class="reservation-desktop-part">
+                            <div class="arrivee">
+                                <h4>Arrivée</h4>
+                                <time class="light">31/05/2001</time>
+                            </div>
+                            <div class="depart">
+                                <h4>Départ</h4>
+                                <time class="light">31/05/2001</time>
+                            </div>
+                            <div class="voyageur">
+                                <h4>Voyageur</h4>
+                                <p class="light">1 voyageur</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btnReservation">Modifier les dates</a>
+                    </div>
+                    <div class="perle-desktop">
+                        <div>
+                            <h2>Je suis une perle rare.</h2><span>En plus de savoir réaliser des sites internet, je suis aussi un <abbr title="hacker éthique" lang="en">white hat</abbr>.</span>
+                        </div>
+                        <div>
+                            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="height: 32px; width: 32px; fill: rgb(227, 28, 95); stroke: currentcolor;"><g stroke="none"><path d="m32.62 6 9.526 11.114-18.146 23.921-18.147-23.921 9.526-11.114z" fill-opacity=".2"></path><path d="m34.4599349 2 12.8243129 14.9616983-23.2842478 30.6928721-23.28424779-30.6928721 12.82431289-14.9616983zm-17.9171827 16h-12.52799999l18.25899999 24.069zm27.441 0h-12.528l-5.73 24.069zm-14.583 0h-10.802l5.4012478 22.684zm-15.92-12.86-9.30799999 10.86h11.89399999zm19.253-1.141h-17.468l2.857 12.001h11.754zm1.784 1.141-2.586 10.86h11.894z"></path></g></svg>
+                        </div>
+                    </div>
+                </section>
+                <section class="firstSection">
                     <h2 class="hidden">Présentation générale</h2>
                     <div class="firstPresentation">
                         <h3><span class="bold">2 Qualités</span><span class="bold">·&nbsp;2 Défauts</span></h3>
@@ -476,7 +513,7 @@
                     <span>Liège&nbsp;<svg viewBox="0 0 18 18" style="height: 7px; width: 7px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
                     <span>Neupré&nbsp;<svg viewBox="0 0 18 18" style="height: 7px; width: 7px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
                     <span>Plainevaux&nbsp;<svg viewBox="0 0 18 18" style="height: 7px; width: 7px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
-                    <span>Chez moi&nbsp;<svg viewBox="0 0 18 18" style="height: 7px; width: 7px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></span>
+                    <span>Chez moi</span>
                 </p>
             </section>
             <section class="assistance" itemscope itemtype="http://schema.org/WebPageElement">

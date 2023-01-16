@@ -43,6 +43,142 @@ Nom Complet: 	Renaud Van Meerbergen
         padding: 2.5em;
         border-radius: 1em;
     }
+    section.mes_photos {
+        margin: 1.5em 2.5em;
+    }
+    main {
+        padding: 1.5em 2.5em;
+    }
+    .nice {
+        display: none;
+    }
+    main article:first-of-type {
+        position: relative;
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: auto;
+        grid-auto-columns: 1fr;
+        gap: 0 8.33333%;
+        grid-auto-flow: row;
+        grid-template-areas: "firstSection nice-desktop"
+                             "secondSection nice-desktop"
+                             "thirdSection nice-desktop"
+                             "fourthSection nice-desktop"
+                             "fifthSection nice-desktop"
+                             "sixthSection nice-desktop"
+                             "eighthSection nice-desktop"
+                             "commentaireSection commentaireSection"
+                             "seventhSection seventhSection"
+                             "bonusSection bonusSection";
+    }
+    .firstSection { grid-area: firstSection; }
+    .secondSection { grid-area: secondSection; }
+    .thirdSection { grid-area: thirdSection; }
+    .fourthSection { grid-area: fourthSection; }
+    .fifthSection { grid-area: fifthSection; }
+    .sixthSection { grid-area: sixthSection; }
+    .eighthSection { grid-area: eighthSection; }
+    .seventhSection { grid-area: seventhSection; }
+    .nice-desktop { grid-area: nice-desktop; }
+    .commentaireSection { grid-area: commentaireSection; }
+    .bonusSection { grid-area: bonusSection; }
+
+    section.nice-desktop {
+        display: block;
+        position: sticky;
+        top: 10px;
+        border: none;
+        background-color: white;
+    }
+    section.nice-desktop p:first-of-type {
+        margin-bottom: 0.5em;
+    }
+
+    div.reservation-desktop-part {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0;
+        grid-auto-flow: row;
+        grid-template-areas: "arrivee depart"
+                             "voyageur voyageur";
+        border: 1px solid #717171;
+        border-radius: 0.5em;
+    }
+    div.reservation-desktop-part h4 {
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgb(193, 53, 21);
+    }
+    div.reservation-desktop-part div {
+        padding: 0.75em 0.75em;
+        font-size: 0.875rem;
+    }
+    div.reservation-desktop-part div time, div.reservation-desktop-part div p:last-of-type {
+        font-size: 0.875rem;
+    }
+    .arrivee {
+        grid-area: arrivee;
+        border-bottom: 1px solid #717171;
+    }
+    .depart {
+        grid-area: depart;
+        border-left: 1px solid #717171;
+        border-bottom: 1px solid #717171;
+    }
+    .voyageur {
+        grid-area: voyageur;
+    }
+
+    .nice-desktop div.reservation-desktop, .nice-desktop div.perle-desktop {
+        padding: 1.5em;
+        border-radius: 0.75rem;
+        border: 1px solid rgb(221, 221, 221);
+    }
+    .nice-desktop div.reservation-desktop {
+        box-shadow: rgba(0, 0, 0, 0.12) 0 6px 16px;
+        margin-bottom: 1.5em;
+    }
+    .nice-desktop div.reservation-desktop a+div {
+        margin: 1.5em 0;
+    }
+    .nice-desktop div.reservation-desktop a.btnReservation {
+        display: block;
+    }
+    .nice-desktop div.perle-desktop {
+        display: flex;
+    }
+    .perle-desktop div:first-of-type {
+        margin-right: 1em;
+        line-height: 1.25;
+    }
+    .perle-desktop div:first-of-type h2 {
+        font-size: 1em;
+        line-height: 1.25;
+        margin-bottom: 0;
+        margin-right: 8px;
+        display: inline;
+    }
+    .perle-desktop div:first-of-type span {
+        font-size: 1rem;
+    }
+    .seventhSection img {
+        max-height: 60vh;
+        object-fit: cover;
+    }
+    .assistance ul {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+     }
+    .assistance, .concurrents ul {
+        padding-left: 0;
+    }
+    footer {
+        background-color: whitesmoke;
+        padding: 0 2.5em;
+    }
     .prendreReservation {
         display: none;
     }
@@ -50,34 +186,31 @@ Nom Complet: 	Renaud Van Meerbergen
 
 @media screen and (min-width: 1125px) {
     section.mes_photos {
-        margin: 1.5em 5em;
+        margin: 1.5em 10em;
     }
     main {
-        padding: 1.5em 5em;
+        padding: 1.5em 10em;
     }
-    /*.nice {
-        background-color: #fff;
-        position: fixed;
-        width: 33.3333%;
-        margin-left: 8.33333%;
-    }*/
     .fourthSection, .fifthSection, .sixthSection, .seventhSection, .bonusSection {
         padding-top: 3em;
     }
     .bonusSection {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 1.5em;
+        grid-template-columns: 45% 30%;
+        column-gap: 5em;
     }
     .bonusSection .respons {
         place-self: center;
     }
     section.concurrents, section.assistance {
-        padding: 3em 5em;
+        padding: 1.5em 8em;
     }
     .aPropos {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .assistance ul {
+        display: block;
     }
     .assistance, .concurrents ul {
         display: grid;

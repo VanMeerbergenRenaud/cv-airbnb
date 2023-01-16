@@ -111,6 +111,9 @@ abbr {
     font-weight: 600;
 }
 
+.none {
+    display: none;
+}
 /*---------------- PAGE D'ACCUEIL ---------------*/
 /*--------- HEADER --------*/
 header {
@@ -118,18 +121,21 @@ header {
 }
 header div.header-intro {
     border-bottom: 1px solid rgb(221, 221, 221);
-}
-header div:first-of-type {
     background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8em 1em;
+    padding: 1.5em;
+}
+header div.share {
+    display: flex;
+    padding: 0;
 }
 header div:first-of-type a {
     display: flex;
     border: none;
     text-decoration: none;
+    align-items: center;
 }
 header div.share a:first-of-type {
     margin-right: 1.2em;
@@ -531,6 +537,10 @@ article ol li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.bonusSection .advertising svg {
+    width: 24px;
+    height: 24px;
 }
 small {
     font-size: 0.75rem;
