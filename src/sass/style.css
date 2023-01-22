@@ -14,7 +14,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.5;
-    max-width: 1600px;
+    max-width: 1600px; /* 2000px */
     color: #222222;
 }
 main {
@@ -456,22 +456,22 @@ article ol li {
 .commentaireSection .slider > div:last-of-type {
     margin-right: 0;
 }
-.com-card {
+.commentaireSection .com-card {
     margin-top: 2em;
     border: 1px solid rgb(221, 221, 221);
     position: relative;
     border-radius: 12px;
     padding: 1em;
 }
-.com-card img {
+.commentaireSection .com-card img {
     border-radius: 50%;
     float: left;
     margin-right: 0.875em;
 }
-.com-card p:first-of-type {
+.commentaireSection .com-card p:first-of-type {
     margin-left: 52px;
 }
-.com-card p:last-of-type {
+.commentaireSection .com-card p:last-of-type {
     line-height: 1.5;
     margin: 0.75em 0 0.5em;
     max-height: 100px;
