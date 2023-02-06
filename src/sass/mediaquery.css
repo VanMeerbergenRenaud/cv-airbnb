@@ -192,7 +192,7 @@ Nom Complet: 	Renaud Van Meerbergen
         margin: 0;
     }
     .seventhSection img {
-        max-height: 420px;
+        max-height: 480px;
         object-fit: cover;
     }
     .assistance ul {
@@ -215,9 +215,140 @@ Nom Complet: 	Renaud Van Meerbergen
     .none {
         display: block;
     }
+    .none-ib {
+        display: inline-block;
+    }
     .hide {
         display: none;
     }
+    header div.header-intro {
+        display: none;
+    }
+    header div.header-desktop {
+        padding: 1em 10em;
+        display: grid; /* avec flex, le input search n'est pas pile au milieu... */
+        grid-template-columns: repeat(3, 1fr);
+        align-content: center;
+        justify-content: space-around;
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+    .header-desktop img {
+        width: auto;
+        height: 60px;
+    }
+    .header-desktop label {
+        position: relative;
+        display: inline-block;
+    }
+    /*.header-desktop label:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    }*/
+    .header-desktop label svg {
+        position: absolute;
+        top: 1.25em;
+        right: 2em;
+        padding: 0.625em;
+        background-color: #FF385C;
+        border-radius: 50px;
+    }
+
+    .search__input {
+        margin: 1em;
+        border: 1px solid rgb(221, 221, 221);
+        padding: 1em 5.25em 1em 1.75em;
+        background-color: transparent;
+        box-shadow: rgba(0, 0, 0, 0.08) 0 1px 2px, rgba(0, 0, 0, 0.05) 0 4px 12px;
+        line-height: 1.25;
+        border-radius: 50px;
+        transition: all 250ms ease-in-out;
+    }
+
+    .search__input::placeholder {
+        font-size: 0.94em;
+        line-height: 1.35;
+        font-weight: 600;
+        color: #222222;
+    }
+    .search__input:hover,
+    .search__input:focus {
+        outline: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        background-position: 100% center;
+    }
+    .header-desktop nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .header-desktop button {
+        background-color: transparent;
+        border: none;
+    }
+    .header-desktop nav .world {
+        margin-right: 0.5rem;
+        margin-top: 3px;
+    }
+    .header-desktop nav div:first-of-type a, .header-desktop nav .world svg {
+        padding: 0.75rem;
+        text-align: center;
+        border-radius: 50px;
+    }
+    .header-desktop nav div:first-of-type a:hover, .header-desktop nav .world svg:hover {
+        background-color: whitesmoke;
+    }
+    .header-desktop nav .profil button {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 50px;
+        margin-bottom: 0.25rem;
+    }
+    .header-desktop nav .profil button:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    }
+
+    /* sous menu */
+    .menu {
+        display: none;
+    }
+    button[aria-expanded="true"] + .menu {
+        position: absolute;
+        padding: 0.5rem 0;
+        top: 11vh;
+        right: 13.5vw;
+        background-color: white;
+        border-radius: 1em;
+        width: 245px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    }
+    button[aria-expanded="true"] + .menu a {
+        padding: 1rem;
+        font-weight: 400;
+    }
+    button[aria-expanded="true"] + .menu li:first-of-type a {
+        font-weight: 600;
+    }
+    button[aria-expanded="true"] + .menu li:nth-of-type(2) {
+        margin-bottom: 0.5rem;
+    }
+    button[aria-expanded="true"] + .menu li:nth-of-type(2) + hr {
+        border: 0.05rem solid rgb(221, 221, 221);
+    }
+    button[aria-expanded="true"] + .menu li:nth-of-type(3) {
+        margin-top: 0.5rem;
+    }
+    button[aria-expanded="true"] + .menu li:hover {
+        background-color: whitesmoke;
+    }
+
     section.mes_photos {
         margin: 1.5em 10em;
     }
@@ -389,8 +520,35 @@ Nom Complet: 	Renaud Van Meerbergen
         display: inline-block;
     }
     .aPropos {
+        padding-top: 3em;
+        border-top: 1px solid rgb(221, 221, 221);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 0 3em;
+        grid-auto-flow: row;
+        grid-template-areas: "aProposTitle aProposTitle aProposTitle"
+                             ". . ."
+                             ". . .";
+    }
+    .aProposTitle { grid-area: aProposTitle; }
+    .aPropos section {
+        border: none;
+    }
+    .aPropos section div h3 {
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+    .aPropos section div p {
+        color: #222222;
+        font-size: 1rem;
+        margin-bottom: 1em;
+    }
+    .aPropos p.aProposMore {
+        display: none;
+    }
+    .aPropos span.none {
+        font-weight: 600;
+        border: none;
     }
     .assistance ul {
         display: block;
@@ -401,5 +559,11 @@ Nom Complet: 	Renaud Van Meerbergen
     }
     .concurrents ul li {
         padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .header-desktop label svg {
+        right: 5.75em; /* 2em before */
     }
 }

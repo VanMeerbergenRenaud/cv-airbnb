@@ -85,6 +85,9 @@ a, a:visited {
     white-space: nowrap;
     width: 1px;
 }
+button {
+    cursor: pointer;
+}
 svg {
     width: 16px;
     height: 16px;
@@ -111,9 +114,10 @@ abbr {
     font-weight: 600;
 }
 
-.none {
+.none, .none-ib {
     display: none;
 }
+
 /*---------------- PAGE D'ACCUEIL ---------------*/
 /*--------- HEADER --------*/
 header {
@@ -140,7 +144,7 @@ header div:first-of-type a {
 header div.share a:first-of-type {
     margin-right: 1.2em;
 }
-header div.share a {
+.header-intro a {
     border: none;
 }
 /*--------- SECTION MES PHOTOS --------*/
@@ -316,7 +320,7 @@ article ol li {
 .seventhSection img {
     width: 100%;
     height: 100%;
-    min-height: 32.5vh;
+    max-height: 218px;
     margin: 1.5em 0;
     border:0;
     border-radius: 12px 12px 0 0;
@@ -539,8 +543,8 @@ article ol li {
     justify-content: space-between;
 }
 .bonusSection .advertising svg {
-    width: 24px;
-    height: 24px;
+    width: 40px; /* 16px */
+    height: 40px; /* 18px */
 }
 small {
     font-size: 0.75rem;
@@ -558,22 +562,36 @@ small {
 }
 /*--------- ARTICLE 1 FIN --------*/
 /*--------- ARTICLE 2 --------*/
-.aPropos section {
+.aPropos section a:first-of-type {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: none;
+}
+.aPropos h3 {
+    font-size: 1.375rem;
+    line-height: 1.2;
 }
 .aPropos section div:first-of-type {
     padding-right: 2em;
 }
 .aPropos section p {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
     font-size: 0.875rem;
     line-height: 1.45;
     color: #717171;
 }
 .aPropos section svg {
     border-radius: 50%;
+}
+.aPropos p.aProposMore {
+    color: #222222;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    font-weight: 600;
+    border-bottom: 1px solid #222;
 }
 /*--------- ARTICLE 2 FIN --------*/
 /*--------- SIGNALER L'ANNONCE --------*/
