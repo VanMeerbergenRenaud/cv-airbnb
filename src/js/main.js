@@ -36,3 +36,13 @@ if (screenWidth < 1000) {
 }
 */
 
+/* Javascript pour le sous menu du header */
+const button = document.querySelector('.profil button');
+const menu = document.querySelector('.menu');
+
+button.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+    this.setAttribute('aria-expanded', !expanded);
+    menu.style.display = expanded ? 'none' : 'block';
+});
+
