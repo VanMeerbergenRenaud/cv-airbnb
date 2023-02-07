@@ -678,6 +678,7 @@ section.assistance {
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid rgb(221, 221, 221);
+    z-index: 100;
 }
 .prendreReservation p {
     margin-right: 1em;
@@ -760,4 +761,7 @@ a.btnReservation {
     font-weight: 400;
     font-size: 1em;
     line-height: 1.5;
+}
+main section.mes_photos {
+    display: none;
 }

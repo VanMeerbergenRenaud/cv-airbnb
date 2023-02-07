@@ -14,6 +14,9 @@ Nom Complet: 	Renaud Van Meerbergen
     }
 }
 @media screen and (min-width: 750px) {
+    .hide-tablet {
+        display: none;
+    }
     section.mes_photos {
         height: calc(50vw * 8 / 12);
         overflow: auto;
@@ -52,7 +55,7 @@ Nom Complet: 	Renaud Van Meerbergen
     .nice {
         display: none;
     }
-    main article:first-of-type {
+    main article:first-of-type div.first-div {
         position: relative;
         display: grid;
         grid-template-columns: 60% 1fr;
@@ -66,10 +69,10 @@ Nom Complet: 	Renaud Van Meerbergen
                              "fourthSection nice-desktop"
                              "fifthSection nice-desktop"
                              "sixthSection nice-desktop"
-                             "eighthSection nice-desktop"
-                             "commentaireSectionDesktop commentaireSectionDesktop"
+                             "eighthSection nice-desktop";
+                            /*"commentaireSectionDesktop commentaireSectionDesktop"
                              "seventhSection seventhSection"
-                             "bonusSection bonusSection";
+                             "bonusSection bonusSection";*/
     }
     .firstSection {
         grid-area: firstSection;
@@ -81,18 +84,19 @@ Nom Complet: 	Renaud Van Meerbergen
     .fifthSection { grid-area: fifthSection; }
     .sixthSection { grid-area: sixthSection; }
     .eighthSection { grid-area: eighthSection; }
-    .seventhSection { grid-area: seventhSection; }
     .nice-desktop { grid-area: nice-desktop; }
+    /*.seventhSection { grid-area: seventhSection; }
     .commentaireSectionDesktop { grid-area: commentaireSectionDesktop; }
-    .bonusSection { grid-area: bonusSection; }
+    .bonusSection { grid-area: bonusSection; }*/
 
     section.nice-desktop {
         display: block;
         position: sticky;
-        top: 10px;
+        top: 80px;
         border: none;
         grid-row-start: 1;
         grid-row-end: 8;
+        max-height: 36rem;
     }
     section.nice-desktop p:first-of-type {
         margin-bottom: 0.5em;
@@ -225,7 +229,7 @@ Nom Complet: 	Renaud Van Meerbergen
         display: none;
     }
     header div.header-desktop {
-        padding: 1em 10em;
+        padding: 0.35em 10em;
         display: grid; /* avec flex, le input search n'est pas pile au milieu... */
         grid-template-columns: repeat(3, 1fr);
         align-content: center;
@@ -239,6 +243,7 @@ Nom Complet: 	Renaud Van Meerbergen
     .header-desktop label {
         position: relative;
         display: inline-block;
+        padding: 0 1em;
     }
     /*.header-desktop label:hover {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
@@ -246,7 +251,7 @@ Nom Complet: 	Renaud Van Meerbergen
     .header-desktop label svg {
         position: absolute;
         top: 1.25em;
-        right: 2em;
+        right: 10%;
         padding: 0.625em;
         background-color: #FF385C;
         border-radius: 50px;
@@ -255,7 +260,7 @@ Nom Complet: 	Renaud Van Meerbergen
     .search__input {
         margin: 1em;
         border: 1px solid rgb(221, 221, 221);
-        padding: 1em 5.25em 1em 1.75em;
+        padding: 1em 8em 1em 1.75em;
         background-color: transparent;
         box-shadow: rgba(0, 0, 0, 0.08) 0 1px 2px, rgba(0, 0, 0, 0.05) 0 4px 12px;
         line-height: 1.25;
@@ -318,7 +323,7 @@ Nom Complet: 	Renaud Van Meerbergen
     button[aria-expanded="true"] + .menu {
         position: absolute;
         padding: 0.5rem 0;
-        top: 11vh;
+        top: 9vh;
         right: 13.5vw;
         background-color: white;
         border-radius: 1em;
@@ -355,6 +360,40 @@ Nom Complet: 	Renaud Van Meerbergen
     main {
         padding: 1.5em 10em;
     }
+
+    nav.desktop-menu {
+        display: block;
+        width: 100%;
+        z-index: 1000;
+        top: -100px;
+        left: 0;
+        right: 0;
+        position: fixed;
+        background-color: white;
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+    nav.desktop-menu ul {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        padding-left: 1.5rem;
+    }
+    nav.desktop-menu li {
+        border: none;
+    }
+    nav.desktop-menu a {
+        display: inline-block;
+        border: none;
+        padding: 2rem 1rem;
+        border-bottom: 2px solid transparent;
+        text-decoration: none;
+    }
+    nav.desktop-menu a:hover {
+        border-bottom: 2px solid #222222;
+    }
+    .desktop-menu.show {
+        top: 0;
+    }
     .fourthSection, .fifthSection, .sixthSection, .seventhSection, .eighthSection, .bonusSection {
         padding: 3em 0;
     }
@@ -389,6 +428,7 @@ Nom Complet: 	Renaud Van Meerbergen
     .seventhSection img {
         max-height: 480px;
     }
+
     .commentaireSectionDesktop {
         padding: 3em 0;
     }
@@ -560,10 +600,11 @@ Nom Complet: 	Renaud Van Meerbergen
     .concurrents ul li {
         padding-left: 0;
     }
-}
-
-@media screen and (min-width: 1350px) {
-    .header-desktop label svg {
-        right: 5.75em; /* 2em before */
+    header section.mes_photos {
+        display: none;
+    }
+    main section.mes_photos {
+        display: grid;
+        margin: 1.5em 0;
     }
 }
