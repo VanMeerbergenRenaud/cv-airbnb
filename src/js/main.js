@@ -46,3 +46,19 @@ button.addEventListener('click', function() {
     menu.style.display = expanded ? 'none' : 'block';
 });
 
+window.addEventListener("scroll", function() {
+    let scrollDistance = document.body.scrollTop || document.documentElement.scrollTop;
+    if (scrollDistance >= 700) {
+        document.querySelector(".desktop-menu").classList.remove("none");
+        document.querySelector(".desktop-menu").classList.add("show");
+    } else {
+        document.querySelector(".desktop-menu").classList.remove("show");
+        document.querySelector(".desktop-menu").classList.add("none");
+    }
+});
+
+
+
+
+
+
