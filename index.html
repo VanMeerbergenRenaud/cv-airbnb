@@ -10,9 +10,9 @@
     <link rel="canonical" href="https://renaud-vmb.com">
     <!-- Feuilles de styles  -->
     <!--<link rel="stylesheet" href="dist/css/style.min.css">-->
-    <link rel="stylesheet" href="src/sass/reset.css">
-    <link rel="stylesheet" href="src/sass/style.css">
-    <link rel="stylesheet" href="src/sass/mediaquery.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/mediaquery.css">
 
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
@@ -46,51 +46,57 @@
 <header>
     <h1 class="hidden">CV de Renaud Van Meerbergen</h1>
     <div class="header-desktop none">
-        <a href="index.html">
+        <a href="index.html" class="hiddenScrollLeft" tabindex="1">
             <img src="img/ma_signature.jpg" alt="image de ma signature personnelle" width="595" height="262">
         </a>
-        <label for="logo-image">
-            <input class="search__input" type="text" placeholder="Pose moi une question..." id="logo-image">
-            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; fill: none; height: 12px; width: 12px; stroke: white; stroke-width: 5px; overflow: visible;"><g fill="none"><path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path></g></svg>
-        </label>
+        <div class="search-input">
+            <a href="" target="_blank" class="hidden"></a>
+            <label for="logo-image">
+                <input class="search__input" type="text" placeholder="Poser moi une question..." id="logo-image" tabindex="2">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; fill: none; height: 12px; width: 12px; stroke: white; stroke-width: 5px; overflow: visible;"><g fill="none"><path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path></g></svg>
+            </label>
+            <div class="autocom-box"></div>
+            <div class="icon hidden"></div>
+        </div>
         <nav>
             <div>
-                <a href="#">Réserver un coaching</a>
+                <a href="#" tabindex="3">Réserver un coaching</a>
             </div>
             <div class="world">
-                <button aria-labelledby="Choisissez une nouvelle langue">
+                <button aria-labelledby="Choisissez une nouvelle langue" tabindex="4">
                     <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 16px; width: 16px;"><path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path></svg>
                 </button>
             </div>
             <div class="profil">
-                <button aria-labelledby="Regarder votre profil" aria-expanded="false">
+                <button aria-labelledby="Regarder votre profil" aria-expanded="false" tabindex="5">
                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; margin-right: 0.75rem; fill: none; stroke: currentColor; height: 16px; width: 16px; stroke-width: 3px; overflow: visible;"><g fill="none" fill-rule="nonzero"><path d="m2 16h28"></path><path d="m2 24h28"></path><path d="m2 8h28"></path></g></svg>
                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 28px; width: 28px; fill: #717171;"><path d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z"></path></svg>
                 </button>
-                <ul class="menu" id="profil-menu">
-                    <li><a href="#">Ma marque de café</a></li>
-                    <li><a href="#">Mon curriculum vita</a></li>
-                    <li><a href="#">Mon plus grand secret</a></li>
-                    <li><a href="#">Ma journée typique</a></li>
-                    <li><a href="#">Me contacter</a></li>
+                <ul class="menu" id="profil-menu" tabindex="6">
+                    <li><a href="#" tabindex="7">Ma marque de café</a></li>
+                    <li><a href="#" tabindex="8">Mon curriculum vita</a></li>
+                    <li><!--Séparation horizontale--></li>
+                    <li><a href="#" tabindex="9">Mon plus grand secret</a></li>
+                    <li><a href="#" tabindex="10">Ma journée typique</a></li>
+                    <li><a href="#" tabindex="11">Me contacter</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="header-intro">
+    <div class="header-intro" tabindex="12">
         <a href="#">
             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; stroke-width: 3px; overflow: visible; margin-right: 8px;" aria-label="Vers le portfolio" role="img"><g fill="none"><path d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"></path></g></svg>
             CV de  Renaud Van Meerbergen</a>
         <div class="share">
-            <a href="#">
+            <a href="#" tabindex="13">
                 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; margin-right: 1.25em; stroke-width: 3px; overflow: visible;"><g fill="none"><path d="M27 18v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9"></path><path d="M16 3v23V3z"></path><path d="M6 13l9.293-9.293a1 1 0 0 1 1.414 0L26 13"></path></g></svg>
             </a>
-            <a href="#">
+            <a href="#" tabindex="14">
                 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: currentcolor; stroke-width: 3px; overflow: visible;"><path d="m16 28c7-4.733 14-10 14-17 0-1.792-.683-3.583-2.05-4.95-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05l-2.051 2.051-2.05-2.051c-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05-1.367 1.367-2.051 3.158-2.051 4.95 0 7 7 12.267 14 17z"></path></svg>
             </a>
         </div>
     </div>
-    <section class="mes_photos">
+    <section class="mes_photos hiddenScrollTop">
         <h2 class="hidden">Mon book photos</h2>
         <img src="img/moi/fichier_1.png" alt="portrait de moi" class="photo_first">
         <img src="img/moi/fichier_2.png" alt="portrait de moi en souriant" class="photo2">
@@ -101,7 +107,7 @@
         <img src="img/moi/fichier_7.png" alt="portrait de moi au cours de mannequinat" class="photo-next">
     </section>
     <nav class="desktop-menu none">
-        <ul>
+        <ul tabindex="15">
             <li><a href="#photos">Photos</a></li>
             <li><a href="#languages">Languages</a></li>
             <li><a href="#commentaires">Commentaires</a></li>
@@ -116,10 +122,10 @@
         <div class="intro-resume">
             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="width: 12px; height: 12px"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>
             <span class="bold">4,95</span> ·
-            <a href="#">13 commentaires</a> ·
+            <a href="#commentaires">13 commentaires</a> ·
             <svg xmlns="http://www.w3.org/2000/svg" style="width: 12px; height: 12px" viewBox="0 0 512 512"><path d="M16 0H144c5.3 0 10.3 2.7 13.3 7.1l81.1 121.6c-49.5 4.1-94 25.6-127.6 58.3L2.7 24.9C-.6 20-.9 13.7 1.9 8.5S10.1 0 16 0zM509.3 24.9L401.2 187.1c-33.5-32.7-78.1-54.2-127.6-58.3L354.7 7.1c3-4.5 8-7.1 13.3-7.1H496c5.9 0 11.3 3.2 14.1 8.5s2.5 11.5-.8 16.4zM432 336c0 97.2-78.8 176-176 176s-176-78.8-176-176s78.8-176 176-176s176 78.8 176 176zM264.4 241.1c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z"/></svg>
             <span itemprop="jobTitle">Apprenti Web Developer</span> ·
-            <a href="#" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <a href="#myHouse" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <span itemprop="addressLocality" class="bold">Neupré</span>,
                 <span itemprop="addressRegion" class="bold">Liège</span>,
                 <span itemprop="addressCountry" class="bold">Belgique</span>
@@ -200,7 +206,7 @@
             </section>
             <section class="secondSection" itemscope itemtype="http://schema.org/Service">
                 <h2 class="hidden">Caractéristiques</h2>
-                <div class="enfant">
+                <div class="enfant hiddenScrollLeft">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="height: 22px; width: 22px;"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>                        </div>
                     <div>
@@ -212,7 +218,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="enfant">
+                <div class="enfant hiddenScrollLeft">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="height: 22px; width: 22px;"><path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/></svg></div>
                     <div>
@@ -224,7 +230,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="enfant">
+                <div class="enfant hiddenScrollLeft">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 22px; width: 22px;"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"/></svg>                        </div>
                     <div>
@@ -245,39 +251,43 @@
                     un site internet selon les spécifications de mon client, ainsi qu’à le maintenir par la suite moyennant une rémunération adéquate.
                 </p>
                 <div>
-                    <a href="#answer" id="openLink">En savoir plus</a>
+                    <a href="#answer" id="openLink" data-replace="En savoir plus" class="link-test">
+                        <span>En savoir plus</span>&nbsp;
+                    </a>
                     <div id="answer" class="action">
-                        <div>
-                            <svg id="retour" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="width: 20px; height: 20px"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+                        <div class="bg-entire-page">
+                            <div>
+                                <svg id="retour" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="width: 20px; height: 20px"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+                            </div>
+                            <img src="img/ma_signature.jpg" alt="image de ma signature personnelle" width="595" height="262">
+                            <p>
+                                Je suis considéré comme un débutant spécialiste de la création et du développement de sites internet.
+                            </p>
+                            <h3>Création de sites internet professionnels</h3>
+                            <p>
+                                Je suis une personne bientôt qualifiée qui a les connaissances et l’expérience nécessaires pour créer des sites internet semi-professionnels de qualité.
+                                En faisant appel à moi, vous pouvez être sûr que votre site sera bien conçu, fonctionnel et adapté à vos besoins.
+                            </p>
+                            <h3>L’importance d’une stratégie solide</h3>
+                            <p>
+                                Le développement d’un site internet nécessite une stratégie solide et bien pensée. Je peux vous aider à élaborer une
+                                stratégie efficace qui vous permettra d’atteindre vos objectifs et de réussir sur le web.
+                            </p>
+                            <h3>Création de sites e-commerce</h3>
+                            <p>
+                                La création d’un site e-commerce est ce que je préfère, mais c'est aussi le plus complexe. Je possède les connaissances
+                                et l’expérience nécessaires pour vous aider à créer un site e-commerce réussi qui répondra à vos besoins et à ceux de vos clients.
+                            </p>
+                            <h3>Optimisation de sites internet</h3>
+                            <p>
+                                L’optimisation d’un site internet est essentielle pour assurer sa visibilité et sa performance sur le web.
+                                Je suis aussi capable d’optimiser votre site de manière à ce qu’il soit bien référencé par les moteurs de
+                                recherche et facile à utiliser pour vos visiteurs.
+                            </p>
+                            <p>
+                                Découvrez comment je protège votre future réservation dans mon <a href="#">Centre d’aide</a>.
+                            </p>
                         </div>
-                        <img src="img/ma_signature.jpg" alt="image de ma signature personnelle" width="595" height="262">
-                        <p>
-                            Je suis considéré comme un débutant spécialiste de la création et du développement de sites internet.
-                        </p>
-                        <h3>Création de sites internet professionnels</h3>
-                        <p>
-                            Je suis une personne bientôt qualifiée qui a les connaissances et l’expérience nécessaires pour créer des sites internet semi-professionnels de qualité.
-                            En faisant appel à moi, vous pouvez être sûr que votre site sera bien conçu, fonctionnel et adapté à vos besoins.
-                        </p>
-                        <h3>L’importance d’une stratégie solide</h3>
-                        <p>
-                            Le développement d’un site internet nécessite une stratégie solide et bien pensée. Je peux vous aider à élaborer une
-                            stratégie efficace qui vous permettra d’atteindre vos objectifs et de réussir sur le web.
-                        </p>
-                        <h3>Création de sites e-commerce</h3>
-                        <p>
-                            La création d’un site e-commerce est ce que je préfère, mais c'est aussi le plus complexe. Je possède les connaissances
-                            et l’expérience nécessaires pour vous aider à créer un site e-commerce réussi qui répondra à vos besoins et à ceux de vos clients.
-                        </p>
-                        <h3>Optimisation de sites internet</h3>
-                        <p>
-                            L’optimisation d’un site internet est essentielle pour assurer sa visibilité et sa performance sur le web.
-                            Je suis aussi capable d’optimiser votre site de manière à ce qu’il soit bien référencé par les moteurs de
-                            recherche et facile à utiliser pour vos visiteurs.
-                        </p>
-                        <p>
-                            Découvrez comment je protège votre future réservation dans mon <a href="#">Centre d’aide</a>.
-                        </p>
                     </div>
                 </div>
             </section>
@@ -298,28 +308,31 @@
                         Je m'améliore constamment dans toutes les étapes du cycle de développement de projets Web dynamiques.
                     </p>
                     <div>
-                        <a href="#answer2" id="openLink2" class="last">En savoir plus&nbsp;
-                            <svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                        <a href="#answer2" id="openLink2" data-replace="En savoir plus" class="link-test">
+                            <span>En savoir plus</span>&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                        </a>
                         <div id="answer2" class="action full">
-                            <div>
-                                <svg id="retour2" viewBox="0 0 18 18" style="rotate: 180deg"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                            <div class="bg-entire-page2">
+                                <div>
+                                    <svg id="retour2" viewBox="0 0 18 18" style="rotate: 180deg"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                                </div>
+                                <h2>À propos de moi</h2>
+                                <p>
+                                    Je suis un apprenti développeur web, se spécialisant dans le développement front-end.
+                                    Je m'améliore constamment dans toutes les étapes du cycle de développement de projets Web dynamiques.
+                                </p>
+                                <h3>Connaissance de différents langages de programmation</h3>
+                                <p>
+                                    Je dispose d’une connaissance approfondie de quelques langages de programmation, tels que <abbr title="HyperText Markup Language">HTML</abbr>5, <abbr title="Cascading Style Sheets">CSS</abbr>3 et <abbr title="Hypertext Preprocessor">PHP</abbr>.
+                                    Maitrisant ces quelques langages de programmation et technologies Web, je sais créer des interfaces utilisateur attrayantes et fonctionnelles.
+                                </p>
+                                <h3>Capacité à travailler en équipe et à communiquer</h3>
+                                <p>
+                                    Je travaille souvent en étroite collaboration avec d’autres membres de l’équipe de développement, comme les développeurs
+                                    back-end et les designers. Je suis capable de travailler efficacement en équipe et de communiquer avec des non-techniciens,
+                                    comme les clients et les chefs de projet.
+                                </p>
                             </div>
-                            <h2>À propos de moi</h2>
-                            <p>
-                                Je suis un apprenti développeur web, se spécialisant dans le développement front-end.
-                                Je m'améliore constamment dans toutes les étapes du cycle de développement de projets Web dynamiques.
-                            </p>
-                            <h3>Connaissance de différents langages de programmation</h3>
-                            <p>
-                                Je dispose d’une connaissance approfondie de quelques langages de programmation, tels que <abbr title="HyperText Markup Language">HTML</abbr>5, <abbr title="Cascading Style Sheets">CSS</abbr>3 et <abbr title="Hypertext Preprocessor">PHP</abbr>.
-                                Maitrisant ces quelques langages de programmation et technologies Web, je sais créer des interfaces utilisateur attrayantes et fonctionnelles.
-                            </p>
-                            <h3>Capacité à travailler en équipe et à communiquer</h3>
-                            <p>
-                                Je travaille souvent en étroite collaboration avec d’autres membres de l’équipe de développement, comme les développeurs
-                                back-end et les designers. Je suis capable de travailler efficacement en équipe et de communiquer avec des non-techniciens,
-                                comme les clients et les chefs de projet.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -332,7 +345,7 @@
             </section>
             <section class="sixthSection" id="languages">
                 <h3 class="sixthSection-titre">Les languages que j’utilise</h3>
-                <ul class="list-item sixthSection-contenu1">
+                <ul class="list-item sixthSection-contenu1 hiddenScrollLeft">
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 24px; width: 24px;"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg><span itemprop="knowsAbout"><abbr title="HyperText Markup Language">HTML</abbr> 5</span>
                     </li>
@@ -349,7 +362,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="height: 24px; width: 24px;"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z"/></svg><span itemprop="knowsAbout"><abbr title="Node Package Manager">NPM</abbr></span>
                     </li>
                 </ul>
-                <ul class="list-item sixthSection-contenu2 none">
+                <ul class="list-item sixthSection-contenu2 hiddenScrollRight none">
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="height: 24px; width: 24px;"><path d="M320 104.5c171.4 0 303.2 72.2 303.2 151.5S491.3 407.5 320 407.5c-171.4 0-303.2-72.2-303.2-151.5S148.7 104.5 320 104.5m0-16.8C143.3 87.7 0 163 0 256s143.3 168.3 320 168.3S640 349 640 256 496.7 87.7 320 87.7zM218.2 242.5c-7.9 40.5-35.8 36.3-70.1 36.3l13.7-70.6c38 0 63.8-4.1 56.4 34.3zM97.4 350.3h36.7l8.7-44.8c41.1 0 66.6 3 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7h-70.7L97.4 350.3zm185.7-213.6h36.5l-8.7 44.8c31.5 0 60.7-2.3 74.8 10.7 14.8 13.6 7.7 31-8.3 113.1h-37c15.4-79.4 18.3-86 12.7-92-5.4-5.8-17.7-4.6-47.4-4.6l-18.8 96.6h-36.5l32.7-168.6zM505 242.5c-8 41.1-36.7 36.3-70.1 36.3l13.7-70.6c38.2 0 63.8-4.1 56.4 34.3zM384.2 350.3H421l8.7-44.8c43.2 0 67.1 2.5 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7H417l-32.8 168.7z"/></svg><span itemprop="knowsAbout"><abbr title="Hypertext Preprocessor">PHP</abbr></span>
                     </li>
@@ -376,7 +389,9 @@
                 <p class="last " itemprop="description">
                     En pleine campagne et forêt
                 </p>
-                <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                <a href="#" data-replace="En savoir plus" class="link-test">
+                    <span>En savoir plus</span>&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                </a>
             </section>
             <section class="eighthSection" itemscope itemtype="https://schema.org/Event">
                 <h3 itemprop="name">Mes dispositions du mois</h3>
@@ -409,7 +424,7 @@
                 <a href="#" class="last">Effacer les dates</a>
             </section>
         </div>
-        <section class="commentaireSection hide" itemscope itemtype="https://schema.org/WebPage">
+        <section class="commentaireSection hiddenScrollLeft hide" itemscope itemtype="https://schema.org/WebPage">
             <h3 class="hidden">Commentaires Clients</h3>
             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height: 14px; width: 14px;"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>
             <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -457,14 +472,14 @@
             <a href="#" class="big-btn">Afficher les 24 compétences</a>
         </section>
         <div class="second-div">
-            <section class="commentaireSectionDesktop none" itemscope itemtype="https://schema.org/WebPage" id="commentaires">
+            <section class="commentaireSectionDesktop hiddenScrollTop none" itemscope itemtype="https://schema.org/WebPage" id="commentaires">
                 <h3 class="hidden">Commentaires Clients</h3>
                 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height: 14px; width: 14px;"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>
                 <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                         <span itemprop="ratingValue" class="bold ratingValue">&nbsp;4,95&nbsp;·</span>
                         <span itemprop="reviewCount" class="bold ratingValue">13 commentaires</span>
                     </span>
-                <p class="com-p-first">Découvrez comment fonctionnent les commentaires</p>
+                <p class="com-p-first">Découvrez ce que les gens pense de moi</p>
                 <div class="slider">
                     <div class="com-divider">
                         <p class="com-stat q-é-n">
@@ -511,7 +526,9 @@
                                 pas demander un meilleur support. C’est facilement un freelancer 5 étoiles. Merci Renaud,
                                 tu gères !
                             </p>
-                            <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                            <a href="#" data-replace="En savoir plus" class="link-test">
+                                <span>En savoir plus</span>&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                            </a>
                         </div>
                         <div class="com-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
                             <img src="img/testimonials/face-2.jpg" alt="image d’une cliente nommé Amélie" class="img-me" itemprop="author">
@@ -525,7 +542,9 @@
                                 faisant un travail de qualité. Mon article à fait la une des pages de magazines
                                 grâces à ses techniques sur la publicité.
                             </p>
-                            <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                            <a href="#" data-replace="En savoir plus" class="link-test">
+                                <span>En savoir plus</span>&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                            </a>
                         </div>
                         <div class="com-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
                             <img src="img/testimonials/face-3.jpg" alt="image d’un client nommé Hugues" class="img-me" itemprop="author">
@@ -539,7 +558,9 @@
                                 techniques de référencement sont exceptionnelles. J’ai enfin pu réaliser un site
                                 en première ligne sur Google.
                             </p>
-                            <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                            <a href="#" data-replace="En savoir plus" class="link-test">
+                                <span>En savoir plus</span>&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                            </a>
                         </div>
                         <div class="com-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
                             <img src="img/testimonials/face-4.jpg" alt="image d’un client nommé Safouane" class="img-me" itemprop="author">
@@ -553,7 +574,9 @@
                                 et facile à utiliser. Il a été très professionnel et n'a utilisé que de l'HTML, CSS et du peu de Javascript.
                                 Je ne pourrais pas être plus satisfait de son travail et je le recommande à 101%.
                             </p>
-                            <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                            <a href="#" data-replace="En savoir plus" class="link-test">
+                                <span>En savoir plus</span>&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                            </a>
                         </div>
                         <div class="com-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
                             <img src="img/testimonials/face-5.jpg" alt="image d’une cliente nommé Amélie" class="img-me" itemprop="author">
@@ -568,7 +591,9 @@
                                 Le site qu'il a créé pour moi est magnifique et fonctionne à merveille. Je suis très satisfait de
                                 son travail et je le recommande à tous ceux qui cherchent un développeur web de qualité.
                             </p>
-                            <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                            <a href="#" data-replace="En savoir plus" class="link-test">
+                                <span>En savoir plus</span>&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                            </a>
                         </div>
                         <div class="com-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
                             <img src="img/testimonials/face-6.jpg" alt="image d’un client nommé Hugues" class="img-me" itemprop="author">
@@ -583,13 +608,15 @@
                                 au long du processus pour s'assurer que j'étais entièrement satisfait. Je recommande
                                 vivement ses services à tous ceux qui cherchent à créer un site web de qualité supérieure.
                             </p>
-                            <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                            <a class="link-test" data-replace="En savoir plus" href="#">
+                                                <span>En savoir plus</span>&nbsp;<svg style="height: 12px; width: 12px;" viewBox="0 0 18 18"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                                            </a>
                         </div>
                     </div>
                 </div>
                 <a href="#" class="big-btn">Afficher les 15 avis utilisateur</a>
             </section>
-            <section class="seventhSection none" itemscope itemtype="http://schema.org/Place">
+            <section class="seventhSection hiddenScrollTop none" itemscope itemtype="http://schema.org/Place" id="myHouse">
                 <h3 itemprop="name">Où est ce que j’habite</h3>
                 <img src="img/logement.png" alt="localisation de mon adresse personnelle sur la carte Google Maps" loading="lazy" itemprop="photo">
                 <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -603,9 +630,11 @@
                 <p class="last " itemprop="description">
                     En pleine campagne et forêt
                 </p>
-                <a href="#" class="last">En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+                <a href="#" data-replace="En savoir plus" class="link-test">
+                    <span>En savoir plus</span>&nbsp;<svg viewBox="0 0 18 18" style="height: 12px; width: 12px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                </a>
             </section>
-            <section class="bonusSection" id="bonus">
+            <section class="bonusSection hiddenScrollTop" id="bonus">
                 <div class="respons">
                     <div class="enfant">
                         <div>
@@ -674,7 +703,7 @@
             </section>
         </div>
     </article>
-    <article class="aPropos">
+    <article class="aPropos hiddenScrollTop">
         <h3 class="none aProposTitle">À propos</h3>
         <section>
             <a href="#">
@@ -688,7 +717,7 @@
                             et en cultivant mes compétences extra-scolaires. Cependant, mon plus grand accomplissement académique est sur le point d'être réalisé.-->
                         </p>
                         <span class="none">
-                            En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 16px; width: 16px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
+                            En savoir plus&nbsp;<svg viewBox="0 0 18 18" style="height: 10px; width: 10px;"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg>
                         </span>
                     </div>
                 </div>
@@ -736,7 +765,7 @@
     </div>
 </main>
 <footer>
-    <section class="concurrents">
+    <section class="concurrents hiddenScrollTop">
         <h3>Découvrez d’autres personnes que je fréquente ⋅ Mes amis & mes collègues</h3>
         <ul>
             <li itemprop="colleague">Adrien</li>
@@ -761,7 +790,7 @@
             <span>Chez moi</span>
         </p>
     </section>
-    <section class="assistance" itemscope itemtype="http://schema.org/WebPageElement">
+    <section class="assistance hiddenScrollTop" itemscope itemtype="http://schema.org/WebPageElement">
         <h3 class="hidden">Liste de liens incontournables</h3>
         <div itemscope itemtype="http://schema.org/Service">
             <h4>Mes services</h4>
@@ -851,6 +880,32 @@
                     </a>
                 </li>
             </ul>
+        </div>
+    </section>
+    <section class="infos-copyright">
+        <div>
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 16px; width: 16px; fill: currentcolor;"><path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path></svg>
+            <a href="#" title="Choisir la langue du site">Français (BE)</a>
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 16px; width: 16px; fill: currentcolor;"><path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path></svg>
+            <a href="#" title="Choisir la devise pour le paiement de votre futur projet">EUR</a>
+        </div>
+        <span>© 2023 Airbnb, Inc.</span>
+        <p>
+            <a href="#">Confidentialité</a>&nbsp;·
+            <a href="#">Conditions générales</a>&nbsp;·
+            <a href="#">Plan du site</a>&nbsp;·
+            <a href="#">Infos sur l'entreprise</a>
+        </p>
+        <div class="none reseau-social-footer">
+            <a href="https://www.facebook.com/renaud.vanmeerbergen">
+                <svg viewBox="0 0 32 32" role="img" aria-hidden="false" aria-label="Accéder à Facebook" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m8 14.41v-4.17c0-.42.35-.81.77-.81h2.52v-2.08c0-4.84 2.48-7.31 7.42-7.35 1.65 0 3.22.21 4.69.64.46.14.63.42.6.88l-.56 4.06c-.04.18-.14.35-.32.53-.21.11-.42.18-.63.14-.88-.25-1.78-.35-2.8-.35-1.4 0-1.61.28-1.61 1.73v1.8h4.52c.42 0 .81.42.81.88l-.35 4.17c0 .42-.35.71-.77.71h-4.21v16c0 .42-.35.81-.77.81h-5.21c-.42 0-.8-.39-.8-.81v-16h-2.52a.78.78 0 0 1 -.78-.78" fill-rule="evenodd"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/akarenaud.vmb">
+                <svg viewBox="0 0 32 32" role="img" aria-hidden="false" aria-label="Accéder à Twitter" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m31 6.36c-1.16.49-2.32.82-3.55.95 1.29-.76 2.22-1.87 2.72-3.38a13.05 13.05 0 0 1 -3.91 1.51c-1.23-1.28-2.75-1.94-4.51-1.94-3.41 0-6.17 2.73-6.17 6.12 0 .49.07.95.17 1.38-4.94-.23-9.51-2.6-12.66-6.38-.56.95-.86 1.97-.86 3.09 0 2.07 1.03 3.91 2.75 5.06-1-.03-1.92-.3-2.82-.76v.07c0 2.89 2.12 5.42 4.94 5.98-.63.17-1.16.23-1.62.23-.3 0-.7-.03-1.13-.13a6.07 6.07 0 0 0 5.74 4.24c-2.22 1.74-4.78 2.63-7.66 2.63-.56 0-1.06-.03-1.43-.1 2.85 1.84 6 2.76 9.41 2.76 7.29 0 12.83-4.01 15.51-9.3 1.36-2.66 2.02-5.36 2.02-8.09v-.46c-.03-.17-.03-.3-.03-.33a12.66 12.66 0 0 0 3.09-3.16" fill-rule="evenodd"></path></svg>
+            </a>
+            <a href="https://twitter.com/RenaudVmb">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="false" aria-label="Accéder à Instagram" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m23.09.91c-.61-.61-1.33-.91-2.17-.91h-17.84c-.85 0-1.57.3-2.17.91s-.91 1.33-.91 2.17v17.84c0 .85.3 1.57.91 2.17s1.33.91 2.17.91h17.84c.85 0 1.57-.3 2.17-.91s.91-1.33.91-2.17v-17.84c0-.85-.3-1.57-.91-2.17zm-14.48 7.74c.94-.91 2.08-1.37 3.4-1.37 1.33 0 2.47.46 3.41 1.37s1.41 2.01 1.41 3.3-.47 2.39-1.41 3.3-2.08 1.37-3.41 1.37c-1.32 0-2.46-.46-3.4-1.37s-1.41-2.01-1.41-3.3.47-2.39 1.41-3.3zm12.66 11.63c0 .27-.09.5-.28.68a.92.92 0 0 1 -.67.28h-16.7a.93.93 0 0 1 -.68-.28.92.92 0 0 1 -.27-.68v-10.13h2.2a6.74 6.74 0 0 0 -.31 2.05c0 2 .73 3.71 2.19 5.12s3.21 2.12 5.27 2.12a7.5 7.5 0 0 0 3.75-.97 7.29 7.29 0 0 0 2.72-2.63 6.93 6.93 0 0 0 1-3.63c0-.71-.11-1.39-.31-2.05h2.11v10.12zm0-13.95c0 .3-.11.56-.31.77a1.05 1.05 0 0 1 -.77.31h-2.72c-.3 0-.56-.11-.77-.31a1.05 1.05 0 0 1 -.31-.77v-2.58c0-.29.11-.54.31-.76s.47-.32.77-.32h2.72c.3 0 .56.11.77.32s.31.47.31.76z" fill-rule="evenodd"></path></svg>
+            </a>
         </div>
     </section>
     <section class="prendreReservation">
