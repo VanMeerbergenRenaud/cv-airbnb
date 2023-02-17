@@ -42,7 +42,7 @@ Nom Complet: 	Renaud Van Meerbergen
     }
     /*En savoir plus 1.*/
     .is-opened {
-        height: 92%;
+        height: 100%;
         padding: 1em 1.5em 2em;
         background-color: rgba(255,255,255,0.85);
     }
@@ -215,6 +215,9 @@ Nom Complet: 	Renaud Van Meerbergen
     .seventhSection img {
         max-height: 480px;
         object-fit: cover;
+    }
+    .seventhSection .map {
+        height: 480px;
     }
     .assistance ul {
         display: grid;
@@ -450,6 +453,9 @@ Nom Complet: 	Renaud Van Meerbergen
 
     .seventhSection img {
         max-height: 480px;
+    }
+    .seventhSection .map {
+        height: 480px;
     }
 
     .commentaireSectionDesktop {

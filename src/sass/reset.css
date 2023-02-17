@@ -1,8 +1,6 @@
 /* -------------------------------------------
 Nom Complet: 	Renaud Van Meerbergen
 ------------------------------------------- */
-                /*LET'S GO*/
-/*-------------------------------------------- */
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -53,15 +51,14 @@ table {
     border-spacing: 0;
 }
 /* Ajout au reset */
-.browserupgrade,
-.no-js__message {
-    display:block;
-    background:tomato;
-    padding:2rem;
-    margin:0 0 1rem;
-    z-index:99;
-    font-weight:700
+.browserupgrade, .no-js__message {
+    display: block;
+    background: tomato;
+    padding: 2rem;
+    margin: 0 0 1rem;
+    z-index: 999;
+    font-weight: 700;
 }
 .js-enabled .no-js__message {
-    display:none
+    display:none;
 }
