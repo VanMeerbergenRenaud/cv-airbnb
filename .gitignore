@@ -4,6 +4,7 @@
 
 ### JetBrains ###
 .idea/
+.idea/workspace.xml
 
 ### macOS ###
 # General
@@ -155,9 +156,12 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,sass,macos,windows,jetbrains
-
-/hot
+# Dossier racine
+/fichiers_externes/*
+/gulpfile.js
+/package.json
+/package-lock.json
 /mix-manifest.json
-/dist/js/script.min.js
-/fichiers_externes/
+/src/fonts/*
+
+# End of https://www.gitignore.io/api/node,sass,macos,windows,jetbrains

@@ -14,6 +14,9 @@ Nom Complet: 	Renaud Van Meerbergen
     }
 }
 @media screen and (min-width: 750px) {
+    .hide-tablet {
+        display: none;
+    }
     section.mes_photos {
         height: calc(50vw * 8 / 12);
         overflow: auto;
@@ -39,9 +42,26 @@ Nom Complet: 	Renaud Van Meerbergen
     }
     /*En savoir plus 1.*/
     .is-opened {
-        margin: 2.5em;
-        padding: 2.5em;
+        height: 100%;
+        padding: 3em 15em 5em;
+        background-color: rgba(255,255,255,0.85);
+    }
+    .bg-entire-page {
+        border: 1px solid whitesmoke;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        padding: 5% 8%;
+        background-color: white;
         border-radius: 1em;
+        z-index: 101;
+    }
+    .bg-entire-page2 {
+        margin: 8%;
+        border: 1px solid whitesmoke;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        padding: 5% 8%;
+        background-color: white;
+        border-radius: 1em;
+        z-index: 101;
     }
     section.mes_photos {
         margin: 1.5em 2.5em;
@@ -52,7 +72,7 @@ Nom Complet: 	Renaud Van Meerbergen
     .nice {
         display: none;
     }
-    main article:first-of-type {
+    main article:first-of-type div.first-div {
         position: relative;
         display: grid;
         grid-template-columns: 60% 1fr;
@@ -66,10 +86,10 @@ Nom Complet: 	Renaud Van Meerbergen
                              "fourthSection nice-desktop"
                              "fifthSection nice-desktop"
                              "sixthSection nice-desktop"
-                             "eighthSection nice-desktop"
-                             "commentaireSectionDesktop commentaireSectionDesktop"
-                             "seventhSection seventhSection"
-                             "bonusSection bonusSection";
+                             "eighthSection nice-desktop";
+        /*"commentaireSectionDesktop commentaireSectionDesktop"
+         "seventhSection seventhSection"
+         "bonusSection bonusSection";*/
     }
     .firstSection {
         grid-area: firstSection;
@@ -81,18 +101,19 @@ Nom Complet: 	Renaud Van Meerbergen
     .fifthSection { grid-area: fifthSection; }
     .sixthSection { grid-area: sixthSection; }
     .eighthSection { grid-area: eighthSection; }
-    .seventhSection { grid-area: seventhSection; }
     .nice-desktop { grid-area: nice-desktop; }
+    /*.seventhSection { grid-area: seventhSection; }
     .commentaireSectionDesktop { grid-area: commentaireSectionDesktop; }
-    .bonusSection { grid-area: bonusSection; }
+    .bonusSection { grid-area: bonusSection; }*/
 
     section.nice-desktop {
         display: block;
         position: sticky;
-        /*top: 10px;*/
+        top: 80px;
         border: none;
         grid-row-start: 1;
         grid-row-end: 8;
+        max-height: 36rem;
     }
     section.nice-desktop p:first-of-type {
         margin-bottom: 0.5em;
@@ -169,8 +190,9 @@ Nom Complet: 	Renaud Van Meerbergen
         font-size: 1rem;
     }
     .signalement {
-        border-top: none;
+        display: block;
         text-align: center;
+        border-top: none;
     }
     .signalement svg {
         fill: #717171;
@@ -191,13 +213,16 @@ Nom Complet: 	Renaud Van Meerbergen
         margin: 0;
     }
     .seventhSection img {
-        max-height: 420px;
+        max-height: 480px;
         object-fit: cover;
     }
+    .seventhSection .map {
+        height: 480px;
+    }
     .assistance ul {
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-     }
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
     .assistance, .concurrents ul {
         padding-left: 0;
     }
@@ -217,11 +242,178 @@ Nom Complet: 	Renaud Van Meerbergen
     .hide {
         display: none;
     }
+    header div.header-intro {
+        display: none;
+    }
+    header div.header-desktop {
+        padding: 0.35em 10em;
+        display: grid; /* avec flex, le input search n'est pas pile au milieu... */
+        grid-template-columns: repeat(3, 1fr);
+        align-content: center;
+        justify-content: space-around;
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+    .header-desktop img {
+        width: auto;
+        height: 60px;
+    }
+    .header-desktop label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 1em;
+    }
+    /*.header-desktop label:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    }*/
+    .header-desktop label svg {
+        padding: 0.75em;
+        background-color: #FF385C;
+        border-radius: 50px;
+        margin-left: -12.5%;
+    }
+
+    .search__input {
+        border: 1px solid rgb(221, 221, 221);
+        padding: 1.5em 8em 1.5em 1.75em;
+        background-color: transparent;
+        box-shadow: rgba(0, 0, 0, 0.08) 0 1px 2px, rgba(0, 0, 0, 0.05) 0 4px 12px;
+        line-height: 1.25;
+        border-radius: 50px;
+        transition: all 250ms ease-in-out;
+    }
+
+    .search__input::placeholder {
+        font-size: 0.94em;
+        line-height: 1.35;
+        font-weight: 600;
+        color: #222222;
+    }
+    .search__input:hover,
+    .search__input:focus {
+        outline: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        background-position: 100% center;
+    }
+    .header-desktop nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .header-desktop button {
+        background-color: transparent;
+        border: none;
+    }
+    .header-desktop nav .world {
+        margin-right: 0.5rem;
+        margin-top: 3px;
+    }
+    .header-desktop nav div:first-of-type a, .header-desktop nav .world svg {
+        padding: 0.75rem;
+        text-align: center;
+        border-radius: 50px;
+    }
+    .header-desktop nav div:first-of-type a:hover, .header-desktop nav .world svg:hover {
+        background-color: whitesmoke;
+    }
+    .header-desktop nav .profil button {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 50px;
+        margin-bottom: 0.25rem;
+    }
+    .header-desktop nav .profil button:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    }
+
+    /* sous menu */
+    .menu {
+        display: none;
+    }
+    button[aria-expanded="true"] + .menu {
+        position: absolute;
+        padding: 0.5rem 0;
+        top: 9vh;
+        right: 13.5vw;
+        background-color: white;
+        border-radius: 1em;
+        width: 245px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    }
+    button[aria-expanded="true"] + .menu a {
+        padding: 1rem;
+        font-weight: 400;
+    }
+    button[aria-expanded="true"] + .menu li:first-of-type a {
+        font-weight: 600;
+    }
+    button[aria-expanded="true"] + .menu li:nth-of-type(2) {
+        margin-bottom: 0.5rem;
+    }
+    button[aria-expanded="true"] + .menu li:nth-of-type(3) {
+        content: "";
+        display: block;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid rgb(221, 221, 221);
+    }
+    button[aria-expanded="true"] + .menu li:nth-of-type(4) {
+        margin-top: 0.5rem;
+    }
+    button[aria-expanded="true"] + .menu li:hover {
+        background-color: whitesmoke;
+    }
+
     section.mes_photos {
         margin: 1.5em 10em;
     }
     main {
         padding: 1.5em 10em;
+    }
+
+    nav.desktop-menu {
+        display: block;
+        width: 100%;
+        z-index: 100;
+        top: -100px;
+        left: 0;
+        right: 0;
+        position: fixed;
+        background-color: white;
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+    nav.desktop-menu ul {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        padding-left: 1.5rem;
+    }
+    nav.desktop-menu li {
+        border: none;
+    }
+    nav.desktop-menu a {
+        display: inline-block;
+        border: none;
+        padding: 2rem 1rem;
+        border-bottom: 2px solid transparent;
+        text-decoration: none;
+    }
+    nav.desktop-menu a:hover {
+        border-bottom: 2px solid #222222;
+    }
+    .desktop-menu.show {
+        top: 0;
     }
     .fourthSection, .fifthSection, .sixthSection, .seventhSection, .eighthSection, .bonusSection {
         padding: 3em 0;
@@ -234,6 +426,10 @@ Nom Complet: 	Renaud Van Meerbergen
     }
     .fourthSection p.traduction, .fourthSection p.traduction a {
         font-size: 1rem;
+        transition: ease-in-out .3s;
+    }
+    .fourthSection p.traduction a:hover {
+        font-size: 0.94rem;
     }
     .fifthSection img {
         width: 20vw;
@@ -251,11 +447,17 @@ Nom Complet: 	Renaud Van Meerbergen
                               "sixthSection-lien .";
     }
     .sixthSection-titre { grid-area: sixthSection-titre; }
-    .sixthSection-contenu { grid-area: sixthSection-contenu; }
+    .sixthSection-contenu1 { grid-area: sixthSection-contenu1; }
+    .sixthSection-contenu2 { grid-area: sixthSection-contenu2; }
     .sixthSection-lien { grid-area: sixthSection-lien; }
+
     .seventhSection img {
         max-height: 480px;
     }
+    .seventhSection .map {
+        height: 480px;
+    }
+
     .commentaireSectionDesktop {
         padding: 3em 0;
     }
@@ -281,13 +483,15 @@ Nom Complet: 	Renaud Van Meerbergen
     .commentaireSectionDesktop p.com-stat {
         margin-bottom: 1em;
     }
-    .com-divider {
+    .commentaireSectionDesktop .com-divider {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
         grid-template-rows: auto;
         gap: 0 8vw;
     }
-
+    .commentaireSectionDesktop .com-divider:first-of-type {
+        margin-bottom: 1.5em;
+    }
     .q-é-n {
         display: grid;
         grid-template-columns: 4fr 2fr 2vw;
@@ -295,9 +499,9 @@ Nom Complet: 	Renaud Van Meerbergen
         grid-auto-columns: 1fr;
         gap: 0;
         grid-auto-flow: row;
-        grid-template-areas: "qualité evaluation eval-note";
+        grid-template-areas: "qualite evaluation eval-note";
     }
-    .qualité { grid-area: qualité; }
+    .qualite { grid-area: qualite; }
     .evaluation { grid-area: evaluation; }
     .eval-note { grid-area: eval-note; }
 
@@ -385,9 +589,79 @@ Nom Complet: 	Renaud Van Meerbergen
         display: inline-block;
     }
     .aPropos {
+        padding-top: 3em;
+        border-top: 1px solid rgb(221, 221, 221);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 0 3em;
+        grid-auto-flow: row;
+        grid-template-areas: "aProposTitle aProposTitle aProposTitle"
+                             ". . ."
+                             ". . .";
     }
+    .aProposTitle { grid-area: aProposTitle; }
+    .aPropos section {
+        border: none;
+    }
+    .aPropos section div h3 {
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+    .aPropos section div p {
+        color: #222222;
+        font-size: 1rem;
+        margin-bottom: 1em;
+    }
+    .aPropos p.aProposMore {
+        display: none;
+    }
+    .aPropos span.none {
+        display: inline-block;
+        font-weight: 600;
+        border: none;
+        padding-bottom: 0.2rem;
+        transition: ease-in-out .3s;
+        border-bottom: 2px solid transparent;
+    }
+    .aPropos span.none:hover {
+        border-bottom: 2px solid #222222;
+    }
+
+
+    /*--------- Infos Copyright --------*/
+    .infos-copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 0 8em 2em 8em;
+    }
+    .infos-copyright div {
+        order: 1;
+    }
+    .infos-copyright div:first-of-type {
+        align-items: center;
+    }
+    .infos-copyright div + span {
+        display: inline-block;
+        margin-top: 0;
+    }
+    .infos-copyright div ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .infos-copyright div ul li {
+        font-size: inherit;
+    }
+    .infos-copyright div ul a {
+        margin-right: 0.75em;
+        margin-bottom: 0;
+    }
+    .infos-copyright .reseau-social-footer {
+        display: flex;
+    }
+
     .assistance ul {
         display: block;
     }
@@ -397,5 +671,12 @@ Nom Complet: 	Renaud Van Meerbergen
     }
     .concurrents ul li {
         padding-left: 0;
+    }
+    header section.mes_photos {
+        display: none;
+    }
+    main section.mes_photos {
+        display: grid;
+        margin: 1.5em 0;
     }
 }

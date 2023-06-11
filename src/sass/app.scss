@@ -1,0 +1,1581 @@
+/* -------------------------------------------
+Nom Complet: 	Renaud Van Meerbergen
+------------------------------------------- */
+
+$base-font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+
+$white: #fff;
+$whitesmoke: whitesmoke;
+$offwhite: #eee;
+$lightgray: #F7F7F7;
+$graysmoke: #717171;
+$gray: #484848;
+$blacksmoke: #222;
+$black: #000;
+
+$borderGray: 1px solid rgb(221, 221, 221);
+
+$linearGradientAirBnb: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $base-font-family;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $white;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 1600px; /* 2000px */
+  color: $blacksmoke;
+}
+main {
+  padding: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 1.625em;
+  line-height: 1.155;
+}
+h2 {
+  font-size: 1.5em;
+  line-height: 1.666;
+}
+h3 {
+  font-size: 1.375em;
+  line-height: 1.182;
+}
+h4 {
+  font-size: 1em;
+  line-height: 1.25;
+}
+p {
+  word-wrap: break-word;
+  hyphens: auto;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 400;
+}
+span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.img-me {
+  width: 40px;
+  height: 40px;
+}
+ul, ol {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  font-size: 0.94em;
+}
+a, a:visited {
+  color: $black;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.125;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px solid $blacksmoke;
+}
+button {
+  cursor: pointer;
+}
+svg {
+  width: 16px;
+  height: 16px;
+  fill: $blacksmoke;
+  display: inline-block;
+}
+code {
+  background-color: $offwhite;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+abbr {
+  text-decoration: none;
+}
+
+/* Font-weight police */
+.light {
+  font-weight: 400;
+}
+.regular {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 600;
+}
+
+/* Hidden class */
+.none {
+  display: none;
+}
+.hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/*---------------- PAGE D'ACCUEIL ---------------*/
+/*--------- HEADER --------*/
+header {
+
+}
+header div.header-intro {
+  border-bottom: $borderGray;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+header div.share {
+  display: flex;
+  padding: 0;
+}
+header div:first-of-type a {
+  display: flex;
+  border: none;
+  text-decoration: none;
+  align-items: center;
+}
+header div.share a:first-of-type {
+  margin-right: 1.2em;
+}
+.header-intro a {
+  border: none;
+}
+/*--------- SECTION MES PHOTOS --------*/
+section.mes_photos {
+  display: flex;
+  height: calc(100vw * 8 / 12);
+  /*Solution du height adaptée (au format) depuis la source: https://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css*/
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+}
+.mes_photos img {
+  flex: 0 0 100%;
+  width: 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+main section.mes_photos {
+  display: none;
+}
+/*--------- SECTION INTRO --------*/
+.intro-resume {
+  margin-bottom: 1.5em;
+  margin-top: 8px;
+}
+.nice {
+  display: flex;
+  padding: 1.5em 0;
+  border-top: $borderGray;
+}
+.nice div:first-of-type {
+  margin-right: 8px;
+  line-height: 1.25;
+}
+.nice div:first-of-type h2 {
+  font-size: 1em;
+  line-height: 1.25;
+  margin-bottom: 0;
+  margin-right: 8px;
+  display: inline;
+}
+.nice div:first-of-type span {
+  font-size: 1rem;
+}
+
+/*--------- ARTICLE 1 --------*/
+article section {
+  padding: 1.5em 0;
+  border-top: $borderGray;
+}
+/*--------- First Section --------*/
+.firstPresentation {
+  display: flex;
+}
+.firstPresentation h3 {
+  flex: 0 1 100%;
+}
+.firstPresentation h3 span {
+  display: block;
+  font-size: 1.375rem;
+  line-height: 1.182;
+  margin-bottom: 4px;
+}
+.firstPresentation img {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+article ol li {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+/*--------- Second Section --------*/
+.secondSection {
+  padding: 2em 0 0;
+}
+.secondSection div.enfant {
+  display: flex;
+  margin-bottom: 1.5em;
+}
+.secondSection div div.icon {
+  margin-right: 1em;
+}
+.secondSection div div p:first-of-type {
+  margin-bottom: 4px;
+}
+.secondSection div div p:last-of-type {
+  color: $graysmoke;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+/*--------- Third Section --------*/
+.thirdSection img {
+  width: 100px;
+  margin-bottom: 0.5em;
+}
+.thirdSection p {
+  margin-bottom: 1em;
+  font-size: 0.875rem;
+}
+.thirdSection a {
+  line-height: 1.25;
+}
+/*--------- Fourth Section --------*/
+.fourthSection, .fifthSection, .sixthSection, .seventhSection, .bonusSection {
+  padding-top: 2em;
+}
+.fourthSection div.enfant {
+  display: flex;
+  padding-bottom: 2em;
+}
+.fourthSection p.traduction {
+  color: $gray;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+.fourthSection p.traduction a {
+  font-size: 0.875rem;
+}
+.fourthSection p.last {
+  line-height: 1.5;
+}
+.fourthSection div.enfant div {
+  margin-right: 12px;
+}
+.fourthSection a.last, .seventhSection a.last, .com-card a.last {
+  border-bottom: none;
+  font-size: 1rem;
+}
+.fourthSection div:last-of-type a {
+  margin-top: 1em;
+  display: inline-block;
+}
+/*--------- Fifth Section --------*/
+.fifthSection img {
+  border-radius: 0.5em;
+  margin: 1.5em 0 1em;
+  object-fit: cover;
+  width: 156px;
+  height: 105px;
+}
+.fifthSection p:last-of-type {
+  margin-top: 0.2em;
+  font-size: 0.875rem;
+}
+/*--------- Sixth Section --------*/
+.sixthSection h3 {
+  margin-bottom: 1.1em;
+}
+.sixthSection .list-item li {
+  padding-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+.sixthSection .list-item li svg {
+  margin-right: 0.75em;
+}
+.big-btn {
+  display: block;
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  border-radius: 0.5em;
+  border: 1px solid $gray;
+  font-size: 1em;
+}
+.big-btn:hover {
+  background-color: $lightgray;
+}
+/*--------- SeventhSection Section --------*/
+.seventhSection img {
+  width: 100%;
+  height: 100%;
+  max-height: 218px;
+  margin: 1.5em 0;
+  border:0;
+  border-radius: 12px 12px 0 0;
+}
+.seventhSection strong span {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+.seventhSection p.last {
+  margin: 0.75em 0 1em;
+}
+
+/*--------- EighthSection Section --------*/
+.eighthSection time {
+  margin-top: 0.5em;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+.eighthSection a.last {
+  margin-left: 0.5em;
+  padding: 0.5em;
+  border-bottom: none;
+  text-decoration-line: revert;
+}
+.eighthSection a.last:hover {
+  background-color: $whitesmoke;
+  border-radius: 0.5em;
+}
+/*----- Calendrier ---*/
+.all {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0 1em;
+  max-width: 380px;
+}
+.wrapper{
+  background: $white;
+  border-radius: 10px;
+}
+.wrapper .header{
+  padding: 1.5em 0 0.8em;
+}
+.header .icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .icons span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.header .icons span:hover {
+  background-color: $offwhite;
+}
+.header .current-date {
+  font-size: 1em;
+  line-height: 1.25;
+  font-weight: 500;
+}
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.calendar .days {
+  margin-bottom: 20px;
+}
+.calendar li {
+  color: $graysmoke;
+  width: calc(100% / 7); /*7 pour le nombre de grille*/
+  font-size: 0.75em;
+}
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive {
+  color: $graysmoke;
+}
+.days li.active {
+  color: $white;
+}
+.days li:before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 42px;
+  width: 42px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active:before {
+  background: $gray;
+}
+.days li:not(.active):hover:before {
+  background: #f2f2f2;
+}
+
+/*--------- CommentaireSection Section --------*/
+.commentaireSection {
+  padding-top: 2em;
+}
+.commentaireSection span {
+  font-size: 1.35rem;
+  line-height: 1.2265;
+  margin-left: 4px;
+}
+.commentaireSection .slider {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.commentaireSection .slider > div {
+  margin-right: 1em;
+  max-width: 80%;
+  flex: 0 0 80%;
+}
+.commentaireSection .slider > div:last-of-type {
+  margin-right: 0;
+}
+.commentaireSection .com-card {
+  margin-top: 2em;
+  border: $borderGray;
+  position: relative;
+  border-radius: 12px;
+  padding: 1em;
+}
+.commentaireSection .com-card img {
+  border-radius: 50%;
+  float: left;
+  margin-right: 0.875em;
+}
+.commentaireSection .com-card p:first-of-type {
+  margin-left: 52px;
+}
+.commentaireSection .com-card p:last-of-type {
+  line-height: 1.5;
+  margin: 0.75em 0 0.5em;
+  max-height: 100px;
+  overflow: hidden;
+  /*text-overflow: ellipsis;*/
+}
+.commentaireSection a.big-btn {
+  margin-top: 1.5em;
+}
+/*--------- BonusSection Section --------*/
+.bonusSection div.enfant {
+  margin-bottom: 1.5em;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.bonusSection div.enfant div p {
+  margin-top: 0.5em;
+  font-size: 0.875rem;
+  color: $graysmoke;
+}
+.bonusSection p.light {
+  padding-top: 0.5em;
+}
+.bonusSection img {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+.bonusSection ul {
+  margin-bottom: 0.5em;
+}
+.bonusSection ul li {
+  margin-bottom: 1em;
+}
+.bonusSection ul li div {
+  font-size: 1rem;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+}
+.bonusSection ul li svg {
+  margin-right: 0.5em;
+}
+.bonusSection h4:first-of-type {
+  padding-top: 1.5em;
+}
+.bonusSection h4 + p {
+  margin: 0.475em 0 1.5em;
+  line-height: 1.5;
+}
+.bonusSection ul.liste-talent li {
+  margin-bottom: 0.5em;
+}
+.bonusSection a.big-btn {
+  margin: 1.5em 0;
+}
+.bonusSection a.big-btn span {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.bonusSection .advertising {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bonusSection .advertising svg {
+  width: 40px; /* 16px */
+  height: 40px; /* 18px */
+}
+small {
+  font-size: 0.75rem;
+  line-height: 1.333;
+  margin-right: 1em;
+  font-weight: 400;
+}
+.liste-talent li {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+.liste-talent span {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*--------- ARTICLE 1 FIN --------*/
+/*--------- ARTICLE 2 --------*/
+.aPropos section a:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+}
+.aPropos h3 {
+  font-size: 1.375rem;
+  line-height: 1.2;
+}
+.aPropos section div:first-of-type {
+  padding-right: 2em;
+}
+.aPropos section p {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: $graysmoke;
+}
+.aPropos section svg {
+  border-radius: 50%;
+}
+.aPropos p.aProposMore {
+  color: $blacksmoke;
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  font-weight: 600;
+  border-bottom: 1px solid $blacksmoke;
+}
+/*--------- ARTICLE 2 FIN --------*/
+/*--------- SIGNALER L'ANNONCE --------*/
+.signalement {
+  display: flex;
+  align-items: center;
+  padding-top: 1.5em;
+  border-top: $borderGray;
+}
+.signalement svg {
+  margin-right: 1em;
+}
+.signalement a {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+/*--------- CONCURRENTS --------*/
+.concurrents {
+  padding: 2em 1.5em;
+  border-top: 8px solid $whitesmoke;
+  border-bottom: $borderGray;
+}
+.concurrents h3 {
+  padding-bottom: 1em;
+}
+.concurrents ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 1em;
+}
+.concurrents ul li {
+  padding: 0.5em;
+  width: 45%;
+  color: $graysmoke;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.concurrents p {
+  margin-top: 2em;
+  color: $gray;
+}
+.concurrents p span {
+  display: inline-block;
+}
+.concurrents p span svg {
+  margin: 0 0.5em;
+}
+/*--------- ASSISTANCE --------*/
+section.assistance {
+  padding: 0.5em 1.5em 0 2em;
+  background-color: $whitesmoke;
+}
+.assistance h4 {
+  margin-top: 1.5em;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+.assistance div {
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgb(221, 221, 221)
+}
+.assistance ul li {
+  margin-top: 0.75em;
+}
+.assistance ul li a {
+  text-decoration: none;
+  border-bottom: none;
+  font-weight: 300;
+}
+.assistance span {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.assistance ul li a:hover {
+  border-bottom: 1px solid $blacksmoke;
+}
+/*--------- FOOTER PHONE --------*/
+.prendreReservation {
+  position: fixed;
+  bottom: 0;
+  padding: 1em 1.5em;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: $borderGray;
+  z-index: 100;
+}
+.prendreReservation p {
+  margin-right: 1em;
+  line-height: 1.125;
+}
+a.btnReservation {
+  border: none;
+  border-radius: 0.5em;
+  background: $linearGradientAirBnb;
+  padding: 0.875em 1.5em;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: $white;
+  text-align: center;
+}
+/*--------- Infos Copyright --------*/
+.infos-copyright {
+  padding: 1.5em 1.5em 6.5em 2em;
+  background-color: $whitesmoke;
+}
+.infos-copyright div {
+  display: flex;
+}
+.infos-copyright div svg {
+  margin-right: 0.5em;
+}
+.infos-copyright div a {
+  margin-right: 1.5em;
+  font-weight: 600;
+}
+.infos-copyright a:hover {
+  border-bottom: 1px solid $blacksmoke;
+}
+.infos-copyright a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 400;
+}
+.infos-copyright div + span {
+  display: block;
+  margin-top: 1em;
+}
+.infos-copyright .reseau-social-footer {
+  display: none;
+}
+
+/*--------- FOOTER FIN --------*/
+
+/*--------- Effet Au clic --------*/
+.action {
+  display: none;
+}
+
+.is-opened {
+  position: fixed;
+  inset: 0;
+  margin-top: 1em;
+  padding: 1em 1.5em 2em;
+  z-index: 100;
+  background-color: $whitesmoke;
+  border-radius: 1em 1em 0 0;
+  height: fit-content;
+  overflow: auto;
+}
+.is-opened svg {
+  position: relative;
+  left: -0.5em;
+  padding: 0.5em;
+  border-radius: 50%;
+}
+.is-opened svg:hover {
+  background-color: $whitesmoke;
+}
+.is-opened img.airCover {
+  margin: 1em 0 0.5em;
+  width: 120px;
+}
+.is-opened h3:first-of-type {
+  padding-top: 1.5em;
+  border-top: $borderGray;
+}
+.is-opened p:first-of-type, .is-opened h3, .is-opened p:last-of-type {
+  color: $blacksmoke;
+  font-size: 1em;
+  line-height: 1.25;
+  margin: 0 0 0.5em;
+}
+.is-opened p {
+  color: $graysmoke;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  padding: 0;
+}
+.is-opened p:first-of-type {
+  margin-bottom: 1.5em;
+}
+.full {
+  margin-top: 0;
+  border-radius: 0;
+}
+.full h2:first-of-type {
+  margin: 0.9em 0 1.35em;
+}
+.full h3:first-of-type, .full h3:last-of-type  {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 600;
+}
+.full p:first-of-type, .full p, .full p:last-of-type {
+  color: $blacksmoke;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+
+/* Animation link */
+a.link-test {
+  font-size: 1rem;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  border: none;
+  padding-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+a.link-test::before,
+a.link-test::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+a.link-test::before {
+  background: $linearGradientAirBnb;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+a.link-test::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: $blacksmoke;
+}
+
+a.link-test:hover::before {
+  transform-origin: 0 50%;
+  transform: scaleX(1);
+}
+a.link-test:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+a.link-test span {
+  font-size: 1rem;
+  font-weight: inherit;
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a.link-test:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+/* Search bar list */
+/*::selection {
+  color: $white;
+  background: #664AFF;
+}*/
+.search-input {
+  position: relative;
+}
+.search-input .autocom-box {
+  position: absolute;
+  top: 10vh;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.search-input.active .autocom-box {
+  margin-left: 3rem;
+  opacity: 1;
+  pointer-events: auto;
+  background-color: $white;
+  width: 18rem;
+  border-radius: 0.5em;
+  border: 1px solid $blacksmoke;
+}
+.autocom-box li {
+  list-style: none;
+  margin: 0.25rem;
+  display: none;
+  width: 100%;
+  cursor: default;
+}
+.search-input.active .autocom-box li {
+  display: block;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+.autocom-box li:hover{
+  background: $whitesmoke;
+}
+
+/*-------------------------------------------- */
+              /* MEDIA-QUERIES */
+/*-------------------------------------------- */
+@media screen and (min-width: 350px) {
+  .prendreReservation {
+    min-width: 90vw;
+  }
+}
+@media screen and (min-width: 500px) {
+  .prendreReservation {
+    min-width: 93.5vw;
+  }
+}
+@media screen and (min-width: 750px) {
+  .hide-tablet {
+    display: none;
+  }
+  section.mes_photos {
+    height: calc(50vw * 8 / 12);
+    overflow: auto;
+    margin: 1.5em 2.2em;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*ou alors 2fr and repeat (2, 1fr)*/
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px 8px;
+    grid-auto-flow: column dense;
+    grid-template-areas: ". .";
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) à tester au clic*/
+  }
+  .photo_first {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  section.mes_photos img {
+    height: 100%;
+  }
+  section.mes_photos img.photo-next {
+    display: none;
+  }
+  /*En savoir plus 1.*/
+  .is-opened {
+    height: 100%;
+    background-color: rgba(255,255,255,0.85);
+  }
+  .bg-entire-page {
+    border: 1px solid whitesmoke;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);;
+    padding: 5% 8%;
+    background-color: white;
+    border-radius: 1em;
+    z-index: 101;
+  }
+  .bg-entire-page2 {
+    margin: 8%;
+    border: 1px solid whitesmoke;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);;
+    padding: 5% 8%;
+    background-color: white;
+    border-radius: 1em;
+    z-index: 101;
+  }
+  section.mes_photos {
+    margin: 1.5em 2.5em;
+  }
+  main {
+    padding: 1.5em 2.5em;
+  }
+  .nice {
+    display: none;
+  }
+  main article:first-of-type div.first-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    gap: 0 8.33333%;
+    grid-auto-flow: row;
+    grid-template-areas: "firstSection nice-desktop"
+                             "secondSection nice-desktop"
+                             "thirdSection nice-desktop"
+                             "fourthSection nice-desktop"
+                             "fifthSection nice-desktop"
+                             "sixthSection nice-desktop"
+                             "eighthSection nice-desktop";
+    /*"commentaireSectionDesktop commentaireSectionDesktop"
+     "seventhSection seventhSection"
+     "bonusSection bonusSection";*/
+  }
+  .firstSection {
+    grid-area: firstSection;
+    border-top: none;
+  }
+  .secondSection { grid-area: secondSection; }
+  .thirdSection { grid-area: thirdSection; }
+  .fourthSection { grid-area: fourthSection; }
+  .fifthSection { grid-area: fifthSection; }
+  .sixthSection { grid-area: sixthSection; }
+  .eighthSection { grid-area: eighthSection; }
+  .nice-desktop { grid-area: nice-desktop; }
+  /*.seventhSection { grid-area: seventhSection; }
+  .commentaireSectionDesktop { grid-area: commentaireSectionDesktop; }
+  .bonusSection { grid-area: bonusSection; }*/
+
+  section.nice-desktop {
+    display: block;
+    position: sticky;
+    top: 80px;
+    border: none;
+    grid-row-start: 1;
+    grid-row-end: 8;
+    max-height: 36rem;
+  }
+  section.nice-desktop p:first-of-type {
+    margin-bottom: 0.5em;
+  }
+
+  div.reservation-desktop-part {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0;
+    grid-auto-flow: row;
+    grid-template-areas: "arrivee depart"
+                             "voyageur voyageur";
+    border: 1px solid #717171;
+    border-radius: 0.5em;
+  }
+  div.reservation-desktop-part h4 {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(193, 53, 21);
+  }
+  div.reservation-desktop-part div {
+    padding: 0.75em 0.75em;
+    font-size: 0.875rem;
+  }
+  div.reservation-desktop-part div time, div.reservation-desktop-part div p:last-of-type {
+    font-size: 0.875rem;
+  }
+  .arrivee {
+    grid-area: arrivee;
+    border-bottom: 1px solid #717171;
+  }
+  .depart {
+    grid-area: depart;
+    border-left: 1px solid #717171;
+    border-bottom: 1px solid #717171;
+  }
+  .voyageur {
+    grid-area: voyageur;
+  }
+
+  .nice-desktop div.reservation-desktop, .nice-desktop div.perle-desktop {
+    padding: 1.5em;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(221, 221, 221);
+  }
+  .nice-desktop div.reservation-desktop {
+    box-shadow: rgba(0, 0, 0, 0.12) 0 6px 16px;
+    margin-bottom: 1.5em;
+  }
+  .nice-desktop div.reservation-desktop a+div {
+    margin: 1.5em 0;
+  }
+  .nice-desktop div.reservation-desktop a.btnReservation {
+    display: block;
+  }
+  .nice-desktop div.perle-desktop {
+    display: flex;
+  }
+  .perle-desktop div:first-of-type {
+    margin-right: 1em;
+    line-height: 1.25;
+  }
+  .perle-desktop div:first-of-type h2 {
+    font-size: 1em;
+    line-height: 1.25;
+    margin-bottom: 0;
+    margin-right: 8px;
+    display: inline;
+  }
+  .perle-desktop div:first-of-type span {
+    font-size: 1rem;
+  }
+  .signalement {
+    display: block;
+    text-align: center;
+    border-top: none;
+  }
+  .signalement svg {
+    fill: #717171;
+  }
+  .signalement a {
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color: #717171;
+  }
+  .firstPresentation {
+    align-items: center;
+  }
+  .firstPresentation h3 span {
+    display: inline-block;
+    margin: 0 0.3em 0 0;
+  }
+  .firstPresentation img {
+    margin: 0;
+  }
+  .seventhSection img {
+    max-height: 480px;
+    object-fit: cover;
+  }
+  .assistance ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .assistance, .concurrents ul {
+    padding-left: 0;
+  }
+  footer {
+    background-color: whitesmoke;
+    padding: 0 2.5em;
+  }
+  .prendreReservation {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1125px) {
+  .none {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  header div.header-intro {
+    display: none;
+  }
+  header div.header-desktop {
+    padding: 0.35em 10em;
+    display: grid; /* avec flex, le input search n'est pas pile au milieu... */
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+  .header-desktop img {
+    width: auto;
+    height: 60px;
+  }
+  .header-desktop label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 1em;
+  }
+  /*.header-desktop label:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  }*/
+  .header-desktop label svg {
+    padding: 0.75em;
+    background-color: #FF385C;
+    border-radius: 50px;
+    margin-left: -12.5%;
+  }
+
+  .search__input {
+    border: 1px solid rgb(221, 221, 221);
+    padding: 1.5em 8em 1.5em 1.75em;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.08) 0 1px 2px, rgba(0, 0, 0, 0.05) 0 4px 12px;
+    line-height: 1.25;
+    border-radius: 50px;
+    transition: all 250ms ease-in-out;
+  }
+
+  .search__input::placeholder {
+    font-size: 0.94em;
+    line-height: 1.35;
+    font-weight: 600;
+    color: #222222;
+  }
+  .search__input:hover,
+  .search__input:focus {
+    outline: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    background-position: 100% center;
+  }
+  .header-desktop nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+  .header-desktop button {
+    background-color: transparent;
+    border: none;
+  }
+  .header-desktop nav .world {
+    margin-right: 0.5rem;
+    margin-top: 3px;
+  }
+  .header-desktop nav div:first-of-type a, .header-desktop nav .world svg {
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 50px;
+  }
+  .header-desktop nav div:first-of-type a:hover, .header-desktop nav .world svg:hover {
+    background-color: whitesmoke;
+  }
+  .header-desktop nav .profil button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 50px;
+    margin-bottom: 0.25rem;
+  }
+  .header-desktop nav .profil button:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  }
+
+  /* sous menu */
+  .menu {
+    display: none;
+  }
+  button[aria-expanded="true"] + .menu {
+    position: absolute;
+    padding: 0.5rem 0;
+    top: 9vh;
+    right: 13.5vw;
+    background-color: white;
+    border-radius: 1em;
+    width: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  }
+  button[aria-expanded="true"] + .menu a {
+    padding: 1rem;
+    font-weight: 400;
+  }
+  button[aria-expanded="true"] + .menu li:first-of-type a {
+    font-weight: 600;
+  }
+  button[aria-expanded="true"] + .menu li:nth-of-type(2) {
+    margin-bottom: 0.5rem;
+  }
+  button[aria-expanded="true"] + .menu li:nth-of-type(3) {
+    content: "";
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgb(221, 221, 221);
+  }
+  button[aria-expanded="true"] + .menu li:nth-of-type(4) {
+    margin-top: 0.5rem;
+  }
+  button[aria-expanded="true"] + .menu li:hover {
+    background-color: whitesmoke;
+  }
+
+  section.mes_photos {
+    margin: 1.5em 10em;
+  }
+  main {
+    padding: 1.5em 10em;
+  }
+
+  nav.desktop-menu {
+    display: block;
+    width: 100%;
+    z-index: 100;
+    top: -100px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: white;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+  nav.desktop-menu ul {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-left: 1.5rem;
+  }
+  nav.desktop-menu li {
+    border: none;
+  }
+  nav.desktop-menu a {
+    display: inline-block;
+    border: none;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+  }
+  nav.desktop-menu a:hover {
+    border-bottom: 2px solid #222222;
+  }
+  .desktop-menu.show {
+    top: 0;
+  }
+  .fourthSection, .fifthSection, .sixthSection, .seventhSection, .eighthSection, .bonusSection {
+    padding: 3em 0;
+  }
+  .thirdSection p, .thirdSection a {
+    font-size: 1rem;
+  }
+  .thirdSection a {
+    border-bottom: none;
+  }
+  .fourthSection p.traduction, .fourthSection p.traduction a {
+    font-size: 1rem;
+    transition: ease-in-out .3s;
+  }
+  .fourthSection p.traduction a:hover {
+    font-size: 0.94rem;
+  }
+  .fifthSection img {
+    width: 20vw;
+    height: auto;
+  }
+  .sixthSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-columns: 1fr;
+    gap: 0 2em;
+    grid-auto-flow: row;
+    grid-template-areas:  "sixthSection-titre sixthSection-titre"
+                              "sixthSection-contenu1 sixthSection-contenu2"
+                              "sixthSection-lien .";
+  }
+  .sixthSection-titre { grid-area: sixthSection-titre; }
+  .sixthSection-contenu1 { grid-area: sixthSection-contenu1; }
+  .sixthSection-contenu2 { grid-area: sixthSection-contenu2; }
+  .sixthSection-lien { grid-area: sixthSection-lien; }
+
+  .seventhSection img {
+    max-height: 480px;
+  }
+
+  .commentaireSectionDesktop {
+    padding: 3em 0;
+  }
+  .commentaireSectionDesktop svg {
+    width: 16px;
+    height: 16px;
+  }
+  .commentaireSectionDesktop span.ratingValue {
+    font-size: 1.375rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  .commentaireSectionDesktop p.com-p-first {
+    font-size: 0.875rem;
+    line-height: 1.15;
+    color: #717171;
+    margin-bottom: 2em;
+    padding-top: 4px;
+  }
+  .commentaireSectionDesktop p.com-info-user {
+    margin-bottom: 0;
+  }
+  .commentaireSectionDesktop p.com-stat {
+    margin-bottom: 1em;
+  }
+  .commentaireSectionDesktop .com-divider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    grid-template-rows: auto;
+    gap: 0 8vw;
+  }
+  .commentaireSectionDesktop .com-divider:first-of-type {
+    margin-bottom: 1.5em;
+  }
+  .q-é-n {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2vw;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0;
+    grid-auto-flow: row;
+    grid-template-areas: "qualite evaluation eval-note";
+  }
+  .qualite { grid-area: qualite; }
+  .evaluation { grid-area: evaluation; }
+  .eval-note { grid-area: eval-note; }
+
+  .commentaireSectionDesktop p.com-stat span {
+    font-size: 1rem;
+    line-height: 1.2;
+    align-self: center;
+  }
+  .commentaireSectionDesktop p.com-stat span.com-bar {
+    display: flex;
+    width: 120px;
+    height: 4px;
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px;
+    justify-self: end;
+    align-self: center;
+    margin-right: 0.65em;
+  }
+  .commentaireSectionDesktop p.com-stat span:last-of-type {
+    font-size: 0.75rem;
+  }
+  .commentaireSectionDesktop .slider {
+    margin-top: 1.5em;
+  }
+  .commentaireSectionDesktop .slider div.com-card {
+    position: relative;
+    margin-bottom: 2.5em;
+  }
+  .commentaireSectionDesktop .slider img {
+    border-radius: 50%;
+    float: left;
+    margin-right: 0.875em;
+  }
+  .commentaireSectionDesktop .slider strong {
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #222222;
+  }
+  .commentaireSectionDesktop .com-card p:last-of-type {
+    line-height: 1.5;
+    margin: 0.75em 0 0.5em;
+    max-height: 100px;
+    overflow: hidden;
+    /*text-overflow: ellipsis;*/
+  }
+  .commentaireSectionDesktop a.big-btn {
+    margin-top: 0;
+    display: inline-block;
+  }
+  .bonusSection {
+    display: grid;
+    grid-template-columns: 45% 30%;
+    column-gap: 5em;
+  }
+  .bonusSection div.enfant {
+    display: grid;
+    grid-template-columns: 5em 1fr;
+  }
+  .bonusSection div.enfant p {
+    display: inline-block;
+  }
+  .bonusSection div.enfant p:after {
+    content: " · ";
+  }
+  .bonusSection .enfant img {
+    width: 64px;
+    height: 64px;
+    order: -1;
+  }
+  .bonusSection .respons {
+    place-self: center;
+  }
+  .bonusSection ul.list-item li {
+    display: inline-block;
+    max-width: 50%;
+    margin-right: 1em;
+  }
+  .bonusSection ul.liste-talent li {
+    margin-bottom: 1em;
+  }
+  section.concurrents, section.assistance {
+    padding: 1.5em 8em;
+  }
+  .bonusSection a.big-btn {
+    display: inline-block;
+  }
+  .aPropos {
+    padding-top: 3em;
+    border-top: 1px solid rgb(221, 221, 221);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 3em;
+    grid-auto-flow: row;
+    grid-template-areas: "aProposTitle aProposTitle aProposTitle"
+                             ". . ."
+                             ". . .";
+  }
+  .aProposTitle { grid-area: aProposTitle; }
+  .aPropos section {
+    border: none;
+  }
+  .aPropos section div h3 {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+  .aPropos section div p {
+    color: #222222;
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+  .aPropos p.aProposMore {
+    display: none;
+  }
+  .aPropos span.none {
+    display: inline-block;
+    font-weight: 600;
+    border: none;
+    padding-bottom: 0.2rem;
+    transition: ease-in-out .3s;
+    border-bottom: 2px solid transparent;
+  }
+  .aPropos span.none:hover {
+    border-bottom: 2px solid #222222;
+  }
+
+
+  /*--------- Infos Copyright --------*/
+  .infos-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 8em 2em 8em;
+  }
+  .infos-copyright div {
+    order: 1;
+  }
+  .infos-copyright div:first-of-type {
+    align-items: center;
+  }
+  .infos-copyright div + span {
+    display: inline-block;
+    margin-top: 0;
+  }
+  .infos-copyright div ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .infos-copyright div ul li {
+    font-size: inherit;
+  }
+  .infos-copyright div ul a {
+    margin-right: 0.75em;
+    margin-bottom: 0;
+  }
+  .infos-copyright .reseau-social-footer {
+    display: flex;
+  }
+
+  .assistance ul {
+    display: block;
+  }
+  .assistance, .concurrents ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .concurrents ul li {
+    padding-left: 0;
+  }
+  header section.mes_photos {
+    display: none;
+  }
+  main section.mes_photos {
+    display: grid;
+    margin: 1.5em 0;
+  }
+}
